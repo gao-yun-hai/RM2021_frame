@@ -12,10 +12,13 @@
 /* 本模块向外部提供的结构体/枚举定义 ----------------------------------------*/
 typedef enum
 {
-		YawGimbalMotor_TOE = 0,		//Yaw轴电机
-		PitchGimbalMotor_TOE,			//Pitch轴电机
-  	TriggerMotor_TOE,					//拨盘电机
-		ChassisMotor_TOE,					//底盘电机
+		YawGimbalMotor_TOE,				//Yaw轴电机数据接收
+		PitchGimbalMotor_TOE,			//Pitch轴电机数据接收
+  	TriggerMotor_TOE,					//拨盘电机数据接收
+		ChassisMotor_TOE,					//底盘电机数据接收
+		RemoteControl_TOE,				//遥控器数据接收
+		Referee_TOE,							//裁判系统数据接收
+		Vision_TOE,								//视觉数据接收
   
 		DeviceTotal_TOE	
 }DeviceX_DEF;

@@ -88,7 +88,7 @@ void OffLine_Check_Task(void const *argument)
 		if((off_line.device_offline_flag & 0x01))//无法接收yaw轴电机返回值 LED1
 		{
 			LED1_TOG();
-			printf("Yaw_Gimbal_Motor can not get date\r\n");
+//			printf("Cannot receive yaw_motor return data\r\n");
 		}
 		else 
 			LED1_ON();
@@ -96,7 +96,7 @@ void OffLine_Check_Task(void const *argument)
 		if((off_line.device_offline_flag & 0x02))//无法接收pitch轴电机返回值 LED2
 		{
 			LED2_TOG();
-			printf("Pitch_Gimbal_Motor can not get date\r\n");
+//			printf("Cannot receive pitch_motor return data\r\n");
 		}
 		else 
 			LED2_ON();
@@ -104,7 +104,7 @@ void OffLine_Check_Task(void const *argument)
 		if((off_line.device_offline_flag & 0x04))//无法接收拨盘电机返回值 LED3
 		{
 			LED3_TOG();
-			printf("Trigger_Motor can not get date\r\n");
+//			printf("Cannot receive trigger_motor return data\r\n");
 		}
 		else 
 			LED3_ON();		
@@ -112,10 +112,34 @@ void OffLine_Check_Task(void const *argument)
 		if((off_line.device_offline_flag & 0x08))//无法接收底盘电机返回值 LED1
 		{
 			LED4_TOG();
-			printf("Chassis_Motor can not get date\r\n");
+//			printf("Cannot receive chassis_motor return data\r\n");
 		}
 		else 
 			LED4_ON();
+		
+		if((off_line.device_offline_flag & 0x10))//无法接收底盘电机返回值 LED1
+		{
+			LED5_TOG();
+//			printf("Cannot receive remote_control return data\r\n");
+		}
+		else 
+			LED5_ON();
+
+		if((off_line.device_offline_flag & 0x20))//无法接收底盘电机返回值 LED1
+		{
+			LED6_TOG();
+//			printf("Cannot receive referee return data\r\n");
+		}
+		else 
+			LED6_ON();		
+		
+		if((off_line.device_offline_flag & 0x40))//无法接收底盘电机返回值 LED1
+		{
+			LED7_TOG();
+//			printf("Cannot receive vision return data\r\n");
+		}
+		else 
+			LED7_ON();	
 		
 		
 		osDelayUntil(&xLastWakeTime,OFFLINE_PERIOD);

@@ -1298,7 +1298,7 @@ I (..\Module\Module-application\encoder.h)(0x5FD514AF)
 I (..\Module\Module-communication\vision.h)(0x5FCF176C)
 I (..\Module\Module-communication\referee.h)(0x5FCF176C)
 I (..\Module\Module-moter_driver\motor_use_tim.h)(0x5FC6410D)
-I (..\Module\Module-application\offline_check.h)(0x5FD50BC0)
+I (..\Module\Module-application\offline_check.h)(0x5FDC0B1B)
 I (..\Module\Module-communication\remote_control.h)(0x5FCF176B)
 I (..\Module\Module-communication\pid_wireless_debug.h)(0x5FCF176C)
 I (..\Module\Module-application\pid.h)(0x5FCF7772)
@@ -1704,7 +1704,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5F79AE29)
 F (..\Module\Module-application\offline_check.c)(0x5FD50BC0)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ..\APP_Tasks -I ..\Boards_BSP -I ..\Module\Module-algorithm -I ..\Module\Module-application -I ..\Module\Module-communication -I ..\Module\Module-moter_driver -I ..\Drivers\CMSIS\DSP\Include-I.\RTE\_rm_frame-ID:\keil5\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\keil5\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o rm_frame\offline_check.o --omf_browse rm_frame\offline_check.crf --depend rm_frame\offline_check.d)
-I (..\Module\Module-application\offline_check.h)(0x5FD50BC0)
+I (..\Module\Module-application\offline_check.h)(0x5FDC0B1B)
 I (..\Boards_BSP\myinclude.h)(0x5FD7085F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5F79AE9D)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x5FD4EBC9)
@@ -1944,7 +1944,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5F79AE29)
 I (..\Module\Module-communication\remote_control.h)(0x5FCF176B)
-I (..\Module\Module-application\offline_check.h)(0x5FD50BC0)
+I (..\Module\Module-application\offline_check.h)(0x5FDC0B1B)
 F (..\Module\Module-moter_driver\motor_use_usart.c)(0x5FC6032F)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ..\APP_Tasks -I ..\Boards_BSP -I ..\Module\Module-algorithm -I ..\Module\Module-application -I ..\Module\Module-communication -I ..\Module\Module-moter_driver -I ..\Drivers\CMSIS\DSP\Include-I.\RTE\_rm_frame-ID:\keil5\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\keil5\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o rm_frame\motor_use_usart.o --omf_browse rm_frame\motor_use_usart.crf --depend rm_frame\motor_use_usart.d)
 I (..\Module\Module-moter_driver\motor_use_usart.h)(0x5FC602FF)
 I (..\Boards_BSP\myinclude.h)(0x5FD7085F)
@@ -2376,7 +2376,7 @@ I (..\Module\Module-algorithm\user_lib.h)(0x5FC23965)
 I (..\Module\Module-moter_driver\motor_use_tim.h)(0x5FC6410D)
 I (..\Module\Module-communication\remote_control.h)(0x5FCF176B)
 I (..\Module\Module-moter_driver\motor_use_can.h)(0x5FD7067B)
-I (..\Module\Module-application\offline_check.h)(0x5FD50BC0)
+I (..\Module\Module-application\offline_check.h)(0x5FDC0B1B)
 F (..\App_Tasks\vision_task.c)(0x5FD5104A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ..\APP_Tasks -I ..\Boards_BSP -I ..\Module\Module-algorithm -I ..\Module\Module-application -I ..\Module\Module-communication -I ..\Module\Module-moter_driver -I ..\Drivers\CMSIS\DSP\Include-I.\RTE\_rm_frame-ID:\keil5\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\keil5\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o rm_frame\vision_task.o --omf_browse rm_frame\vision_task.crf --depend rm_frame\vision_task.d)
 I (..\App_Tasks\vision_task.h)(0x5FCF0F84)
 I (..\Boards_BSP\myinclude.h)(0x5FD7085F)
@@ -2437,7 +2437,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5F79AE29)
-I (..\Module\Module-application\offline_check.h)(0x5FD50BC0)
+I (..\Module\Module-application\offline_check.h)(0x5FDC0B1B)
 F (..\App_Tasks\referee_task.c)(0x5FD5104A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ..\APP_Tasks -I ..\Boards_BSP -I ..\Module\Module-algorithm -I ..\Module\Module-application -I ..\Module\Module-communication -I ..\Module\Module-moter_driver -I ..\Drivers\CMSIS\DSP\Include-I.\RTE\_rm_frame-ID:\keil5\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\keil5\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o rm_frame\referee_task.o --omf_browse rm_frame\referee_task.crf --depend rm_frame\referee_task.d)
 I (..\App_Tasks\referee_task.h)(0x5FC87CCA)
 I (..\Boards_BSP\myinclude.h)(0x5FD7085F)
@@ -2498,8 +2498,8 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5F79AE29)
-I (..\Module\Module-application\offline_check.h)(0x5FD50BC0)
-F (..\App_Tasks\offline_check_task.c)(0x5FD7472D)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ..\APP_Tasks -I ..\Boards_BSP -I ..\Module\Module-algorithm -I ..\Module\Module-application -I ..\Module\Module-communication -I ..\Module\Module-moter_driver -I ..\Drivers\CMSIS\DSP\Include-I.\RTE\_rm_frame-ID:\keil5\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\keil5\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o rm_frame\offline_check_task.o --omf_browse rm_frame\offline_check_task.crf --depend rm_frame\offline_check_task.d)
+I (..\Module\Module-application\offline_check.h)(0x5FDC0B1B)
+F (..\App_Tasks\offline_check_task.c)(0x5FDC0B1B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ..\APP_Tasks -I ..\Boards_BSP -I ..\Module\Module-algorithm -I ..\Module\Module-application -I ..\Module\Module-communication -I ..\Module\Module-moter_driver -I ..\Drivers\CMSIS\DSP\Include-I.\RTE\_rm_frame-ID:\keil5\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\keil5\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o rm_frame\offline_check_task.o --omf_browse rm_frame\offline_check_task.crf --depend rm_frame\offline_check_task.d)
 I (..\App_Tasks\offline_check_task.h)(0x5FD02BEA)
 I (..\Boards_BSP\myinclude.h)(0x5FD7085F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5F79AE9D)
@@ -2559,7 +2559,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5F79AE29)
-I (..\Module\Module-application\offline_check.h)(0x5FD50BC0)
+I (..\Module\Module-application\offline_check.h)(0x5FDC0B1B)
 F (..\App_Tasks\gimbal_control_task.c)(0x5FD5104A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ..\APP_Tasks -I ..\Boards_BSP -I ..\Module\Module-algorithm -I ..\Module\Module-application -I ..\Module\Module-communication -I ..\Module\Module-moter_driver -I ..\Drivers\CMSIS\DSP\Include-I.\RTE\_rm_frame-ID:\keil5\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\keil5\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o rm_frame\gimbal_control_task.o --omf_browse rm_frame\gimbal_control_task.crf --depend rm_frame\gimbal_control_task.d)
 I (..\App_Tasks\gimbal_control_task.h)(0x5FC6EED6)
 I (..\Boards_BSP\myinclude.h)(0x5FD7085F)
@@ -2620,7 +2620,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5F79AE29)
-I (..\Module\Module-application\offline_check.h)(0x5FD50BC0)
+I (..\Module\Module-application\offline_check.h)(0x5FDC0B1B)
 F (..\App_Tasks\remote_control_task.c)(0x5FD51022)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ..\APP_Tasks -I ..\Boards_BSP -I ..\Module\Module-algorithm -I ..\Module\Module-application -I ..\Module\Module-communication -I ..\Module\Module-moter_driver -I ..\Drivers\CMSIS\DSP\Include-I.\RTE\_rm_frame-ID:\keil5\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\keil5\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o rm_frame\remote_control_task.o --omf_browse rm_frame\remote_control_task.crf --depend rm_frame\remote_control_task.d)
 I (..\App_Tasks\remote_control_task.h)(0x5FC31CE8)
 I (..\Boards_BSP\myinclude.h)(0x5FD7085F)
@@ -2681,7 +2681,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5F79AE29)
-I (..\Module\Module-application\offline_check.h)(0x5FD50BC0)
+I (..\Module\Module-application\offline_check.h)(0x5FDC0B1B)
 F (..\App_Tasks\chassis_control_task.c)(0x5FD7074A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ..\APP_Tasks -I ..\Boards_BSP -I ..\Module\Module-algorithm -I ..\Module\Module-application -I ..\Module\Module-communication -I ..\Module\Module-moter_driver -I ..\Drivers\CMSIS\DSP\Include-I.\RTE\_rm_frame-ID:\keil5\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\keil5\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING -D__FPU_PRESENT="1U" -D__FPU_USED="1U"-o rm_frame\chassis_control_task.o --omf_browse rm_frame\chassis_control_task.crf --depend rm_frame\chassis_control_task.d)
 I (..\App_Tasks\chassis_control_task.h)(0x5FC6EED6)
 I (..\Boards_BSP\myinclude.h)(0x5FD7085F)
@@ -2744,6 +2744,6 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5F79AE29)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5F79AE29)
 I (..\Module\Module-application\pid.h)(0x5FCF7772)
 I (..\Module\Module-application\encoder.h)(0x5FD514AF)
-I (..\Module\Module-application\offline_check.h)(0x5FD50BC0)
+I (..\Module\Module-application\offline_check.h)(0x5FDC0B1B)
 I (..\Module\Module-moter_driver\motor_use_can.h)(0x5FD7067B)
 F (..\README\资源分配表.txt)(0x5FD60373)()
