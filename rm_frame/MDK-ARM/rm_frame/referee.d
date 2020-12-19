@@ -61,3 +61,4 @@ rm_frame\referee.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 rm_frame\referee.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 rm_frame\referee.o: ..\Boards_BSP\bsp_usart.h
 rm_frame\referee.o: ..\Module\Module-algorithm\crc.h
+rm_frame\referee.o: ..\Module\Module-application\offline_check.h

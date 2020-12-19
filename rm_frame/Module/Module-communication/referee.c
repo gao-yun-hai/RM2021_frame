@@ -16,6 +16,7 @@
 #include "referee.h"
 #include "bsp_usart.h"
 #include "crc.h"
+#include "offline_check.h"
 /* 内部宏定义 ----------------------------------------------------------------*/
 #define RD_huart  huart6
 /* 内部自定义数据类型的变量 --------------------------------------------------*/
@@ -62,6 +63,8 @@ uint32_t Referee_UART_IRQHandler(void)
 			referee_rx_date_len = (REFEREE_RX_BUFFER_SIZE - RD_huart.hdmarx->Instance->NDTR);
 			//数据解码
 			SBUS_To_Referee(referee_rx_buf,&referee);
+			//断线检测刷新时间
+			Refresh_Device_OffLine_Time(Referee_TOE);		
 			//任务通知
 			vTaskNotifyGiveFromISR(RefereeDataTaskHandle,&pxHigherPriorityTaskWoken);
 			portYIELD_FROM_ISR(pxHigherPriorityTaskWoken);	

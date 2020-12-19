@@ -16,7 +16,7 @@
 /* 包含头文件 ----------------------------------------------------------------*/
 #include "remote_control.h"
 #include "bsp_usart.h"
-
+#include "offline_check.h"
 /* 内部宏定义 ----------------------------------------------------------------*/
 #define RC_huart  huart1
 #define RC_abs(value)    ((value)>=0 ? (value) : (-value))
@@ -69,6 +69,8 @@ uint32_t DR16_UART_IRQHandler(void)
 				SBUS_To_RC(sbus_rx_buf,&rc_ctrl);
 				//数据正确性判断
 				RC_Data_Error();
+				//断线检测刷新时间
+				Refresh_Device_OffLine_Time(RemoteControl_TOE);
 				//任务通知
 				vTaskNotifyGiveFromISR(RemoteDataTaskHandle,&pxHigherPriorityTaskWoken);
 				portYIELD_FROM_ISR(pxHigherPriorityTaskWoken);	

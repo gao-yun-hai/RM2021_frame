@@ -60,3 +60,4 @@ rm_frame\remote_control.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/qu
 rm_frame\remote_control.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 rm_frame\remote_control.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 rm_frame\remote_control.o: ..\Boards_BSP\bsp_usart.h
+rm_frame\remote_control.o: ..\Module\Module-application\offline_check.h

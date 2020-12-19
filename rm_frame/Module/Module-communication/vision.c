@@ -14,7 +14,7 @@
 /* 包含头文件 ----------------------------------------------------------------*/
 #include "vision.h"
 #include "bsp_usart.h"
-
+#include "offline_check.h"
 /* 内部宏定义 ----------------------------------------------------------------*/
 #define VD_huart  huart7
 /* 内部自定义数据类型的变量 --------------------------------------------------*/
@@ -62,6 +62,8 @@ uint32_t Vision_UART_IRQHandler(void)
 			vision_rx_date_len = (VISION_RX_BUFFER_SIZE - VD_huart.hdmarx->Instance->NDTR);
 			//数据解码
 			SBUS_To_Vision(vision_rx_buf,&minipc_rx);
+			//断线检测刷新时间
+			Refresh_Device_OffLine_Time(Vision_TOE);
 			//任务通知
 			vTaskNotifyGiveFromISR(VisionDataTaskHandle,&pxHigherPriorityTaskWoken);
 			portYIELD_FROM_ISR(pxHigherPriorityTaskWoken);	
