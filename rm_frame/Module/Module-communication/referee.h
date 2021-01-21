@@ -372,7 +372,7 @@ typedef  struct
 extern Referee_Struct  referee;
 /* 本模块向外部提供的接口函数原型声明 ---------------------------------------*/
 void RefereeDate_Receive_USART_Init(void);
-uint32_t Referee_UART_IRQHandler(void);
+void Referee_UART_IRQHandler(void);
 
 
 

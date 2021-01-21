@@ -122,10 +122,10 @@ void Refresh_Task_OffLine_Time(TaskX_DEF TaskX_TOE)
 */
 void Device_OffLine_Check(void)
 {
-	uint8_t num=0;//临时变量累加用
-	float time=Get_System_Timer();//当前系统时间
+	uint8_t num = 0;//临时变量累加用
+	float time = Get_System_Timer();//当前系统时间
 
-	for(num=0; num<DeviceTotal_TOE; num++)
+	for(num = 0; num < DeviceTotal_TOE; num++)
 	{
 		if(time-g_Time_Device_OffLine[num] > OFFLINE_TIME)
 		{
@@ -146,10 +146,10 @@ void Device_OffLine_Check(void)
 */
 void Task_OffLine_Check(void)
 {
-	short num=0;//临时变量累加用
-	float time=Get_System_Timer();//当前系统时间
+	short num = 0;//临时变量累加用
+	float time = Get_System_Timer();//当前系统时间
 
-	for(num=0;num<TaskTotal_TOE;num++)
+	for(num = 0;num < TaskTotal_TOE;num++)
 	{
 		if(time-g_Time_Task_OffLine[num] > OFFLINE_TIME)
 		{

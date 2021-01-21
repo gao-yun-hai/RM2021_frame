@@ -336,9 +336,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_HAL_DRIVER,STM32F427xx,USE_HAL_DRIVER,STM32F427xx,ARM_MATH_CM4,__CC_ARM,ARM_MATH_MATRIX_CHECK,ARM_MATH_ROUNDING,__FPU_PRESENT=1U,__FPU_USED=1U</Define>
+              <Define>USE_HAL_DRIVER,STM32F427xx,ARM_MATH_CM4,__CC_ARM,ARM_MATH_MATRIX_CHECK,ARM_MATH_ROUNDING,__FPU_PRESENT=1U,__FPU_USED=1U</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;..\APP_Tasks;..\Boards_BSP;..\Module\Module-algorithm;..\Module\Module-application;..\Module\Module-communication;..\Module\Module-moter_driver;..\Drivers\CMSIS\DSP\Include</IncludePath>
+              <IncludePath>../Core/Inc; ../Drivers/STM32F4xx_HAL_Driver/Inc; ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy; ../Drivers/CMSIS/Device/ST/STM32F4xx/Include; ../Drivers/CMSIS/Include; ../Middlewares/Third_Party/FreeRTOS/Source/include; ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS; ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F; ..\APP_Tasks; ..\Boards_BSP; ..\Module\Module-Algorithm; ..\Module\Module-Application; ..\Module\Module-Communication; ..\Module\Module-Moter_Driver; ..\Drivers\CMSIS\DSP\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -408,11 +408,6 @@
               <FilePath>../Core/Src/can.c</FilePath>
             </File>
             <File>
-              <FileName>usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Core/Src/usart.c</FilePath>
-            </File>
-            <File>
               <FileName>dma.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/dma.c</FilePath>
@@ -431,6 +426,11 @@
               <FileName>tim.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/usart.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_it.c</FileName>
@@ -635,13 +635,8 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Module/algorithm</GroupName>
+          <GroupName>Module/Algorithm</GroupName>
           <Files>
-            <File>
-              <FileName>crc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Module\Module-algorithm\crc.c</FilePath>
-            </File>
             <File>
               <FileName>user_lib.c</FileName>
               <FileType>1</FileType>
@@ -655,8 +650,13 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Module/application</GroupName>
+          <GroupName>Module/Application</GroupName>
           <Files>
+            <File>
+              <FileName>crc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Module\Module-application\crc.c</FilePath>
+            </File>
             <File>
               <FileName>pid.c</FileName>
               <FileType>1</FileType>
@@ -682,10 +682,15 @@
               <FileType>1</FileType>
               <FilePath>..\Module\Module-application\mecaum_calc.c</FilePath>
             </File>
+            <File>
+              <FileName>power_restriction.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Module\Module-Application\power_restriction.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>Module/moter_driver</GroupName>
+          <GroupName>Module/Moter_Driver</GroupName>
           <Files>
             <File>
               <FileName>motor_use_tim.c</FileName>
@@ -705,7 +710,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Module/communication</GroupName>
+          <GroupName>Module/Communication</GroupName>
           <Files>
             <File>
               <FileName>vision.c</FileName>

@@ -4,16 +4,17 @@
 #include "myinclude.h"
 
 /* 本模块向外部提供的宏定义 -------------------------------------------------*/
-#define NUM_OF_MOTOR      4//电机的数量
+
 
 /* 本模块向外部提供的结构体/枚举定义 ----------------------------------------*/
 typedef enum
 {
-	CHASSIS_3508MOTOR = 0,
-	TRIGGER_2006MOTOR = 1,
-	YAW_3508MOTOR = 2,
-	PITCH_6020MOTOR = 3,
+	CHASSIS_3508MOTOR,
+	TRIGGER_2006MOTOR,
+	YAW_3508MOTOR,
+	PITCH_6020MOTOR,
 	
+	NUM_OF_MOTOR      //电机的数量
 }motor_ID;//电机数据接收结构体对应存储的数组编号
 
 typedef enum

@@ -3,16 +3,6 @@
 
 #include "myinclude.h"
 
-typedef signed char int8_t;
-typedef signed short int int16_t;
-typedef signed int int32_t;
-typedef signed long long int64_t;
-
-/* exact-width unsigned integer types */
-typedef unsigned char uint8_t;
-typedef unsigned short int uint16_t;
-typedef unsigned int uint32_t;
-typedef unsigned long long uint64_t;
 typedef unsigned char bool_t;
 typedef float fp32;
 typedef double fp64;
@@ -65,6 +55,11 @@ extern int16_t int16_constrain(int16_t Value, int16_t minValue, int16_t maxValue
 extern fp32 loop_fp32_constrain(fp32 Input, fp32 minValue, fp32 maxValue);
 //½Ç¶È ¡ãÏÞ·ù 180 ~ -180
 extern fp32 theta_format(fp32 Ang);
+
+
+float Window_sliding_filter(float *buff);
+float LPF_1st(float oldData, float newData, float lpf_factor);
+
 
 extern ramp_function_source_t shoot;
 

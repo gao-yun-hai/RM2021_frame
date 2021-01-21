@@ -17,7 +17,7 @@
 #include "usart_printf.h"
 
 /* 内部宏定义 ----------------------------------------------------------------*/
-#define US_huart  huart2           //printf与虚拟示波器使用串口
+#define US_huart  huart2   //printf与虚拟示波器使用串口
 
 /* 内部自定义数据类型的变量 --------------------------------------------------*/
 
@@ -34,8 +34,8 @@ void Vcan_Sendware(uint8_t *wareaddr, uint32_t waresize);
 //===================================================================================================================//
 /**
   * @brief				重定向c库的printf函数到串口2的发送函数
-  * @param[out]		
   * @param[in]		
+	* @param[out]		
   * @retval				
 */
 int fputc(int ch, FILE* f)
@@ -47,11 +47,12 @@ int fputc(int ch, FILE* f)
 //===================================================================================================================//
 /********************************************** 虚拟示波器（USART2） *************************************************/
 //===================================================================================================================//
+
 /**
   * @brief				虚拟示波器传参函数
-  * @param[out]		
-  * @param[in]		
-  * @retval				
+  * @param[in]		date1-date8：所需打印的数据
+	* @param[out]		
+  * @retval				none
 */
 void Virtual_Oscilloscope(float data1,float data2,float data3,float data4,float data5,float data6,float data7,float data8)
 {
@@ -67,11 +68,12 @@ void Virtual_Oscilloscope(float data1,float data2,float data3,float data4,float 
 	angle[7] = data8;
 	Vcan_Sendware((uint8_t *)angle,sizeof(angle));
 }
+
 /**
   * @brief				虚拟示波器发送函数
-  * @param[out]		
-  * @param[in]		
-  * @retval				
+	* @param[in]		wareaddr：指向发送数组的指针
+	* @param[out]		waresize：发送数据长度
+  * @retval				none
 */
 void Vcan_Sendware(uint8_t *wareaddr, uint32_t waresize)
 {

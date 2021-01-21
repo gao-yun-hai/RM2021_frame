@@ -47,7 +47,12 @@ void PID_Param_Init(pid_t *pid, uint8_t mode, float max_out, float max_iout, flo
     
     pid->Kp = Kp;
     pid->Ki = Ki;
-    pid->Kd = Kd;    
+    pid->Kd = Kd;
+		
+		pid->err[LLAST] = pid->err[LAST] = pid->err[NOW] = 0.0f;
+    pid->pout = pid->iout = pid->dout = pid->last_dout = 0.0f;
+		pid->pos_out = pid->delta_out = 0.0f;
+
 }
 
 /**
@@ -63,47 +68,43 @@ float PID_Calc(pid_t* pid, float get, float set)
         return 0.0f;
     }
 	
-    pid->get[NOW] = get;
-    pid->set[NOW] = set;
-    pid->err[NOW] = set - get;	//set - measure
+    pid->get = get;
+    pid->set = set;
+    pid->err[NOW] = set - get;
 		
     if (pid->max_err != 0 && fabs(pid->err[NOW]) > pid->max_err)
 		return 0;
 		if (pid->deadband != 0 && fabs(pid->err[NOW]) < pid->deadband)
 		return 0;
     
-    if(pid->pid_mode == POSITION_PID) //位置式p
+    if(pid->pid_mode == POSITION_PID) //位置式
     {
         pid->pout = pid->Kp * pid->err[NOW];
         pid->iout += pid->Ki * pid->err[NOW];
         pid->dout = pid->Kd * (pid->err[NOW] - pid->err[LAST] );			  
-//		    pid->dout = LPF_1st(pid->dout_last,pid->dout,0.6);
+		    pid->dout = LPF_1st(pid->last_dout,pid->dout,0.6);
 				pid->last_dout = pid->dout;
 			
         abs_limit(&(pid->iout), pid->max_iout);
         pid->pos_out = pid->pout + pid->iout + pid->dout;
         abs_limit(&(pid->pos_out), pid->max_out);
-        pid->last_pos_out = pid->pos_out;	//update last time 
 
     }
-    else if(pid->pid_mode == DELTA_PID)//增量式P
+    else if(pid->pid_mode == DELTA_PID)//增量式
     {
         pid->pout = pid->Kp * (pid->err[NOW] - pid->err[LAST]);
         pid->iout = pid->Ki * pid->err[NOW];
         pid->dout = pid->Kd * (pid->err[NOW] - 2*pid->err[LAST] + pid->err[LLAST]);
+				pid->dout = LPF_1st(pid->last_dout,pid->dout,0.6);
+				pid->last_dout = pid->dout;
         
         abs_limit(&(pid->iout), pid->max_iout);
-        pid->delta_out = pid->last_delta_out + (pid->pout + pid->iout + pid->dout);
+        pid->delta_out += pid->pout + pid->iout + pid->dout;
         abs_limit(&(pid->delta_out), pid->max_out);
-        pid->last_delta_out = pid->delta_out;	//update last time
     }
-    
-    pid->err[LLAST] = pid->err[LAST];
+		
     pid->err[LAST] = pid->err[NOW];
-    pid->get[LLAST] = pid->get[LAST];
-    pid->get[LAST] = pid->get[NOW];
-    pid->set[LLAST] = pid->set[LAST];
-    pid->set[LAST] = pid->set[NOW];
+    pid->err[LLAST] = pid->err[LAST];   
 		
     return pid->pid_mode==POSITION_PID ? pid->pos_out : pid->delta_out;
 	
@@ -123,17 +124,15 @@ void PID_Clear(pid_t *pid)
     }
 
     pid->err[LLAST] = pid->err[LAST] = pid->err[NOW] = 0.0f;
-		pid->get[LLAST] = pid->get[LAST] = pid->get[NOW] = 0.0f;
-		pid->set[LLAST] = pid->set[LAST] = pid->set[NOW] = 0.0f;
 		
 		if(pid->pid_mode == POSITION_PID)
 		{
 			pid->pout = pid->iout = pid->dout = pid->last_dout = 0.0f;
-			pid->pos_out = pid->last_pos_out = 0.0f;
+			pid->pos_out  = 0.0f;
 		}
 		else
 		{
 			pid->pout = pid->iout = pid->dout = 0.0f;
-			pid->delta_out = pid->last_delta_out = 0.0f;		
+			pid->delta_out = 0.0f;		
 		}		
 }

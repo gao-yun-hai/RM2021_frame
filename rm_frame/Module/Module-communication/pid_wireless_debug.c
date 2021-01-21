@@ -6,7 +6,7 @@
   作    者   : 高云海
   生成日期   : 2020.11.27
   最近修改   :
-  功能描述   : PID无线调参【USART初始化、数据发送、数据接收、USART中断处理】
+  功能描述   : PID无线调参【USART初始化、数据发送、数据解码、USART中断处理】
   函数列表   : 1) Wireless_Debug_Init() 	【外部调用：bsp.c】
 							 2) PID_Params_Set()				【内部调用：PID_Regulator_Decode()】
 							 3) PID_Regulator_Decode()  【内部调用：PW_IRQHandler()】
@@ -41,11 +41,12 @@ void PID_Params_Upload(char motor_ID);
 void PID_Regulator_Decode(void);
 
 /* 函数主体部分 --------------------------------------------------------------*/
+
 /**
-  * @brief				PID无线调参开启串口数据接收中断
-  * @param[out]		
+  * @brief				PID无线调参USART初始化函数（开启USART接收中断）
   * @param[in]		
-  * @retval				
+	* @param[out]		
+  * @retval				none
 */
 void Wireless_Debug_USART_Init(void)
 {
@@ -54,9 +55,9 @@ void Wireless_Debug_USART_Init(void)
 
 /**
   * @brief				将上位机接收到的数据设置进PID结构体中及PID参数设置
-  * @param[out]		
   * @param[in]		
-  * @retval				
+	* @param[out]		
+  * @retval				none
 */
 void PID_Params_Set(MsgsFrame_struct *pidSet)
 {
@@ -76,9 +77,9 @@ void PID_Params_Set(MsgsFrame_struct *pidSet)
 
 /**
   * @brief				将从上位机接收到的数据进行解码
-  * @param[out]		
   * @param[in]		
-  * @retval				
+	* @param[out]		
+  * @retval				none
 */
 void PID_Regulator_Decode(void)
 {
@@ -115,9 +116,9 @@ void PID_Regulator_Decode(void)
 
 /**
   * @brief				将PID参数回传给上位机即参数上传
-  * @param[out]		
   * @param[in]		
-  * @retval				
+	* @param[out]		
+  * @retval				none
 */
 void PID_Params_Upload(char motor_ID)
 {
@@ -175,17 +176,17 @@ void PID_Params_Upload(char motor_ID)
 
 /**
   * @brief				串口中断接收上位机信息
-  * @param[out]		
   * @param[in]		
-  * @retval				
+	* @param[out]		
+  * @retval				none
 */
 void PW_IRQHandler(void)    
 {
 		static uint8_t upload_flag=0;
 		uint8_t Res = 0;
     if(PW_huart.Instance->SR & UART_FLAG_RXNE || PW_huart.Instance->SR &UART_FLAG_ORE)
-	{
-		Res =(uint8_t)(PW_huart.Instance->DR & (uint8_t)0x00FF);
+	  {
+			Res =(uint8_t)(PW_huart.Instance->DR & (uint8_t)0x00FF);
 
       if( (usart_state == USART_Waiting)&&(Res == 0xA5) ) 
       {

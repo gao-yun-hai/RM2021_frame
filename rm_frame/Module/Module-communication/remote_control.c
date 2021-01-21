@@ -33,10 +33,10 @@ uint8_t RC_Data_Error(void);//接收数据错误判断函数
 
 /* 函数主体部分 --------------------------------------------------------------*/
 /**
-  * @brief				遥控器数据接收USART空闲中断初始化函数
-  * @param[out]		
+  * @brief				遥控器数据接收USART初始化函数（开启DMA+开启USART空闲中断）
   * @param[in]		
-  * @retval				
+	* @param[out]		
+  * @retval				none
 */
 void Remote_Control_USART_Init(void)
 {
@@ -45,50 +45,51 @@ void Remote_Control_USART_Init(void)
 
 
 /**
-  * @brief				遥控器数据接收的触发的空闲中断后中断处理函数
-  * @param[out]		
+  * @brief				遥控器USART中断处理函数（重新设置DMA参数+数据解码+发送任务通知）
   * @param[in]		
-  * @retval				
+	* @param[out]		
+  * @retval				none
 */
-uint32_t DR16_UART_IRQHandler(void)
+void DR16_UART_IRQHandler(void)
 {
 	static  BaseType_t  pxHigherPriorityTaskWoken;
-
- if (__HAL_UART_GET_FLAG(&RC_huart, UART_FLAG_IDLE))
+ /* 判断是否为空闲中断 */
+  if (__HAL_UART_GET_FLAG(&RC_huart, UART_FLAG_IDLE))
 	{
-			/* clear idle it flag avoid idle interrupt all the time */
+			/* 清除空闲标志，避免一直处于空闲状态的中断 */
 			__HAL_UART_CLEAR_IDLEFLAG(&RC_huart);
 
-			/* clear DMA transfer complete flag */
+			/* 关闭DMA传输 */
 			__HAL_DMA_DISABLE(RC_huart.hdmarx);
 
-			/* handle dbus data dbus_buf from DMA */
+			/* 计算接收到的遥控器数据长度与发送的是否一致 */
 			if ((DR16_RX_BUFFER_SIZE - RC_huart.hdmarx->Instance->NDTR) == DR16_DATA_LEN)
 			{
-				//数据解码
+				/* 数据解码 */
 				SBUS_To_RC(sbus_rx_buf,&rc_ctrl);
-				//数据正确性判断
+				/* 数据正确性判断 */
 				RC_Data_Error();
-				//断线检测刷新时间
+				/* 断线检测刷新时间 */
 				Refresh_Device_OffLine_Time(RemoteControl_TOE);
-				//任务通知
+				/* 任务通知 */
 				vTaskNotifyGiveFromISR(RemoteDataTaskHandle,&pxHigherPriorityTaskWoken);
 				portYIELD_FROM_ISR(pxHigherPriorityTaskWoken);	
 			}
 			else RC_Restart(DR16_RX_BUFFER_SIZE);
-			/* restart dma transmission */
+			/* 重新启动DMA传输 */
+			/* 设置DMA可传输最大数据长度 */
 			__HAL_DMA_SET_COUNTER(RC_huart.hdmarx, DR16_RX_BUFFER_SIZE);
+			/* 开启DMA传输 */
 			__HAL_DMA_ENABLE(RC_huart.hdmarx);				
 			
 	}
-	return 0;
 }
 
 /**
   * @brief				遥控器数据解码函数
-  * @param[out]		
-  * @param[in]		
-  * @retval				
+  * @param[in]		sbus_buf：指向数据接收数组的指针
+	* @param[out]		rc_ctrl：	指向存储遥控器数据结构体的指针
+  * @retval				none
 */
 static void SBUS_To_RC(volatile const uint8_t *sbus_buf, RC_ctrl_t *rc_ctrl)
 {
@@ -120,12 +121,11 @@ static void SBUS_To_RC(volatile const uint8_t *sbus_buf, RC_ctrl_t *rc_ctrl)
 	rc_ctrl->rc.ch3 -= 1024;
 }
 
-/*----------------------------以下代码暂未使用，待后续开发（参考19年官方代码，断线检测使用）------------------------------*/
 /**
   * @brief				判断遥控器数据是否出错
-  * @param[out]		
   * @param[in]		
-  * @retval				
+	* @param[out]		
+  * @retval				0：数据错误；1：数据正常
 */
 uint8_t RC_Data_Error(void)
 {
@@ -174,10 +174,10 @@ error:
 
 
 /**
-  * @brief				若接收数据出错，则使用该函数进行复位
-  * @param[out]		
-  * @param[in]		
-  * @retval				
+  * @brief				串口重新开启
+  * @param[in]		dma_buf_num：DMA可接收数据的最大长度
+	* @param[out]		
+  * @retval				none
 */
 static void RC_Restart(uint16_t dma_buf_num)
 {
@@ -195,6 +195,3 @@ static void RC_Restart(uint16_t dma_buf_num)
 	__HAL_DMA_ENABLE(RC_huart.hdmarx);
 
 }
-
-
-/*----------------------------以上代码暂未使用，待后续开发（参考19年官方代码，断线检测使用）------------------------------*/

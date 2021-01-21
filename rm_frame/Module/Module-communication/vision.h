@@ -5,6 +5,7 @@
 #include "myinclude.h"
 /* 本模块向外部提供的宏定义 -------------------------------------------------*/
 #define VISION_RX_BUFFER_SIZE  18 //接收视觉数据时提供的数组大小
+#define VISION_DATA_LEN 9					//视觉传输数据的实际长度
 /* 本模块向外部提供的结构体/枚举定义 ----------------------------------------*/
 typedef struct
 {
@@ -22,7 +23,7 @@ typedef struct
 
 /* 本模块向外部提供的接口函数原型声明 ---------------------------------------*/
 void VisionDate_Receive_USART_Init(void);
-uint32_t Vision_UART_IRQHandler(void);
+void Vision_UART_IRQHandler(void);
 
 
 

@@ -80,7 +80,8 @@ void first_order_filter_cali(first_order_filter_type_t *first_order_filter_type,
 {
     first_order_filter_type->input = input;
     first_order_filter_type->out =
-        first_order_filter_type->num[0] / (first_order_filter_type->num[0] + first_order_filter_type->frame_period) * first_order_filter_type->out + first_order_filter_type->frame_period / (first_order_filter_type->num[0] + first_order_filter_type->frame_period) * first_order_filter_type->input;
+			first_order_filter_type->num[0] / (first_order_filter_type->num[0] + first_order_filter_type->frame_period) * first_order_filter_type->out + 
+			first_order_filter_type->frame_period / (first_order_filter_type->num[0] + first_order_filter_type->frame_period) * first_order_filter_type->input;
 }
 
 //绝对限制
@@ -272,3 +273,141 @@ float Getnum(unsigned char *s)
 	}
 	return str2f(sNum);
 }
+
+
+/*
+** Descriptions: 交换两变量值
+** Input: 需要交换的两个变量float型
+** Output: NULL
+*/
+void swap(float *a,float *b)
+{
+ float c;
+ c=*a;*a=*b;*b=c;
+}
+/*
+** Descriptions: 将数组分成两部分，前一部分的值均比后一部分值小
+** Input: 要求的数据的开头和末尾
+** Output: 返回分界点
+*/
+int Partition(float data[],int low,int high)
+{
+ float pivokey;
+ pivokey=data[low];
+ while(low<high)
+ {
+  while(low<high&&data[high]>=pivokey)
+   high--;
+  swap(&data[low],&data[high]);
+
+  while(low<high&&data[low]<=pivokey)
+   low++;
+  swap(&data[low],&data[high]);
+ }
+ return low;
+}
+/*
+** Descriptions: 进行的递归的调用，达到排序的目的
+** Input: 需要进行排序的数组指针，以及对应的范围
+** Output: NULL
+*/
+void QSort(float data[],int low,int high)
+{
+ if(low<high)
+ {
+  int pivokey=Partition(data,low,high);
+  QSort(data,low,pivokey-1);
+  QSort(data,pivokey+1,high);
+ }
+}
+/*
+** Descriptions: 求得缓存的中值
+** Input:对应的缓存指针，缓存的数组长度需要为10
+** Output:中值
+*/
+float Median_value_fliter(uint32_t *buff,int length)
+{	
+	uint32_t mybuff[length];
+	memcpy(mybuff,buff,length);
+	QSort((float*)mybuff, 0, length-1);
+	return buff[(int)((length-1)/2)];
+}
+/*
+** Descriptions: 中值平均滤波
+** Input:对应的缓存指针，缓存的数组长度需要为10
+** Output:滤去最大最小值的平均值
+*/
+float Median_average_fliter(uint32_t *buff,int length)
+{
+	int16_t sum = 0;
+	uint32_t mybuff[length];
+	memcpy(mybuff,buff,length);
+	QSort((float*)mybuff, 0, length-1);
+	for(uint8_t i = 1;i < length-1;i++)
+	{
+		sum += mybuff[i];
+	}
+	sum = sum/(length-2);
+	return sum;
+}
+/*
+** Descriptions: 均值滤波
+** Input: 需要滤波的缓存的指针
+** Output: 滤波结果
+*/
+float Average_value_fliter(uint32_t *buff)
+{
+	float sum = 0;
+	uint32_t mybuff[10];
+	memcpy(mybuff,buff,10);
+	for(uint8_t i = 0;i < 10;i++ )
+	{
+		sum += mybuff[i];
+	}
+	sum *= 0.1f;
+	return sum;
+}
+/*
+** Descriptions: 窗口滑动滤波
+** Input: 需要滤波的缓存的指针
+** Output: 滤波结果
+*/
+float Window_sliding_filter(float *buff)
+{
+	float sum = 0;
+	for(uint8_t i = 0; i < 10; i++) {
+	buff[i] = buff[i+1]; // 所有数据左移，低位仍掉
+	sum += buff[i];
+  }
+	
+	return sum;
+}
+
+/*
+** Descriptions: 一阶低通滤波
+** Input: 
+** Output: 滤波结果
+*/
+float LPF_1st(float oldData, float newData, float lpf_factor)
+{
+	return oldData * (1 - lpf_factor) + newData * lpf_factor;
+}
+
+/*
+** Descriptions: 限幅滤波
+** Input:   相邻的两次数据
+** Output: 滤波结果
+*/
+float Limit_filter(float oldData,float newData,float val)
+{
+	if(fabs(newData-oldData)>val)
+		{
+			return oldData;
+		}
+	else
+		{
+			return newData;
+		}
+}
+
+

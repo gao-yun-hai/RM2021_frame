@@ -119,38 +119,38 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
+  osThreadDef(defaultTask, StartDefaultTask, osPriorityBelowNormal, 0, 128);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
 	/*********数据接收与处理*********/
-	osThreadDef(RemoteDataTask, Remote_Data_Task, osPriorityHigh, 0, 256);          		 //遥控器任务
+	osThreadDef(RemoteDataTask, Remote_Data_Task, osPriorityHigh, 0, 256);          					 //遥控器任务
 	RemoteDataTaskHandle = osThreadCreate(osThread(RemoteDataTask), NULL);
 	
-	osThreadDef(RefereeDataTask, Referee_Data_Task, osPriorityAboveNormal, 0, 128);			 //裁判系统任务
+	osThreadDef(RefereeDataTask, Referee_Data_Task, osPriorityHigh, 0, 128);									 //裁判系统任务
 	RefereeDataTaskHandle = osThreadCreate(osThread(RefereeDataTask), NULL);
 	
-	osThreadDef(VisionDataTask, Vision_Data_Task, osPriorityAboveNormal, 0, 128);			 	 //视觉任务
+	osThreadDef(VisionDataTask, Vision_Data_Task, osPriorityHigh, 0, 128);			 							 //视觉任务
 	VisionDataTaskHandle = osThreadCreate(osThread(VisionDataTask), NULL);
 	
 	/**********发射控制**************/
-		osThreadDef(FrictionDriveTask, Friction_Drive_Task, osPriorityNormal, 0, 128);  	 //摩擦轮任务
+		osThreadDef(FrictionDriveTask, Friction_Drive_Task, osPriorityAboveNormal, 0, 128);  	 	 //摩擦轮任务
 	FrictionDriveTaskHandle = osThreadCreate(osThread(FrictionDriveTask),  NULL);
 	
-	osThreadDef(TriggerDriveTask, Trigger_Drive_Task, osPriorityNormal, 0, 256);   		 	 //拨盘控制任务
+	osThreadDef(TriggerDriveTask, Trigger_Drive_Task, osPriorityAboveNormal, 0, 256);   		 	 //拨盘控制任务
 	TriggerDriveTaskHandle = osThreadCreate(osThread(TriggerDriveTask),  NULL);
 	
 	/**********底盘控制**************/
-	osThreadDef(ChassisContrlTask, Chassis_Control_Task, osPriorityNormal, 0, 256);			 //底盘控制任务
+	osThreadDef(ChassisContrlTask, Chassis_Control_Task, osPriorityAboveNormal, 0, 256); 			 //底盘控制任务
 	ChassisControlTaskHandle = osThreadCreate(osThread(ChassisContrlTask), NULL); 
 	
 	/**********云台控制**************/
-	osThreadDef(GimbalControlTask, Gimbal_Control_Task, osPriorityNormal, 0, 256);  	   //云台控制任务
+	osThreadDef(GimbalControlTask, Gimbal_Control_Task, osPriorityAboveNormal, 0, 256);  	     //云台控制任务
 	GimbalControlTaskHandle = osThreadCreate(osThread(GimbalControlTask), NULL);
 	
 	/**********断线检测**************/
-	osThreadDef(OffLineCheckTask, OffLine_Check_Task, osPriorityNormal, 0, 128);				 //断线检测任务
+	osThreadDef(OffLineCheckTask, OffLine_Check_Task, osPriorityNormal, 0, 128);							 //断线检测任务
 	OffLineCheckTaskHandle = osThreadCreate(osThread(OffLineCheckTask), NULL);
 	
   /* USER CODE END RTOS_THREADS */

@@ -29,9 +29,9 @@ void Motor3508_PID_Init(void);
 /* 函数主体部分 --------------------------------------------------------------*/
 /**
   * @brief				底盘任务
-  * @param[out]		
   * @param[in]		
-  * @retval				
+	* @param[out]		
+  * @retval				none
 */
 void Chassis_Control_Task(void const * argument)
 {
@@ -50,10 +50,9 @@ void Chassis_Control_Task(void const * argument)
 		mini512_cnt = Get_TIM_COUNTER();
 		set_speed_z = 500;
 		get_speed_z = motor_get[CHASSIS_3508MOTOR].speed_rpm;//正面看逆时针为正
-		PID_Calc(&motor_pid[PID_CHASSIS_3508MOTOR_SPEED], get_speed_z, set_speed_z);
-		Current_Value = (motor_pid[PID_CHASSIS_3508MOTOR_SPEED].pos_out);
+		Current_Value = PID_Calc(&motor_pid[PID_CHASSIS_3508MOTOR_SPEED], get_speed_z, set_speed_z);
 	
-		Chassis_Motor3508(&hcan1,Current_Value,0,0,0);
+//		Chassis_Motor3508(&hcan1,Current_Value,0,0,0);
 		
 		
 		osDelayUntil(&xLastWakeTime,CHASSIS_PERIOD);		
@@ -62,11 +61,12 @@ void Chassis_Control_Task(void const * argument)
 
 }
 
+
 /**
   * @brief				PID初始化函数（3508）
-  * @param[out]		
   * @param[in]		
-  * @retval				
+	* @param[out]		
+  * @retval				none
 */
 void Motor3508_PID_Init(void)   
 {

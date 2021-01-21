@@ -28,13 +28,12 @@ void TIM_Compare_Value_Set(uint32_t value1,uint32_t value2);
 /*
 TIM4：通道1-通道4对应 -> PD12/PD13/PD14/PD15
 TIM5：通道1-通道4对应 -> PH10/PH11/PH12/PI0
+目前只使用TIM5通道1与通道2，其余均完成测试但未使用到。
 */
 /**
   * @brief				TIM捕获/比较寄存器的预装载值设定
-									因只需要两个通道故仅使用通道1与通道2；通道3与通道4暂未使用但已完成初始化。
   * @param[out]		
-  * @param[in]		value1：通道CC1的值
-									value2：通道CC2的值
+  * @param[in]		value1：通道CC1的值。value2：通道CC2的值									
   * @retval				
 */
 void TIM_Compare_Value_Set(uint32_t value1,uint32_t value2)
@@ -44,7 +43,7 @@ void TIM_Compare_Value_Set(uint32_t value1,uint32_t value2)
 }
 
 /**
-  * @brief				摩擦轮电机驱动函数
+  * @brief				摩擦轮电机驱动函数（通过设定比较值进而进行设定转速）
   * @param[out]		
   * @param[in]		两轮转速:wheel1；wheel2
   * @retval				
@@ -55,9 +54,9 @@ void Shoot_Firction_Motor(uint32_t wheel1,uint32_t wheel2)
 }
 
 /**
-  * @brief				摩擦轮电机停止函数（待改进，可以通过不关闭定时器的方式停止摩擦轮）
-  * @param[out]		none
-  * @param[in]		none
+  * @brief				摩擦轮电机停止函数（不常用，一般通过将比较值设定为最低电机即可停转）
+  * @param[out]		
+  * @param[in]		
   * @retval				none
 */
 void Shoot_Firction_Motor_Stop(void)
@@ -69,8 +68,8 @@ void Shoot_Firction_Motor_Stop(void)
 
 /**
   * @brief				摩擦轮电机初始化函数
-  * @param[out]		none
-  * @param[in]		none
+  * @param[out]		
+  * @param[in]		
   * @retval				none
 */
 void Shoot_Firction_Motor_PWM_Init(void)
@@ -81,5 +80,5 @@ void Shoot_Firction_Motor_PWM_Init(void)
 	Shoot_Firction_Motor (HIGH_SPEED,HIGH_SPEED);
 	HAL_Delay(2000);
 	Shoot_Firction_Motor (LOW_SPEED,LOW_SPEED);
-	HAL_Delay(2000);   
+	HAL_Delay(1000);   
 }

@@ -21,6 +21,12 @@
 /* 内部函数原型声明 ----------------------------------------------------------*/
 
 /* 函数主体部分 --------------------------------------------------------------*/
+/**
+  * @brief				裁判系统任务
+  * @param[in]		
+	* @param[out]		
+  * @retval				none
+*/
 void Referee_Data_Task(void const * argument)
 {
 	  uint32_t NotifyValue;
@@ -35,7 +41,6 @@ void Referee_Data_Task(void const * argument)
     if(NotifyValue == 1)
 		{
 			Refresh_Task_OffLine_Time(RefereeDataTask_TOE);
-			
 		}
 		
 		osDelayUntil(&xLastWakeTime, REFEREE_PERIOD);

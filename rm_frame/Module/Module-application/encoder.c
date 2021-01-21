@@ -6,10 +6,11 @@
   作    者   : 高云海
   生成日期   : 2020.12.8
   最近修改   : 
-  功能描述   : 外置编码器TIM初始化、TIM计数及编码器检测方向所用IO口外部中断回调函数
+			 								
+	功能描述   : 外置编码器TIM初始化、TIM计数及编码器检测方向所用IO口外部中断回调函数
   函数列表   : 1) Encoder_Mini512_TIM_Init()			【外部调用：bsp.c】
 							 2) Get_TIM_COUNTER()								【外部调用：chassis_control_task.c】
-							 3) HAL_GPIO_EXTI_Callback()				【HAL库函数，外部中断回调函数】							 								
+							 3) HAL_GPIO_EXTI_Callback()				【HAL库函数，外部中断回调函数】				
 *******************************************************************************/
 /* 包含头文件 ----------------------------------------------------------------*/
 #include "encoder.h"
@@ -56,10 +57,10 @@ void	HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	if(GPIO_Pin == Encoder_Direction_Pin)
 	{
 		if(HAL_GPIO_ReadPin(Encoder_Direction_GPIO_Port,Encoder_Direction_Pin)==1)
-			EM_htim.Instance->CR1 &=~(1<<4);//对CR1寄存器的DIR位置0，即向下计数。
+			EM_htim.Instance->CR1 &=~(1<<4);//对CR1寄存器的DIR位置0，即计数器递增计数。
 			
 		else if(HAL_GPIO_ReadPin(Encoder_Direction_GPIO_Port,Encoder_Direction_Pin)==0)
-			EM_htim.Instance->CR1 |=(1<<4);//对CR1寄存器的DIR位置1，即向上计数。
+			EM_htim.Instance->CR1 |=(1<<4); //对CR1寄存器的DIR位置1，即计数器递减计数。
 	}
 }
 

@@ -90,7 +90,8 @@ int main(void)
 
   /* USER CODE BEGIN SysInit */
 	taskENTER_CRITICAL();  //进入临界段
-	//由于退出临界段代码无法写在指定位置，故当使用CubeMX重新生成工程时，需要将taskEXIT_CRITICAL()退出临界段重新写入
+	//由于退出临界段代码无法写在指定位置，故当使用CubeMX重新生成工程时，
+	//需要将taskEXIT_CRITICAL()退出临界段重新写入
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */

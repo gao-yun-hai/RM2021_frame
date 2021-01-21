@@ -43,6 +43,6 @@ extern RC_ctrl_t rc_ctrl;//遥控器数据结构体
 
 /* 本模块向外部提供的接口函数原型声明 ---------------------------------------*/
 void Remote_Control_USART_Init(void);
-uint32_t DR16_UART_IRQHandler(void);
+void DR16_UART_IRQHandler(void);
 
 #endif

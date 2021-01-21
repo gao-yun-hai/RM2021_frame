@@ -18,7 +18,7 @@
 #include "crc.h"
 #include "offline_check.h"
 /* 内部宏定义 ----------------------------------------------------------------*/
-#define RD_huart  huart6
+#define RD_huart  huart6	//与裁判系统通信所用串口
 /* 内部自定义数据类型的变量 --------------------------------------------------*/
 Referee_Struct  referee;
 
@@ -31,60 +31,63 @@ static void SBUS_To_Referee(uint8_t *buff, Referee_Struct  *Referee);
 
 /* 函数主体部分 --------------------------------------------------------------*/
 /**
-  * @brief				裁判系统数据接收USART空闲中断初始化函数
-  * @param[out]		
+  * @brief				裁判系统数据接收USART初始化函数（开启DMA+开启USART空闲中断）
   * @param[in]		
-  * @retval				
+	* @param[out]		
+  * @retval				none
 */
 void RefereeDate_Receive_USART_Init(void)
 {
     UART_IT_Init(&RD_huart,referee_rx_buf,REFEREE_RX_BUFFER_SIZE);
 }
 
+
 /**
-  * @brief				遥控器数据接收的触发的空闲中断后中断处理函数
-  * @param[out]		
+  * @brief				裁判系统USART中断处理函数（重新设置DMA参数+数据解码+发送任务通知）
   * @param[in]		
-  * @retval				
+	* @param[out]		
+  * @retval				none
 */
-uint32_t Referee_UART_IRQHandler(void)
+void Referee_UART_IRQHandler(void)
 {
 	static  BaseType_t  pxHigherPriorityTaskWoken;
-
- if (__HAL_UART_GET_FLAG(&RD_huart, UART_FLAG_IDLE))
+	/* 判断是否为空闲中断 */
+  if (__HAL_UART_GET_FLAG(&RD_huart, UART_FLAG_IDLE))
 	{
-			/* clear idle it flag avoid idle interrupt all the time */
+			/* 清除空闲标志，避免一直处于空闲状态的中断 */
 			__HAL_UART_CLEAR_IDLEFLAG(&RD_huart);
 
-			/* clear DMA transfer complete flag */
+			/* 关闭DMA传输 */
 			__HAL_DMA_DISABLE(RD_huart.hdmarx);
 
-			//计算接收裁判系统数据的长度
+			/* 计算接收裁判系统数据的长度 */
 			referee_rx_date_len = (REFEREE_RX_BUFFER_SIZE - RD_huart.hdmarx->Instance->NDTR);
-			//数据解码
+			/* 数据解码 */
 			SBUS_To_Referee(referee_rx_buf,&referee);
-			//断线检测刷新时间
+			/* 断线检测刷新时间 */
 			Refresh_Device_OffLine_Time(Referee_TOE);		
-			//任务通知
+			/* 任务通知 */
 			vTaskNotifyGiveFromISR(RefereeDataTaskHandle,&pxHigherPriorityTaskWoken);
 			portYIELD_FROM_ISR(pxHigherPriorityTaskWoken);	
-
-			/* restart dma transmission */
+			/* 重新启动DMA传输 */
+			/* 设置DMA可传输最大数据长度 */
 			__HAL_DMA_SET_COUNTER(RD_huart.hdmarx, REFEREE_RX_BUFFER_SIZE);
+			/* 开启DMA传输 */
 			__HAL_DMA_ENABLE(RD_huart.hdmarx);				
 			
 	}
-	return 0;
 }
+
+
 /**
   * @brief				裁判系统数据解码
-  * @param[out]		
-  * @param[in]		
-  * @retval				
+  * @param[in]		buff：指向数据接收数组的指针
+	* @param[out]		Referee：指向存储裁判系统数据结构体的指针
+  * @retval				none
 */
 static void SBUS_To_Referee(uint8_t *buff, Referee_Struct  *Referee)
 {		
-		uint16_t  referee_length = 0;
+		uint16_t  referee_length = 0;//一帧数据总长度
 	
 		//无数据包，则不作任何处理
 		if (buff == NULL)

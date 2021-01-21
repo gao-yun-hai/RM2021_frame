@@ -31,9 +31,9 @@ shoot_control_t shoot_control;          //射击数据结构体
 //===================================================================================================================//
 /**
   * @brief				摩擦轮任务
-  * @param[out]		
   * @param[in]		
-  * @retval				
+	* @param[out]		
+  * @retval				none
 */
 void Friction_Drive_Task(void const *argument)
 {
@@ -48,12 +48,7 @@ void Friction_Drive_Task(void const *argument)
 	for(;;)  
 	{
 		Refresh_Task_OffLine_Time(FrictionDriveTask_TOE);//记录任务运行的时间点
-		if(rc_ctrl.rc.s1 == 3)
-		{
-			shoot_control.fric1_ramp.max_value = 100;
-			shoot_control.fric2_ramp.max_value = 100;
-		}
-		else if(rc_ctrl.rc.s1 == 1)
+		if(rc_ctrl.rc.s1 == 1)
 		{
 			shoot_control.fric1_ramp.max_value = 125;
 			shoot_control.fric2_ramp.max_value = 125;
@@ -63,7 +58,11 @@ void Friction_Drive_Task(void const *argument)
 			shoot_control.fric1_ramp.max_value = 130;
 			shoot_control.fric2_ramp.max_value = 130;
 		}
-	
+		else 
+		{
+			shoot_control.fric1_ramp.max_value = 100;
+			shoot_control.fric2_ramp.max_value = 100;
+		}
 		 ramp_calc(&shoot_control.fric1_ramp, SHOOT_FRIC_PWM_ADD_VALUE);
 		 ramp_calc(&shoot_control.fric2_ramp, SHOOT_FRIC_PWM_ADD_VALUE);
 		
@@ -79,9 +78,9 @@ void Friction_Drive_Task(void const *argument)
 //===================================================================================================================//
 /**
   * @brief				拨盘任务
-  * @param[out]		
   * @param[in]		
-  * @retval				
+	* @param[out]		
+  * @retval				none
 */
 void Trigger_Drive_Task(void const * argument)
 {

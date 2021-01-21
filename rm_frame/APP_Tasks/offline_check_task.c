@@ -46,9 +46,9 @@ off_line.device_offline_flag为16位数据0000 0000 0000 0000
 
 /**
   * @brief				断线检测任务
-  * @param[out]		
   * @param[in]		
-  * @retval				
+	* @param[out]		
+  * @retval				none
 */
 void OffLine_Check_Task(void const *argument)
 {

@@ -22,16 +22,16 @@ enum Time
 
 typedef enum
 {
-	PID_CHASSIS_3508MOTOR_SPEED = 0,
-	PID_CHASSIS_3508MOTOR_POS = 1,
-	PID_TRIGGER_2006MOTOR_SPEED = 2,
-	PID_TRIGGER_2006MOTOR_POS = 3,
-	PID_YAW_3508MOTOR_ID_SPEED = 4,
-	PID_YAW_3508MOTOR_ID_POS = 5,
-	PID_PITCH_6020MOTOR_ID_SPEED = 6,
-	PID_PITCH_6020MOTOR_ID_POS = 7,
+	PID_CHASSIS_3508MOTOR_SPEED,
+	PID_CHASSIS_3508MOTOR_POS,
+	PID_TRIGGER_2006MOTOR_SPEED,
+	PID_TRIGGER_2006MOTOR_POS,
+	PID_YAW_3508MOTOR_ID_SPEED,
+	PID_YAW_3508MOTOR_ID_POS,
+	PID_PITCH_6020MOTOR_ID_SPEED,
+	PID_PITCH_6020MOTOR_ID_POS,
 	
-	NUM_OF_PID = 8,//所有电机进行PID运算时所需PID结构体的数量
+	NUM_OF_PID//所有电机进行PID运算时所需PID结构体的数量
 	
 }PID_ID;//电机闭环控制时各电机速度环或位置环PID结构体对应存储的数组编号
 
@@ -45,9 +45,9 @@ typedef struct __pid_t
     float Ki;
     float Kd;
 
-    float set[3];							//目标值,包含NOW， LAST，LLAST
-    float get[3];							//测量值
-    float err[3];							//误差
+    float set;								//目标值
+    float get;								//测量值
+    float err[3];							//误差	,包含NOW， LAST，LLAST
 
     float pout;								//p输出
     float iout;								//i输出
@@ -62,9 +62,7 @@ typedef struct __pid_t
     float deadband;						//死区 
 
     float pos_out;						//本次位置式输出
-    float last_pos_out;				//上次位置式输出
     float delta_out;					//本次增量式输出
-    float last_delta_out;			//上次增量式输出
 
 } pid_t;
 /* 本模块向外部提供的变量声明 -----------------------------------------------*/

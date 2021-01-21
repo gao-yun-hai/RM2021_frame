@@ -80,13 +80,13 @@ void Error_Handler(void);
 #define LED4_GPIO_Port GPIOG
 #define LED3_Pin GPIO_PIN_3
 #define LED3_GPIO_Port GPIOG
-#define Encoder_Direction_Pin GPIO_PIN_10
-#define Encoder_Direction_GPIO_Port GPIOF
-#define Encoder_Direction_EXTI_IRQn EXTI15_10_IRQn
 #define LED2_Pin GPIO_PIN_2
 #define LED2_GPIO_Port GPIOG
 #define LED1_Pin GPIO_PIN_1
 #define LED1_GPIO_Port GPIOG
+#define Encoder_Direction_Pin GPIO_PIN_5
+#define Encoder_Direction_GPIO_Port GPIOA
+#define Encoder_Direction_EXTI_IRQn EXTI9_5_IRQn
 #define GREEN_LED_Pin GPIO_PIN_14
 #define GREEN_LED_GPIO_Port GPIOF
 /* USER CODE BEGIN Private defines */

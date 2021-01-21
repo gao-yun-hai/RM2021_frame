@@ -8,13 +8,12 @@ stm32F427IIH6新板子
 												APB2-peripheral clock	84MHz
 												APB2-timer clock		168MHz
 
-
 *GPIO*
 	  引脚		  功能/备注
 【OK】PG1~PG8    LED1~LED8
 【OK】PF14		 绿灯
 【NO】PE11 		 红灯（与USART7_RX冲突故暂不使用红灯）
-【OK】PF10		 从动轮编码器获取方向IO口->外部中断
+【OK】PA5		 从动轮编码器获取方向IO口->外部中断
 【OK】PH2		 24V电源口1
 【OK】PH3		 24V电源口2
 【OK】PH4		 24V电源口3
@@ -42,13 +41,13 @@ stm32F427IIH6新板子
 
 
 *TIM*   16位高级定时器，时钟来源APB2：TIM1，TIM8。16位通用定时器，时钟来自APB1：TIM3，TIM4。32位通用定时器，时钟来自APB1：TIM2，TIM5。
-		名称		  	引脚		  				功能/备注  			  	 		   			  	 		   			  	 		 模式		  	   分频系数		  	   自动重装载值		  	   计数模式		  	   周期/频率 
+		名称		  	引脚		  				功能/备注  			  	 		   			  	 		   			  	 	 模式		  	   分频系数		  	   自动重装载值		  	   计数模式		  	   周期/频率 
 【OK】	TIM1			————						HAL库时钟
 【NO】  TIM8		   暂未使用且未初始化配置
-【OK】	TIM3		    ————						断线检测专用定时器																 更新中断			 839			       99                   向上				  1ms
-【OK】	TIM4		   PD12/PD13/PD14/PD15			驱动摩擦轮，对应CH1-CH4通道														 PWM输出			 839+1				 1999+1					向上	            20ms/50Hz
-【OK】	TIM2		   PA0						    获取从动轮编码器的脉冲数量（时钟源选择：外部触发输入 ETR）						 计数			      0					 0xFFFFFFFF				向上			   —————————
-【OK】  TIM5		   PH10/PH11/PH12/PI0			驱动摩擦轮，对应CH1-CH4通道（可用与PWM对应TIM有：TIM2,TIM4,TIM5,TIM8）			 PWM输出			 839+1				 1999+1					向上	            20ms/50Hz
+【OK】	TIM3		    ————						断线检测专用定时器															  更新中断			 839			       99                   向上				  1ms
+【OK】	TIM4		   PD12/PD13/PD14/PD15			驱动摩擦轮，对应CH1-CH4通道													  PWM输出			 839+1				 1999+1					向上	            20ms/50Hz
+【OK】	TIM2		   PA0						    获取从动轮编码器的脉冲数量（时钟源选择：外部触发输入 ETR）					  计数			      0					 0xFFFFFFFF				向上			   —————————
+【OK】  TIM5		   PH10/PH11/PH12/PI0			驱动摩擦轮，对应CH1-CH4通道（可用与PWM对应TIM有：TIM2,TIM4,TIM5,TIM8）		  PWM输出			 839+1				 1999+1					向上	            20ms/50Hz
  
  
 *CAN*

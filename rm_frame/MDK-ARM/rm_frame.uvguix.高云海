@@ -11,17 +11,17 @@
     <View>
       <WinId>38003</WinId>
       <ViewName>Registers</ViewName>
-      <TableColWidths>150 151</TableColWidths>
+      <TableColWidths>115 67</TableColWidths>
     </View>
     <View>
       <WinId>346</WinId>
       <ViewName>Code Coverage</ViewName>
-      <TableColWidths>1010 160</TableColWidths>
+      <TableColWidths>770 160</TableColWidths>
     </View>
     <View>
       <WinId>204</WinId>
       <ViewName>Performance Analyzer</ViewName>
-      <TableColWidths>1170</TableColWidths>
+      <TableColWidths>930</TableColWidths>
     </View>
   </SECTreeCtrl>
 
@@ -65,8 +65,8 @@
     <View>
       <WinId>466</WinId>
       <ViewName>Source Browser</ViewName>
-      <UserString>500</UserString>
-      <TableColWidths>166</TableColWidths>
+      <UserString>300</UserString>
+      <TableColWidths>0</TableColWidths>
     </View>
   </TreeListPane>
 
@@ -97,17 +97,17 @@
         <yPos>-1</yPos>
       </MaxPosition>
       <NormalPosition>
-        <Top>0</Top>
-        <Left>2078</Left>
-        <Right>2862</Right>
-        <Bottom>49</Bottom>
+        <Top>5</Top>
+        <Left>262</Left>
+        <Right>1046</Right>
+        <Bottom>54</Bottom>
       </NormalPosition>
     </WindowPosition>
     <MDIClientArea>
       <RegID>0</RegID>
       <MDITabState>
-        <Len>3186</Len>
-        <Data>0100000004000000010000000100000001000000010000000000000002000000000000000100000001000000000000002800000028000000010000001A000000190000000100000057463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4D6F64756C655C4D6F64756C652D6170706C69636174696F6E5C656E636F6465722E630000000009656E636F6465722E6300000000C5D4F200FFFFFFFF57463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4D6F64756C655C4D6F64756C652D6170706C69636174696F6E5C656E636F6465722E680000000009656E636F6465722E6800000000FFDC7800FFFFFFFF5D463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4D6F64756C655C4D6F64756C652D6170706C69636174696F6E5C6F66666C696E655F636865636B2E63000000000F6F66666C696E655F636865636B2E6300000000BECEA100FFFFFFFF5D463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4D6F64756C655C4D6F64756C652D6170706C69636174696F6E5C6F66666C696E655F636865636B2E68000000000F6F66666C696E655F636865636B2E6800000000F0A0A100FFFFFFFF44463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C426F617264735F4253505C6273702E6300000000056273702E6300000000BCA8E100FFFFFFFF48463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C426F617264735F4253505C6273705F63616E2E6300000000096273705F63616E2E63000000009CC1B600FFFFFFFF4A463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C426F617264735F4253505C6273705F75736172742E63000000000B6273705F75736172742E6300000000F7B88600FFFFFFFF5E463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4D6F64756C655C4D6F64756C652D636F6D6D756E69636174696F6E5C75736172745F7072696E74662E63000000000E75736172745F7072696E74662E6300000000D9ADC200FFFFFFFF49463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C524541444D455CD7CAD4B4B7D6C5E4B1ED2E747874000000000ED7CAD4B4B7D6C5E4B1ED2E74787400000000A5C2D700FFFFFFFF4A463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4170705F5461736B735C73686F6F745F7461736B2E63000000000C73686F6F745F7461736B2E6300000000B3A6BE00FFFFFFFF52463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4170705F5461736B735C6F66666C696E655F636865636B5F7461736B2E6300000000146F66666C696E655F636865636B5F7461736B2E6300000000EAD6A300FFFFFFFF4B463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4170705F5461736B735C766973696F6E5F7461736B2E63000000000D766973696F6E5F7461736B2E6300000000F6FA7D00FFFFFFFF58463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4D6F64756C655C4D6F64756C652D636F6D6D756E69636174696F6E5C766973696F6E2E630000000008766973696F6E2E6300000000B5E99D00FFFFFFFF51463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4D444B2D41524D5C737461727475705F73746D33326634323778782E730000000015737461727475705F73746D33326634323778782E73000000005FC3CF00FFFFFFFF64463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C447269766572735C53544D3332463478785F48414C5F4472697665725C5372635C73746D3332663478785F68616C2E63000000000F73746D3332663478785F68616C2E6300000000C1838300FFFFFFFF58463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4D6F64756C655C4D6F64756C652D636F6D6D756E69636174696F6E5C766973696F6E2E680000000008766973696F6E2E6800000000CACAD500FFFFFFFF52463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4170705F5461736B735C6F66666C696E655F636865636B5F7461736B2E6800000000146F66666C696E655F636865636B5F7461736B2E6800000000C5D4F200FFFFFFFF53463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4170705F5461736B735C72656D6F74655F636F6E74726F6C5F7461736B2E63000000001572656D6F74655F636F6E74726F6C5F7461736B2E6300000000FFDC7800FFFFFFFF4C463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4170705F5461736B735C726566657265655F7461736B2E63000000000E726566657265655F7461736B2E6300000000BECEA100FFFFFFFF53463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4170705F5461736B735C67696D62616C5F636F6E74726F6C5F7461736B2E63000000001567696D62616C5F636F6E74726F6C5F7461736B2E6300000000F0A0A100FFFFFFFF5E463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4D6F64756C655C4D6F64756C652D6D6F7465725F6472697665725C6D6F746F725F7573655F63616E2E63000000000F6D6F746F725F7573655F63616E2E6300000000BCA8E100FFFFFFFF5E463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4D6F64756C655C4D6F64756C652D6D6F7465725F6472697665725C6D6F746F725F7573655F63616E2E68000000000F6D6F746F725F7573655F63616E2E68000000009CC1B600FFFFFFFF54463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4170705F5461736B735C636861737369735F636F6E74726F6C5F7461736B2E630000000016636861737369735F636F6E74726F6C5F7461736B2E6300000000F7B88600FFFFFFFF4A463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C426F617264735F4253505C6D79696E636C7564652E68000000000B6D79696E636C7564652E6800000000D9ADC200FFFFFFFF59463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4D6F64756C655C4D6F64756C652D636F6D6D756E69636174696F6E5C726566657265652E630000000009726566657265652E6300000000A5C2D700FFFFFFFF60463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4D6F64756C655C4D6F64756C652D636F6D6D756E69636174696F6E5C72656D6F74655F636F6E74726F6C2E63000000001072656D6F74655F636F6E74726F6C2E6300000000B3A6BE00FFFFFFFF0100000010000000C5D4F200FFDC7800BECEA100F0A0A100BCA8E1009CC1B600F7B88600D9ADC200A5C2D700B3A6BE00EAD6A300F6FA7D00B5E99D005FC3CF00C1838300CACAD500010000000000000002000000BB08000066000000800D000040020000</Data>
+        <Len>751</Len>
+        <Data>01000000040000000100000001000000010000000100000000000000020000000000000001000000010000000000000028000000280000000100000005000000020000000100000043463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C436F72655C5372635C6D61696E2E6300000000066D61696E2E6300000000C5D4F200FFFFFFFF52463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4170705F5461736B735C6F66666C696E655F636865636B5F7461736B2E6300000000146F66666C696E655F636865636B5F7461736B2E6300000000FFDC7800FFFFFFFF53463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4170705F5461736B735C72656D6F74655F636F6E74726F6C5F7461736B2E63000000001572656D6F74655F636F6E74726F6C5F7461736B2E6300000000BECEA100FFFFFFFF53463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4170705F5461736B735C67696D62616C5F636F6E74726F6C5F7461736B2E63000000001567696D62616C5F636F6E74726F6C5F7461736B2E6300000000F0A0A100FFFFFFFF54463A5C526F626F6D61737465725C524D323032305C636F64655C50617373696F6E5F726D5F6672616D655C726D5F6672616D655C4170705F5461736B735C636861737369735F636F6E74726F6C5F7461736B2E630000000016636861737369735F636F6E74726F6C5F7461736B2E6300000000BCA8E100FFFFFFFF0100000010000000C5D4F200FFDC7800BECEA100F0A0A100BCA8E1009CC1B600F7B88600D9ADC200A5C2D700B3A6BE00EAD6A300F6FA7D00B5E99D005FC3CF00C1838300CACAD5000100000000000000020000002C01000066000000000600002A030000</Data>
       </MDITabState>
     </MDIClientArea>
     <ViewEx>
@@ -126,11 +126,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>F40000004F00000090050000DF000000</Data>
+          <Data>C40000004F00000070040000BF000000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>F40000006600000090050000F6000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -146,11 +146,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000660000003401000010020000</Data>
+          <Data>030000006600000025010000FA020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>98FFFFFF00010000BD000000D1030000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -166,11 +166,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000660000003401000010020000</Data>
+          <Data>030000006600000025010000FA020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>98FFFFFF00010000BD000000D1030000</Data>
+          <Data>220000003900000005010000FA010000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -186,11 +186,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000330200008D050000A7020000</Data>
+          <Data>00000000AE010000700400001E020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>2200000039000000EA020000C9000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -206,11 +206,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000330200008D050000A7020000</Data>
+          <Data>03000000B10100006D040000F1010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>2200000039000000EA020000C9000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -226,11 +226,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000330200008D050000A7020000</Data>
+          <Data>03000000B10100006D040000F1010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>2200000039000000EA020000C9000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -246,11 +246,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000330200008D050000A7020000</Data>
+          <Data>03000000B10100006D040000F1010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>2200000039000000EA020000C9000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -266,11 +266,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D040000D8000000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -286,11 +286,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>F7000000660000008D050000C6000000</Data>
+          <Data>C7000000660000006D040000A6000000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>2200000039000000EA020000C9000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -306,11 +306,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000330200008D050000A7020000</Data>
+          <Data>03000000B10100006D04000005020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -326,11 +326,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000330200008D050000A7020000</Data>
+          <Data>03000000B10100006D040000F1010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -346,11 +346,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000330200008D050000A7020000</Data>
+          <Data>03000000B10100006D040000F1010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -366,11 +366,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000330200008D050000A7020000</Data>
+          <Data>03000000B10100006D040000F1010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>2200000039000000EA020000C9000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -386,11 +386,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000330200008D050000A7020000</Data>
+          <Data>03000000B10100006D040000F1010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>2200000039000000EA020000C9000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -406,11 +406,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000330200008D050000A7020000</Data>
+          <Data>03000000B10100006D040000F1010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>2200000039000000EA020000C9000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -426,11 +426,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000330200008D050000A7020000</Data>
+          <Data>03000000B10100006D040000F1010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>2200000039000000EA020000C9000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -446,11 +446,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000660000003401000010020000</Data>
+          <Data>030000006600000025010000FA020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>98FFFFFF00010000BD000000D1030000</Data>
+          <Data>220000003900000005010000FA010000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -466,11 +466,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000660000003401000010020000</Data>
+          <Data>030000006600000025010000FA020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>98FFFFFF00010000BD000000D1030000</Data>
+          <Data>220000003900000005010000FA010000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -486,11 +486,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>0300000044020000FD050000FF020000</Data>
+          <Data>000000002B030000000600002B030000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>D3020000E6030000530A0000B2040000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -506,31 +506,31 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>000000001C02000090050000C0020000</Data>
+          <Data>000000009A010000700400001E020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>2200000039000000EA020000C9000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
         <RegID>199</RegID>
         <PaneID>199</PaneID>
-        <IsVisible>1</IsVisible>
+        <IsVisible>0</IsVisible>
         <IsFloating>0</IsFloating>
         <IsTabbed>0</IsTabbed>
         <IsActivated>0</IsActivated>
         <MRUWidth>32767</MRUWidth>
         <PinState>0</PinState>
-        <RecentFrameAlignment>32768</RecentFrameAlignment>
+        <RecentFrameAlignment>4096</RecentFrameAlignment>
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>0300000044020000FD050000FF020000</Data>
+          <Data>030000002E0300006D0400006E030000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>D3020000E6030000530A0000B2040000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -546,11 +546,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>F7000000660000008D050000C6000000</Data>
+          <Data>C40000006300000070040000BF000000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>2200000039000000EA020000C9000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -566,11 +566,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>F7000000660000008D050000C6000000</Data>
+          <Data>C7000000660000006D040000A6000000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>2200000039000000EA020000C9000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -606,11 +606,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B00300006300000070040000AA010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -626,11 +626,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000330200008D050000A7020000</Data>
+          <Data>00000000AE010000700400000A020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>2200000039000000EA020000C9000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -646,11 +646,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>F7000000660000008D050000C6000000</Data>
+          <Data>C7000000660000006D040000A6000000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>2200000039000000EA020000C9000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -666,11 +666,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>F7000000660000008D050000C6000000</Data>
+          <Data>C7000000660000006D040000A6000000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>2200000039000000EA020000C9000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -686,11 +686,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>F7000000660000008D050000C6000000</Data>
+          <Data>C40000006300000070040000BF000000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -706,11 +706,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>F7000000660000008D050000C6000000</Data>
+          <Data>C7000000660000006D040000A6000000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>2200000039000000EA020000C9000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -726,11 +726,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -746,11 +746,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -766,11 +766,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -786,11 +786,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -806,11 +806,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -826,11 +826,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -846,11 +846,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -866,11 +866,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -886,11 +886,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -906,11 +906,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -926,11 +926,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -946,11 +946,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -966,11 +966,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -986,11 +986,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1006,11 +1006,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1026,11 +1026,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1046,11 +1046,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1066,11 +1066,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1086,11 +1086,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1106,11 +1106,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1126,11 +1126,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1146,11 +1146,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>030000006600000034010000DA020000</Data>
+          <Data>0300000066000000BD00000005020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>98FFFFFF00010000BD000000D1030000</Data>
+          <Data>220000003900000005010000FA010000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1162,15 +1162,15 @@
         <IsActivated>0</IsActivated>
         <MRUWidth>32767</MRUWidth>
         <PinState>0</PinState>
-        <RecentFrameAlignment>32768</RecentFrameAlignment>
+        <RecentFrameAlignment>4096</RecentFrameAlignment>
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000440200007D0700000D030000</Data>
+          <Data>000000002B0300007004000087030000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>D3020000E6030000530A0000B2040000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1182,15 +1182,15 @@
         <IsActivated>0</IsActivated>
         <MRUWidth>32767</MRUWidth>
         <PinState>0</PinState>
-        <RecentFrameAlignment>32768</RecentFrameAlignment>
+        <RecentFrameAlignment>4096</RecentFrameAlignment>
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000440200007D0700000D030000</Data>
+          <Data>030000002E0300006D0400006E030000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>D3020000E6030000530A0000B2040000</Data>
+          <Data>220000003900000005010000FA010000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1206,11 +1206,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000330200008D050000A7020000</Data>
+          <Data>03000000B10100006D040000F1010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1226,11 +1226,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000330200008D050000A7020000</Data>
+          <Data>03000000B10100006D040000F1010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1242,15 +1242,15 @@
         <IsActivated>0</IsActivated>
         <MRUWidth>32767</MRUWidth>
         <PinState>0</PinState>
-        <RecentFrameAlignment>32768</RecentFrameAlignment>
+        <RecentFrameAlignment>4096</RecentFrameAlignment>
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000440200007D0700000D030000</Data>
+          <Data>030000002E0300006D0400006E030000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>D3020000E6030000530A0000B2040000</Data>
+          <Data>220000003900000005010000FA010000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1262,15 +1262,15 @@
         <IsActivated>0</IsActivated>
         <MRUWidth>32767</MRUWidth>
         <PinState>0</PinState>
-        <RecentFrameAlignment>32768</RecentFrameAlignment>
+        <RecentFrameAlignment>4096</RecentFrameAlignment>
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000440200007D0700000D030000</Data>
+          <Data>030000002E0300006D0400006E030000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>D3020000E6030000530A0000B2040000</Data>
+          <Data>220000003900000005010000FA010000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1286,11 +1286,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>F7000000660000008D050000C6000000</Data>
+          <Data>C7000000660000006D040000A6000000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>2200000039000000EA020000C9000000</Data>
+          <Data>22000000390000005A020000A9000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1306,11 +1306,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1326,11 +1326,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1346,11 +1346,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1366,11 +1366,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1386,11 +1386,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1406,11 +1406,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1426,11 +1426,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1446,11 +1446,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1466,11 +1466,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1486,11 +1486,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1506,11 +1506,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1526,11 +1526,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1546,11 +1546,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1566,11 +1566,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1586,11 +1586,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1606,11 +1606,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1626,11 +1626,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1646,11 +1646,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1666,11 +1666,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1686,11 +1686,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>A3040000660000008D05000013020000</Data>
+          <Data>B3030000660000006D0400001D010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -1700,7 +1700,7 @@
         <IsFloating>0</IsFloating>
         <IsTabbed>0</IsTabbed>
         <IsActivated>0</IsActivated>
-        <MRUWidth>953</MRUWidth>
+        <MRUWidth>32767</MRUWidth>
         <PinState>0</PinState>
         <RecentFrameAlignment>8192</RecentFrameAlignment>
         <RecentRowIndex>0</RecentRowIndex>
@@ -1740,7 +1740,7 @@
         <IsFloating>0</IsFloating>
         <IsTabbed>0</IsTabbed>
         <IsActivated>0</IsActivated>
-        <MRUWidth>476</MRUWidth>
+        <MRUWidth>32767</MRUWidth>
         <PinState>0</PinState>
         <RecentFrameAlignment>8192</RecentFrameAlignment>
         <RecentRowIndex>1</RecentRowIndex>
@@ -1760,7 +1760,7 @@
         <IsFloating>0</IsFloating>
         <IsTabbed>0</IsTabbed>
         <IsActivated>0</IsActivated>
-        <MRUWidth>612</MRUWidth>
+        <MRUWidth>32767</MRUWidth>
         <PinState>0</PinState>
         <RecentFrameAlignment>8192</RecentFrameAlignment>
         <RecentRowIndex>2</RecentRowIndex>
@@ -1786,23 +1786,23 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>03000000330200008D050000A7020000</Data>
+          <Data>03000000B10100006D040000F1010000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>22000000390000001201000006010000</Data>
+          <Data>2200000039000000E2000000DB000000</Data>
         </RectRecentFloat>
       </Window>
       <DockMan>
-        <Len>3352</Len>
-        <Data>000000000B000000000000000020000000000000FFFFFFFFFFFFFFFFF4000000DF00000090050000E3000000000000000100000004000000010000000000000000000000FFFFFFFF08000000CB00000057010000CC000000F08B00005A01000079070000D601000045890000FFFF02000B004354616262656450616E650020000000000000F40000006600000090050000F6000000F40000004F00000090050000DF0000000000000040280046080000000B446973617373656D626C7900000000CB00000001000000FFFFFFFFFFFFFFFF14506572666F726D616E636520416E616C797A6572000000005701000001000000FFFFFFFFFFFFFFFF14506572666F726D616E636520416E616C797A657200000000CC00000001000000FFFFFFFFFFFFFFFF0E4C6F67696320416E616C797A657200000000F08B000001000000FFFFFFFFFFFFFFFF0D436F646520436F766572616765000000005A01000001000000FFFFFFFFFFFFFFFF11496E737472756374696F6E205472616365000000007907000001000000FFFFFFFFFFFFFFFF0F53797374656D20416E616C797A657200000000D601000001000000FFFFFFFFFFFFFFFF104576656E742053746174697374696373000000004589000001000000FFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000000000000000000000001000000FFFFFFFFCB00000001000000FFFFFFFFCB000000000000000040000000000000FFFFFFFFFFFFFFFF9C0400004F000000A00400002C020000000000000200000004000000010000000000000000000000FFFFFFFF2B000000E2050000CA0900002D8C00002E8C00002F8C0000308C0000318C0000328C0000338C0000348C0000358C0000368C0000378C0000388C0000398C00003A8C00003B8C00003C8C00003D8C00003E8C00003F8C0000408C0000418C000050C3000051C3000052C3000053C3000054C3000055C3000056C3000057C3000058C3000059C300005AC300005BC300005CC300005DC300005EC300005FC3000060C3000061C3000062C3000063C3000001800040000000000000A0040000660000009005000043020000A00400004F000000900500002C02000000000000404100462B0000000753796D626F6C7300000000E205000001000000FFFFFFFFFFFFFFFF0A5472616365204461746100000000CA09000001000000FFFFFFFFFFFFFFFF00000000002D8C000001000000FFFFFFFFFFFFFFFF00000000002E8C000001000000FFFFFFFFFFFFFFFF00000000002F8C000001000000FFFFFFFFFFFFFFFF0000000000308C000001000000FFFFFFFFFFFFFFFF0000000000318C000001000000FFFFFFFFFFFFFFFF0000000000328C000001000000FFFFFFFFFFFFFFFF0000000000338C000001000000FFFFFFFFFFFFFFFF0000000000348C000001000000FFFFFFFFFFFFFFFF0000000000358C000001000000FFFFFFFFFFFFFFFF0000000000368C000001000000FFFFFFFFFFFFFFFF0000000000378C000001000000FFFFFFFFFFFFFFFF0000000000388C000001000000FFFFFFFFFFFFFFFF0000000000398C000001000000FFFFFFFFFFFFFFFF00000000003A8C000001000000FFFFFFFFFFFFFFFF00000000003B8C000001000000FFFFFFFFFFFFFFFF00000000003C8C000001000000FFFFFFFFFFFFFFFF00000000003D8C000001000000FFFFFFFFFFFFFFFF00000000003E8C000001000000FFFFFFFFFFFFFFFF00000000003F8C000001000000FFFFFFFFFFFFFFFF0000000000408C000001000000FFFFFFFFFFFFFFFF0000000000418C000001000000FFFFFFFFFFFFFFFF000000000050C3000001000000FFFFFFFFFFFFFFFF000000000051C3000001000000FFFFFFFFFFFFFFFF000000000052C3000001000000FFFFFFFFFFFFFFFF000000000053C3000001000000FFFFFFFFFFFFFFFF000000000054C3000001000000FFFFFFFFFFFFFFFF000000000055C3000001000000FFFFFFFFFFFFFFFF000000000056C3000001000000FFFFFFFFFFFFFFFF000000000057C3000001000000FFFFFFFFFFFFFFFF000000000058C3000001000000FFFFFFFFFFFFFFFF000000000059C3000001000000FFFFFFFFFFFFFFFF00000000005AC3000001000000FFFFFFFFFFFFFFFF00000000005BC3000001000000FFFFFFFFFFFFFFFF00000000005CC3000001000000FFFFFFFFFFFFFFFF00000000005DC3000001000000FFFFFFFFFFFFFFFF00000000005EC3000001000000FFFFFFFFFFFFFFFF00000000005FC3000001000000FFFFFFFFFFFFFFFF000000000060C3000001000000FFFFFFFFFFFFFFFF000000000061C3000001000000FFFFFFFFFFFFFFFF000000000062C3000001000000FFFFFFFFFFFFFFFF000000000063C3000001000000FFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000000000000000000000001000000FFFFFFFFE205000001000000FFFFFFFFE2050000000000000080000000000000FFFFFFFFFFFFFFFF0000000018020000900500001C02000000000000010000000400000001000000000000000000000000000000000000000000000001000000C6000000FFFFFFFF0F0000008F070000930700009407000095070000960700009007000091070000B5010000B801000038030000B9050000BA050000BB050000BC050000CB09000001800080000000000000000000003302000090050000D7020000000000001C02000090050000C002000000000000404100460F0000001343616C6C20537461636B202B204C6F63616C73000000008F07000001000000FFFFFFFFFFFFFFFF0755415254202331000000009307000001000000FFFFFFFFFFFFFFFF0755415254202332000000009407000001000000FFFFFFFFFFFFFFFF0755415254202333000000009507000001000000FFFFFFFFFFFFFFFF15446562756720287072696E74662920566965776572000000009607000001000000FFFFFFFFFFFFFFFF0757617463682031000000009007000001000000FFFFFFFFFFFFFFFF0757617463682032000000009107000001000000FFFFFFFFFFFFFFFF10547261636520457863657074696F6E7300000000B501000001000000FFFFFFFFFFFFFFFF0E4576656E7420436F756E7465727300000000B801000001000000FFFFFFFFFFFFFFFF09554C494E4B706C7573000000003803000001000000FFFFFFFFFFFFFFFF084D656D6F7279203100000000B905000001000000FFFFFFFFFFFFFFFF084D656D6F7279203200000000BA05000001000000FFFFFFFFFFFFFFFF084D656D6F7279203300000000BB05000001000000FFFFFFFFFFFFFFFF084D656D6F7279203400000000BC05000001000000FFFFFFFFFFFFFFFF105472616365204E617669676174696F6E00000000CB09000001000000FFFFFFFFFFFFFFFFFFFFFFFF0000000001000000000000000000000001000000FFFFFFFFC80200001C020000CC020000C002000000000000020000000400000000000000000000000000000000000000000000000000000002000000C6000000FFFFFFFF8F07000001000000FFFFFFFF8F07000001000000C6000000000000000010000001000000FFFFFFFFFFFFFFFF370100004F0000003B0100002902000001000000020000100400000001000000E5FEFFFFDA04000000000000000000000000000001000000FFFFFFFF05000000ED0300006D000000C3000000C400000073940000018000100000010000000000000066000000370100000A030000000000004F00000037010000290200000000000040410056050000000750726F6A65637401000000ED03000001000000FFFFFFFFFFFFFFFF05426F6F6B73010000006D00000001000000FFFFFFFFFFFFFFFF0946756E6374696F6E7301000000C300000001000000FFFFFFFFFFFFFFFF0954656D706C6174657301000000C400000001000000FFFFFFFFFFFFFFFF09526567697374657273000000007394000001000000FFFFFFFFFFFFFFFF0000000000000000000000000000000000000000000000000000000001000000FFFFFFFFED03000001000000FFFFFFFFED030000000000000080000001000000FFFFFFFFFFFFFFFF0000000029020000000600002D0200000100000001000010040000000100000041FDFFFFFFFFFFFF00000000000000000000000001000000FFFFFFFF06000000C5000000C7000000B4010000D2010000CF0100007794000001800080000001000000000000000E0300008007000007040000000000002D02000000060000180300000000000040820056060000000C4275696C64204F757470757401000000C500000001000000FFFFFFFFFFFFFFFF0D46696E6420496E2046696C657301000000C700000001000000FFFFFFFFFFFFFFFF0A4572726F72204C69737400000000B401000001000000FFFFFFFFFFFFFFFF0E536F757263652042726F7773657200000000D201000001000000FFFFFFFFFFFFFFFF0E416C6C205265666572656E63657300000000CF01000001000000FFFFFFFFFFFFFFFF0742726F77736572000000007794000001000000FFFFFFFFFFFFFFFF0000000000000000000000000000000000000000000000000000000001000000FFFFFFFFC500000001000000FFFFFFFFC5000000000000000000000000000000</Data>
+        <Len>3312</Len>
+        <Data>000000000B000000000000000020000000000000FFFFFFFFFFFFFFFFC4000000BF00000070040000C3000000000000000100001004000000010000000000000000000000FFFFFFFF08000000CB00000057010000CC000000F08B00005A01000079070000D601000045890000FFFF02000B004354616262656450616E65002000000000000022000000390000005A020000A9000000C40000004F00000070040000BF0000000000000040280046080000000B446973617373656D626C7900000000CB00000001000000FFFFFFFFFFFFFFFF14506572666F726D616E636520416E616C797A6572000000005701000001000000FFFFFFFFFFFFFFFF14506572666F726D616E636520416E616C797A657200000000CC00000001000000FFFFFFFFFFFFFFFF0E4C6F67696320416E616C797A657200000000F08B000001000000FFFFFFFFFFFFFFFF0D436F646520436F766572616765000000005A01000001000000FFFFFFFFFFFFFFFF11496E737472756374696F6E205472616365000000007907000001000000FFFFFFFFFFFFFFFF0F53797374656D20416E616C797A657200000000D601000001000000FFFFFFFFFFFFFFFF104576656E742053746174697374696373000000004589000001000000FFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000000000000000000000001000000FFFFFFFFCB00000001000000FFFFFFFFCB000000000000000040000000000000FFFFFFFFFFFFFFFFAC0300004F000000B0030000AA010000000000000200001004000000010000000000000000000000FFFFFFFF2B000000E2050000CA0900002D8C00002E8C00002F8C0000308C0000318C0000328C0000338C0000348C0000358C0000368C0000378C0000388C0000398C00003A8C00003B8C00003C8C00003D8C00003E8C00003F8C0000408C0000418C000050C3000051C3000052C3000053C3000054C3000055C3000056C3000057C3000058C3000059C300005AC300005BC300005CC300005DC300005EC300005FC3000060C3000061C3000062C3000063C30000018000400000000000002200000039000000E2000000DB000000B00300004F00000070040000AA01000000000000404100462B0000000753796D626F6C7300000000E205000001000000FFFFFFFFFFFFFFFF0A5472616365204461746100000000CA09000001000000FFFFFFFFFFFFFFFF00000000002D8C000001000000FFFFFFFFFFFFFFFF00000000002E8C000001000000FFFFFFFFFFFFFFFF00000000002F8C000001000000FFFFFFFFFFFFFFFF0000000000308C000001000000FFFFFFFFFFFFFFFF0000000000318C000001000000FFFFFFFFFFFFFFFF0000000000328C000001000000FFFFFFFFFFFFFFFF0000000000338C000001000000FFFFFFFFFFFFFFFF0000000000348C000001000000FFFFFFFFFFFFFFFF0000000000358C000001000000FFFFFFFFFFFFFFFF0000000000368C000001000000FFFFFFFFFFFFFFFF0000000000378C000001000000FFFFFFFFFFFFFFFF0000000000388C000001000000FFFFFFFFFFFFFFFF0000000000398C000001000000FFFFFFFFFFFFFFFF00000000003A8C000001000000FFFFFFFFFFFFFFFF00000000003B8C000001000000FFFFFFFFFFFFFFFF00000000003C8C000001000000FFFFFFFFFFFFFFFF00000000003D8C000001000000FFFFFFFFFFFFFFFF00000000003E8C000001000000FFFFFFFFFFFFFFFF00000000003F8C000001000000FFFFFFFFFFFFFFFF0000000000408C000001000000FFFFFFFFFFFFFFFF0000000000418C000001000000FFFFFFFFFFFFFFFF000000000050C3000001000000FFFFFFFFFFFFFFFF000000000051C3000001000000FFFFFFFFFFFFFFFF000000000052C3000001000000FFFFFFFFFFFFFFFF000000000053C3000001000000FFFFFFFFFFFFFFFF000000000054C3000001000000FFFFFFFFFFFFFFFF000000000055C3000001000000FFFFFFFFFFFFFFFF000000000056C3000001000000FFFFFFFFFFFFFFFF000000000057C3000001000000FFFFFFFFFFFFFFFF000000000058C3000001000000FFFFFFFFFFFFFFFF000000000059C3000001000000FFFFFFFFFFFFFFFF00000000005AC3000001000000FFFFFFFFFFFFFFFF00000000005BC3000001000000FFFFFFFFFFFFFFFF00000000005CC3000001000000FFFFFFFFFFFFFFFF00000000005DC3000001000000FFFFFFFFFFFFFFFF00000000005EC3000001000000FFFFFFFFFFFFFFFF00000000005FC3000001000000FFFFFFFFFFFFFFFF000000000060C3000001000000FFFFFFFFFFFFFFFF000000000061C3000001000000FFFFFFFFFFFFFFFF000000000062C3000001000000FFFFFFFFFFFFFFFF000000000063C3000001000000FFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000000000000000000000001000000FFFFFFFFE205000001000000FFFFFFFFE2050000000000000010000001000000FFFFFFFFFFFFFFFF280100004F0000002C010000130300000100000002000010040000000100000042FFFFFF37050000FFFFFFFF05000000ED0300006D000000C3000000C400000073940000018000100000010000002200000039000000E2000000DB000000000000004F00000028010000130300000000000040410056050000000750726F6A65637401000000ED03000001000000FFFFFFFFFFFFFFFF05426F6F6B73010000006D00000001000000FFFFFFFFFFFFFFFF0946756E6374696F6E7301000000C300000001000000FFFFFFFFFFFFFFFF0954656D706C6174657301000000C400000001000000FFFFFFFFFFFFFFFF09526567697374657273000000007394000001000000FFFFFFFFFFFFFFFF00000000000000000000000000000000000000000000000001000000FFFFFFFFED03000001000000FFFFFFFFED030000000000000080000000000000FFFFFFFFFFFFFFFF0000000096010000700400009A01000000000000010000100400000001000000000000000000000000000000000000000000000001000000C6000000FFFFFFFF0F0000008F070000930700009407000095070000960700009007000091070000B5010000B801000038030000B9050000BA050000BB050000BC050000CB090000018000800000000000002200000039000000E2000000DB000000000000009A010000700400001E02000000000000404100460F0000001343616C6C20537461636B202B204C6F63616C73000000008F07000001000000FFFFFFFFFFFFFFFF0755415254202331000000009307000001000000FFFFFFFFFFFFFFFF0755415254202332000000009407000001000000FFFFFFFFFFFFFFFF0755415254202333000000009507000001000000FFFFFFFFFFFFFFFF15446562756720287072696E74662920566965776572000000009607000001000000FFFFFFFFFFFFFFFF0757617463682031000000009007000001000000FFFFFFFFFFFFFFFF0757617463682032000000009107000001000000FFFFFFFFFFFFFFFF10547261636520457863657074696F6E7300000000B501000001000000FFFFFFFFFFFFFFFF0E4576656E7420436F756E7465727300000000B801000001000000FFFFFFFFFFFFFFFF09554C494E4B706C7573000000003803000001000000FFFFFFFFFFFFFFFF084D656D6F7279203100000000B905000001000000FFFFFFFFFFFFFFFF084D656D6F7279203200000000BA05000001000000FFFFFFFFFFFFFFFF084D656D6F7279203300000000BB05000001000000FFFFFFFFFFFFFFFF084D656D6F7279203400000000BC05000001000000FFFFFFFFFFFFFFFF105472616365204E617669676174696F6E00000000CB09000001000000FFFFFFFFFFFFFFFFFFFFFFFF0000000001000000000000000000000001000000FFFFFFFF380200009A0100003C0200001E02000000000000020000000400000000000000000000000000000000000000000000000000000002000000C6000000FFFFFFFF8F07000001000000FFFFFFFF8F07000001000000C6000000000000000080000001000000FFFFFFFFFFFFFFFF00000000130300000006000017030000010000000100001004000000010000000000000000000000FFFFFFFF06000000C5000000C7000000B4010000D2010000CF010000779400000180008000000100000022000000390000005A020000A9000000000000001703000000060000180300000000000040820056060000000C4275696C64204F757470757401000000C500000001000000FFFFFFFFFFFFFFFF0D46696E6420496E2046696C657300000000C700000001000000FFFFFFFFFFFFFFFF0A4572726F72204C69737400000000B401000001000000FFFFFFFFFFFFFFFF0E536F757263652042726F7773657200000000D201000001000000FFFFFFFFFFFFFFFF0E416C6C205265666572656E63657300000000CF01000001000000FFFFFFFFFFFFFFFF0742726F77736572000000007794000001000000FFFFFFFFFFFFFFFF00000000000000000000000000000000000000000000000001000000FFFFFFFFC500000001000000FFFFFFFFC5000000000000000000000000000000</Data>
       </DockMan>
       <ToolBar>
         <RegID>59392</RegID>
         <Name>File</Name>
         <Buttons>
-          <Len>2672</Len>
-          <Data>00200000010000002800FFFF01001100434D4643546F6F6C426172427574746F6E00E100000000000000000000000000000000000000000000000100000001000000018001E100000000000001000000000000000000000000000000000100000001000000018003E1000000000000020000000000000000000000000000000001000000010000000180CD7F0000000000000300000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018023E100000000040004000000000000000000000000000000000100000001000000018022E100000000040005000000000000000000000000000000000100000001000000018025E10000000000000600000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001802BE10000000000000700000000000000000000000000000000010000000100000001802CE10000000004000800000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001807A8A0000000000000900000000000000000000000000000000010000000100000001807B8A0000000004000A00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180D3B00000000000000B000000000000000000000000000000000100000001000000018015B10000000004000C0000000000000000000000000000000001000000010000000180F4B00000000004000D000000000000000000000000000000000100000001000000018036B10000000004000E00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180FF88000000000400460000000000000000000000000000000001000000010000000180FE880000000004004500000000000000000000000000000000010000000100000001800B810000000004001300000000000000000000000000000000010000000100000001800C810000000004001400000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180F0880000020000000F000000000000000000000000000000000100000001000000FFFF0100120043555646696E64436F6D626F427574746F6EE803000000000000000000000000000000000000000000000001000000010000009600000002002050000000000A626C6F636B5F666C6167960000000000000014001A23696E636C75646520226F66666C696E655F636865636B2E68220D6F66666C696E655F636865636B0A626C6F636B5F666C61670B48414C5F4765745469636B10436861737369734D6F746F725F544F45144558544931355F31305F49525148616E646C65721B456E636F6465725F446972656374696F6E5F455854495F4952516E13436861737369735F506174726F6C5F4D6F6465146D696E6970635F72782E626F70616E5F666C6167167074725F686561745F67756E5F742E7368745F666C67195049445F434841535349535F333530384D4F544F525F535044195049445F434841535349535F333530384D4F544F525F504F53087069742E666C6167087961772E666C61671B5049445F545249474745525F323030364D4F544F525F53504545441B5049445F434841535349535F333530384D4F544F525F53504545440D72756E5F6469725F61766F69640E72756E5F6469725F666F6C6C6F770852756E5F446972330A52756E5F446972325F320000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018024E10000000000001100000000000000000000000000000000010000000100000001800A810000000000001200000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6E2280000002000000150000002153746172742F53746F70202644656275672053657373696F6E094374726C2B46350000000000000000000000000100000001000000000000000000000001000000020021802280000000000000150000002153746172742F53746F70202644656275672053657373696F6E094374726C2B4635000000000000000000000000010000000100000000000000000000000100000000002180E0010000000000007500000021456E65726779204D6561737572656D656E742026776974686F75742044656275670000000000000000000000000100000001000000000000000000000001000000000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180C488000000000000160000000000000000000000000000000001000000010000000180C988000000000400180000000000000000000000000000000001000000010000000180C788000000000000190000000000000000000000000000000001000000010000000180C8880000000000001700000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000021804C010000020001001A0000000F2650726F6A6563742057696E646F77000000000000000000000000010000000100000000000000000000000100000008002180DD880000000000001A0000000750726F6A656374000000000000000000000000010000000100000000000000000000000100000000002180DC8B0000000000003A00000005426F6F6B73000000000000000000000000010000000100000000000000000000000100000000002180E18B0000000000003B0000000946756E6374696F6E73000000000000000000000000010000000100000000000000000000000100000000002180E28B000000000000400000000954656D706C6174657300000000000000000000000001000000010000000000000000000000010000000000218018890000000000003D0000000E536F757263652042726F777365720000000000000000000000000100000001000000000000000000000001000000000021800000000000000400FFFFFFFF00000000000000000001000000000000000100000000000000000000000100000000002180D988000000000000390000000C4275696C64204F7574707574000000000000000000000000010000000100000000000000000000000100000000002180E38B000000000000410000000B46696E64204F75747075740000000000000000000000000100000001000000000000000000000001000000000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180FB7F0000000000001B000000000000000000000000000000000100000001000000000000000446696C65B9030000</Data>
+          <Len>2592</Len>
+          <Data>00200000010000002800FFFF01001100434D4643546F6F6C426172427574746F6E00E100000000000000000000000000000000000000000000000100000001000000018001E100000000000001000000000000000000000000000000000100000001000000018003E1000000000000020000000000000000000000000000000001000000010000000180CD7F0000000000000300000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018023E100000000040004000000000000000000000000000000000100000001000000018022E100000000040005000000000000000000000000000000000100000001000000018025E10000000000000600000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001802BE10000000004000700000000000000000000000000000000010000000100000001802CE10000000004000800000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001807A8A0000000004000900000000000000000000000000000000010000000100000001807B8A0000000004000A00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180D3B00000000000000B000000000000000000000000000000000100000001000000018015B10000000004000C0000000000000000000000000000000001000000010000000180F4B00000000004000D000000000000000000000000000000000100000001000000018036B10000000004000E00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180FF88000000000400460000000000000000000000000000000001000000010000000180FE880000000004004500000000000000000000000000000000010000000100000001800B810000000004001300000000000000000000000000000000010000000100000001800C810000000004001400000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180F0880000020000000F000000000000000000000000000000000100000001000000FFFF0100120043555646696E64436F6D626F427574746F6EE803000000000000000000000000000000000000000000000001000000010000009600000002002050000000000E7961775F7365745F657870656374960000000000000012000E7961775F7365745F657870656374145669727475616C5F4F7363696C6C6F73636F706504636861721047696D62616C5F4D6F746F7236303230097961775F636F756E741448414C5F554152545F526563656976655F444D41085049445F43616C630E4352435F436865636B5F547275650C6672616D655F6865616465720F4352435F436865636B5F46616C73650E53656E645F4672616D65446174611A23696E636C75646520226F66666C696E655F636865636B2E68220B48414C5F4765745469636B10436861737369734D6F746F725F544F45144558544931355F31305F49525148616E646C65721B456E636F6465725F446972656374696F6E5F455854495F4952516E13436861737369735F506174726F6C5F4D6F64650A626C6F636B5F666C6167000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018024E10000000000001100000000000000000000000000000000010000000100000001800A810000000000001200000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6E2280000002000000150000002153746172742F53746F70202644656275672053657373696F6E094374726C2B46350000000000000000000000000100000001000000000000000000000001000000020021802280000000000000150000002153746172742F53746F70202644656275672053657373696F6E094374726C2B4635000000000000000000000000010000000100000000000000000000000100000000002180E0010000000000007500000021456E65726779204D6561737572656D656E742026776974686F75742044656275670000000000000000000000000100000001000000000000000000000001000000000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180C488000000000000160000000000000000000000000000000001000000010000000180C988000000000400180000000000000000000000000000000001000000010000000180C788000000000000190000000000000000000000000000000001000000010000000180C8880000000000001700000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000021804C010000020001001A0000000F2650726F6A6563742057696E646F77000000000000000000000000010000000100000000000000000000000100000008002180DD880000000000001A0000000750726F6A656374000000000000000000000000010000000100000000000000000000000100000000002180DC8B0000000000003A00000005426F6F6B73000000000000000000000000010000000100000000000000000000000100000000002180E18B0000000000003B0000000946756E6374696F6E73000000000000000000000000010000000100000000000000000000000100000000002180E28B000000000000400000000954656D706C6174657300000000000000000000000001000000010000000000000000000000010000000000218018890000000000003D0000000E536F757263652042726F777365720000000000000000000000000100000001000000000000000000000001000000000021800000000000000400FFFFFFFF00000000000000000000000000010000000100000000000000000000000100000000002180D988000000000000390000000C4275696C64204F7574707574000000000000000000000000010000000100000000000000000000000100000000002180E38B000000000000410000000B46696E64204F75747075740000000000000000000000000100000001000000000000000000000001000000000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180FB7F0000000000001B000000000000000000000000000000000100000001000000000000000446696C65FF7F0000</Data>
         </Buttons>
         <OriginalItems>
           <Len>1423</Len>
@@ -1818,7 +1818,7 @@
         <Name>Build</Name>
         <Buttons>
           <Len>976</Len>
-          <Data>00200000010000001000FFFF01001100434D4643546F6F6C426172427574746F6ECF7F0000000000001C0000000000000000000000000000000001000000010000000180D07F0000000000001D000000000000000000000000000000000100000001000000018030800000000000001E000000000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6EC7040000000000006A0000000C4261746368204275696C2664000000000000000000000000010000000100000000000000000000000100000004000580C7040000000000006A0000000C4261746368204275696C266400000000000000000000000001000000010000000000000000000000010000000000058046070000000000006B0000000D42617463682052656275696C640000000000000000000000000100000001000000000000000000000001000000000005804707000000000000FFFFFFFF0B426174636820436C65616E0100000000000000000000000100000001000000000000000000000001000000000005809E8A0000000000001F0000000F4261746326682053657475702E2E2E000000000000000000000000010000000100000000000000000000000100000000000180D17F0000000004002000000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001804C8A0000000000002100000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000FFFF01001900434D4643546F6F6C426172436F6D626F426F78427574746F6EBA000000000000000000000000000000000000000000000000010000000100000096000000030020500000000008726D5F6672616D659600000000000000010008726D5F6672616D65000000000180EB880000000000002200000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180C07F000000000000230000000000000000000000000000000001000000010000000180B08A000000000400240000000000000000000000000000000001000000010000000180A8010000000000004E00000000000000000000000000000000010000000100000001807202000000000000530000000000000000000000000000000001000000010000000180BE010000000000005000000000000000000000000000000000010000000100000000000000054275696C64DC010000</Data>
+          <Data>00200000010000001000FFFF01001100434D4643546F6F6C426172427574746F6ECF7F0000000000001C0000000000000000000000000000000001000000010000000180D07F0000000000001D000000000000000000000000000000000100000001000000018030800000000000001E000000000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6EC7040000000000006A0000000C4261746368204275696C2664000000000000000000000000010000000100000000000000000000000100000004000580C7040000000000006A0000000C4261746368204275696C266400000000000000000000000001000000010000000000000000000000010000000000058046070000000000006B0000000D42617463682052656275696C640000000000000000000000000100000001000000000000000000000001000000000005804707000000000000FFFFFFFF0B426174636820436C65616E0100000000000000000000000100000001000000000000000000000001000000000005809E8A0000000000001F0000000F4261746326682053657475702E2E2E000000000000000000000000010000000100000000000000000000000100000000000180D17F0000000004002000000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001804C8A0000000000002100000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000FFFF01001900434D4643546F6F6C426172436F6D626F426F78427574746F6EBA000000000000000000000000000000000000000000000000010000000100000096000000030020500000000008726D5F6672616D659600000000000000010008726D5F6672616D65000000000180EB880000000000002200000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180C07F000000000000230000000000000000000000000000000001000000010000000180B08A000000000400240000000000000000000000000000000001000000010000000180A8010000000000004E00000000000000000000000000000000010000000100000001807202000000000000530000000000000000000000000000000001000000010000000180BE010000000000005000000000000000000000000000000000010000000100000000000000054275696C64FF7F0000</Data>
         </Buttons>
         <OriginalItems>
           <Len>583</Len>
@@ -1834,7 +1834,7 @@
         <Name>Debug</Name>
         <Buttons>
           <Len>2373</Len>
-          <Data>00200000000000001900FFFF01001100434D4643546F6F6C426172427574746F6ECC880000000000002500000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018017800000000000002600000000000000000000000000000000010000000100000001801D800000000000002700000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001801A800000000000002800000000000000000000000000000000010000000100000001801B80000000000000290000000000000000000000000000000001000000010000000180E57F0000000000002A00000000000000000000000000000000010000000100000001801C800000000000002B00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018000890000000000002C00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180E48B0000000000002D0000000000000000000000000000000001000000010000000180F07F0000000000002E0000000000000000000000000000000001000000010000000180E8880000000000003700000000000000000000000000000000010000000100000001803B010000000000002F0000000000000000000000000000000001000000010000000180BB8A00000000000030000000000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6E0E01000000000000310000000D57617463682057696E646F7773000000000000000000000000010000000100000000000000000000000100000003001380D88B00000000000031000000085761746368202631000000000000000000000000010000000100000000000000000000000100000000001380D98B00000000000031000000085761746368202632000000000000000000000000010000000100000000000000000000000100000000001380CE01000000000000FFFFFFFF0C576174636820416E63686F720100000000000000010000000000000001000000000000000000000001000000000013800F01000000000000320000000E4D656D6F72792057696E646F7773000000000000000000000000010000000100000000000000000000000100000004001380D28B00000000000032000000094D656D6F7279202631000000000000000000000000010000000100000000000000000000000100000000001380D38B00000000000032000000094D656D6F7279202632000000000000000000000000010000000100000000000000000000000100000000001380D48B00000000000032000000094D656D6F7279202633000000000000000000000000010000000100000000000000000000000100000000001380D58B00000000000032000000094D656D6F72792026340000000000000000000000000100000001000000000000000000000001000000000013801001000000000000330000000E53657269616C2057696E646F77730000000000000000000000000100000001000000000000000000000001000000040013809307000000000000330000000855415254202326310000000000000000000000000100000001000000000000000000000001000000000013809407000000000000330000000855415254202326320000000000000000000000000100000001000000000000000000000001000000000013809507000000000000330000000855415254202326330000000000000000000000000100000001000000000000000000000001000000000013809607000000000000330000001626446562756720287072696E746629205669657765720000000000000000000000000100000001000000000000000000000001000000000013803C010000000000003400000010416E616C797369732057696E646F7773000000000000000000000000010000000100000000000000000000000100000004001380658A000000000000340000000F264C6F67696320416E616C797A6572000000000000000000000000010000000100000000000000000000000100000000001380DC7F0000000000003E0000001526506572666F726D616E636520416E616C797A6572000000000000000000000000010000000100000000000000000000000100000000001380E788000000000000380000000E26436F646520436F766572616765000000000000000000000000010000000100000000000000000000000100000000001380CD01000000000000FFFFFFFF0F416E616C7973697320416E63686F7201000000000000000100000000000000010000000000000000000000010000000000138053010000000000003F0000000D54726163652057696E646F77730000000000000000000000000100000001000000000000000000000001000000010013805401000000000000FFFFFFFF115472616365204D656E7520416E63686F720100000000000000010000000000000001000000000000000000000001000000000013802901000000000000350000001553797374656D205669657765722057696E646F77730000000000000000000000000100000001000000000000000000000001000000010013804B01000000000000FFFFFFFF1453797374656D2056696577657220416E63686F720100000000000000010000000000000001000000000000000000000001000000000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000013800189000000000000360000000F26546F6F6C626F782057696E646F7700000000000000000000000001000000010000000000000000000000010000000300138044C5000000000000FFFFFFFF0E5570646174652057696E646F77730100000000000000010000000000000001000000000000000000000001000000000013800000000000000400FFFFFFFF000000000000000000010000000000000001000000000000000000000001000000000013805B01000000000000FFFFFFFF12546F6F6C626F78204D656E75416E63686F72010000000000000001000000000000000100000000000000000000000100000000000000000005446562756764020000</Data>
+          <Data>00200000000000001900FFFF01001100434D4643546F6F6C426172427574746F6ECC880000000000002500000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018017800000000000002600000000000000000000000000000000010000000100000001801D800000000000002700000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001801A800000000000002800000000000000000000000000000000010000000100000001801B80000000000000290000000000000000000000000000000001000000010000000180E57F0000000000002A00000000000000000000000000000000010000000100000001801C800000000000002B00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018000890000000000002C00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180E48B0000000000002D0000000000000000000000000000000001000000010000000180F07F0000000000002E0000000000000000000000000000000001000000010000000180E8880000000000003700000000000000000000000000000000010000000100000001803B010000000000002F0000000000000000000000000000000001000000010000000180BB8A00000000000030000000000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6E0E01000000000000310000000D57617463682057696E646F7773000000000000000000000000010000000100000000000000000000000100000003001380D88B00000000000031000000085761746368202631000000000000000000000000010000000100000000000000000000000100000000001380D98B00000000000031000000085761746368202632000000000000000000000000010000000100000000000000000000000100000000001380CE01000000000000FFFFFFFF0C576174636820416E63686F720100000000000000000000000100000001000000000000000000000001000000000013800F01000000000000320000000E4D656D6F72792057696E646F7773000000000000000000000000010000000100000000000000000000000100000004001380D28B00000000000032000000094D656D6F7279202631000000000000000000000000010000000100000000000000000000000100000000001380D38B00000000000032000000094D656D6F7279202632000000000000000000000000010000000100000000000000000000000100000000001380D48B00000000000032000000094D656D6F7279202633000000000000000000000000010000000100000000000000000000000100000000001380D58B00000000000032000000094D656D6F72792026340000000000000000000000000100000001000000000000000000000001000000000013801001000000000000330000000E53657269616C2057696E646F77730000000000000000000000000100000001000000000000000000000001000000040013809307000000000000330000000855415254202326310000000000000000000000000100000001000000000000000000000001000000000013809407000000000000330000000855415254202326320000000000000000000000000100000001000000000000000000000001000000000013809507000000000000330000000855415254202326330000000000000000000000000100000001000000000000000000000001000000000013809607000000000000330000001626446562756720287072696E746629205669657765720000000000000000000000000100000001000000000000000000000001000000000013803C010000000000003400000010416E616C797369732057696E646F7773000000000000000000000000010000000100000000000000000000000100000004001380658A000000000000340000000F264C6F67696320416E616C797A6572000000000000000000000000010000000100000000000000000000000100000000001380DC7F0000000000003E0000001526506572666F726D616E636520416E616C797A6572000000000000000000000000010000000100000000000000000000000100000000001380E788000000000000380000000E26436F646520436F766572616765000000000000000000000000010000000100000000000000000000000100000000001380CD01000000000000FFFFFFFF0F416E616C7973697320416E63686F7201000000000000000000000001000000010000000000000000000000010000000000138053010000000000003F0000000D54726163652057696E646F77730000000000000000000000000100000001000000000000000000000001000000010013805401000000000000FFFFFFFF115472616365204D656E7520416E63686F720100000000000000000000000100000001000000000000000000000001000000000013802901000000000000350000001553797374656D205669657765722057696E646F77730000000000000000000000000100000001000000000000000000000001000000010013804B01000000000000FFFFFFFF1453797374656D2056696577657220416E63686F720100000000000000000000000100000001000000000000000000000001000000000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000013800189000000000000360000000F26546F6F6C626F782057696E646F7700000000000000000000000001000000010000000000000000000000010000000300138044C5000000000000FFFFFFFF0E5570646174652057696E646F77730100000000000000000000000100000001000000000000000000000001000000000013800000000000000400FFFFFFFF000000000000000000000000000100000001000000000000000000000001000000000013805B01000000000000FFFFFFFF12546F6F6C626F78204D656E75416E63686F720100000000000000000000000100000001000000000000000000000001000000000000000000054465627567FF7F0000</Data>
         </Buttons>
         <OriginalItems>
           <Len>898</Len>
@@ -1847,8 +1847,8 @@
       </ToolBar>
       <ControlBarsSummary>
         <Bars>0</Bars>
-        <ScreenCX>1920</ScreenCX>
-        <ScreenCY>1080</ScreenCY>
+        <ScreenCX>1536</ScreenCX>
+        <ScreenCY>864</ScreenCY>
       </ControlBarsSummary>
     </ViewEx>
     <ViewEx>
@@ -2077,7 +2077,7 @@
       <Window>
         <RegID>1937</RegID>
         <PaneID>1937</PaneID>
-        <IsVisible>0</IsVisible>
+        <IsVisible>1</IsVisible>
         <IsFloating>0</IsFloating>
         <IsTabbed>0</IsTabbed>
         <IsActivated>0</IsActivated>
@@ -2247,11 +2247,11 @@
         <RecentRowIndex>0</RecentRowIndex>
         <RectRecentDocked>
           <Len>16</Len>
-          <Data>000000002002000090050000C5020000</Data>
+          <Data>000000009E0100007004000023020000</Data>
         </RectRecentDocked>
         <RectRecentFloat>
           <Len>16</Len>
-          <Data>250000002C0000005D0200009D000000</Data>
+          <Data>260000002C0000005E0200009D000000</Data>
         </RectRecentFloat>
       </Window>
       <Window>
@@ -3536,14 +3536,14 @@
       </Window>
       <DockMan>
         <Len>3415</Len>
-        <Data>000000000C000000000000000020000001000000FFFFFFFFFFFFFFFF29010000DD000000EC050000E10000000100000001000010040000000100000071FFFFFF4A020000FFFFFFFF08000000CB00000057010000CC000000F08B00005A01000079070000D601000045890000FFFF02000B004354616262656450616E6500200000010000002901000066000000EC050000F4000000290100004F000000EC050000DD0000000000000040280056080000000B446973617373656D626C7901000000CB00000001000000FFFFFFFFFFFFFFFF14506572666F726D616E636520416E616C797A6572000000005701000001000000FFFFFFFFFFFFFFFF14506572666F726D616E636520416E616C797A657200000000CC00000001000000FFFFFFFFFFFFFFFF0E4C6F67696320416E616C797A657200000000F08B000001000000FFFFFFFFFFFFFFFF0D436F646520436F766572616765000000005A01000001000000FFFFFFFFFFFFFFFF11496E737472756374696F6E205472616365000000007907000001000000FFFFFFFFFFFFFFFF0F53797374656D20416E616C797A657200000000D601000001000000FFFFFFFFFFFFFFFF104576656E742053746174697374696373000000004589000001000000FFFFFFFFFFFFFFFF00000000000000000000000000000000000000000000000001000000FFFFFFFFCB00000001000000FFFFFFFFCB000000000000000040000000000000FFFFFFFFFFFFFFFF9C0400004F000000A004000030020000000000000200000004000000010000000000000000000000FFFFFFFF2B000000E2050000CA0900002D8C00002E8C00002F8C0000308C0000318C0000328C0000338C0000348C0000358C0000368C0000378C0000388C0000398C00003A8C00003B8C00003C8C00003D8C00003E8C00003F8C0000408C0000418C000050C3000051C3000052C3000053C3000054C3000055C3000056C3000057C3000058C3000059C300005AC300005BC300005CC300005DC300005EC300005FC3000060C3000061C3000062C3000063C3000001800040000000000000A0040000660000009005000047020000A00400004F000000900500003002000000000000404100462B0000000753796D626F6C7300000000E205000001000000FFFFFFFFFFFFFFFF0A5472616365204461746100000000CA09000001000000FFFFFFFFFFFFFFFF00000000002D8C000001000000FFFFFFFFFFFFFFFF00000000002E8C000001000000FFFFFFFFFFFFFFFF00000000002F8C000001000000FFFFFFFFFFFFFFFF0000000000308C000001000000FFFFFFFFFFFFFFFF0000000000318C000001000000FFFFFFFFFFFFFFFF0000000000328C000001000000FFFFFFFFFFFFFFFF0000000000338C000001000000FFFFFFFFFFFFFFFF0000000000348C000001000000FFFFFFFFFFFFFFFF0000000000358C000001000000FFFFFFFFFFFFFFFF0000000000368C000001000000FFFFFFFFFFFFFFFF0000000000378C000001000000FFFFFFFFFFFFFFFF0000000000388C000001000000FFFFFFFFFFFFFFFF0000000000398C000001000000FFFFFFFFFFFFFFFF00000000003A8C000001000000FFFFFFFFFFFFFFFF00000000003B8C000001000000FFFFFFFFFFFFFFFF00000000003C8C000001000000FFFFFFFFFFFFFFFF00000000003D8C000001000000FFFFFFFFFFFFFFFF00000000003E8C000001000000FFFFFFFFFFFFFFFF00000000003F8C000001000000FFFFFFFFFFFFFFFF0000000000408C000001000000FFFFFFFFFFFFFFFF0000000000418C000001000000FFFFFFFFFFFFFFFF000000000050C3000001000000FFFFFFFFFFFFFFFF000000000051C3000001000000FFFFFFFFFFFFFFFF000000000052C3000001000000FFFFFFFFFFFFFFFF000000000053C3000001000000FFFFFFFFFFFFFFFF000000000054C3000001000000FFFFFFFFFFFFFFFF000000000055C3000001000000FFFFFFFFFFFFFFFF000000000056C3000001000000FFFFFFFFFFFFFFFF000000000057C3000001000000FFFFFFFFFFFFFFFF000000000058C3000001000000FFFFFFFFFFFFFFFF000000000059C3000001000000FFFFFFFFFFFFFFFF00000000005AC3000001000000FFFFFFFFFFFFFFFF00000000005BC3000001000000FFFFFFFFFFFFFFFF00000000005CC3000001000000FFFFFFFFFFFFFFFF00000000005DC3000001000000FFFFFFFFFFFFFFFF00000000005EC3000001000000FFFFFFFFFFFFFFFF00000000005FC3000001000000FFFFFFFFFFFFFFFF000000000060C3000001000000FFFFFFFFFFFFFFFF000000000061C3000001000000FFFFFFFFFFFFFFFF000000000062C3000001000000FFFFFFFFFFFFFFFF000000000063C3000001000000FFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000000000000000000000001000000FFFFFFFFE205000001000000FFFFFFFFE2050000000000000010000001000000FFFFFFFFFFFFFFFF250100004F00000029010000330300000100000002000010040000000100000012FFFFFFF3040000FFFFFFFF05000000ED0300006D000000C3000000C400000073940000018000100000010000000000000066000000250100004A030000000000004F00000025010000330300000000000040410056050000000750726F6A65637401000000ED03000001000000FFFFFFFFFFFFFFFF05426F6F6B73000000006D00000001000000FFFFFFFFFFFFFFFF0946756E6374696F6E7300000000C300000001000000FFFFFFFFFFFFFFFF0954656D706C6174657300000000C400000001000000FFFFFFFFFFFFFFFF09526567697374657273010000007394000001000000FFFFFFFFFFFFFFFF00000000000000000000000000000000000000000000000001000000FFFFFFFFED03000001000000FFFFFFFFED030000000000000080000000000000FFFFFFFFFFFFFFFF000000000E0100006C0400001201000000000000010000000400000001000000F9FEFFFF2B00000000000000000000000000000001000000C60000000000000001000000000000000000000001000000FFFFFFFF0003000088020000040300001803000000000000020000000400000000000000000000000000000000000000000000000000000001000000C600000001000000C6000000000000000080000001000000FFFFFFFFFFFFFFFF0000000033030000EC0500003703000001000000010000100400000001000000F7FEFFFF21010000FFFFFFFF06000000C5000000C7000000B4010000D2010000CF0100007794000001800080000001000000000000004E030000EC050000070400000000000037030000EC050000F00300000000000040820056060000000C4275696C64204F757470757400000000C500000001000000FFFFFFFFFFFFFFFF0D46696E6420496E2046696C657301000000C700000001000000FFFFFFFFFFFFFFFF0A4572726F72204C69737400000000B401000001000000FFFFFFFFFFFFFFFF0E536F757263652042726F7773657200000000D201000001000000FFFFFFFFFFFFFFFF0E416C6C205265666572656E63657300000000CF01000001000000FFFFFFFFFFFFFFFF0642726F777365000000007794000001000000FFFFFFFFFFFFFFFF01000000000000000000000000000000000000000000000001000000FFFFFFFFC500000001000000FFFFFFFFC5000000000000000040000001000000FFFFFFFFFFFFFFFFEC0500004F000000F0050000F003000001000000020000100400000001000000EAFCFFFFEB01000000000000000000000000000001000000FFFFFFFF0F0000008F070000930700009407000095070000960700009007000091070000B5010000B801000038030000B9050000BA050000BB050000BC050000CB09000001800040000001000000F0050000660000008007000007040000F00500004F00000080070000F003000000000000404100560F0000001343616C6C20537461636B202B204C6F63616C73010000008F07000001000000FFFFFFFFFFFFFFFF0755415254202331000000009307000001000000FFFFFFFFFFFFFFFF0755415254202332000000009407000001000000FFFFFFFFFFFFFFFF0755415254202333000000009507000001000000FFFFFFFFFFFFFFFF15446562756720287072696E74662920566965776572000000009607000001000000FFFFFFFFFFFFFFFF0757617463682031010000009007000001000000FFFFFFFFFFFFFFFF0757617463682032000000009107000001000000FFFFFFFFFFFFFFFF10547261636520457863657074696F6E7300000000B501000001000000FFFFFFFFFFFFFFFF0E4576656E7420436F756E7465727300000000B801000001000000FFFFFFFFFFFFFFFF09554C494E4B706C7573000000003803000001000000FFFFFFFFFFFFFFFF084D656D6F7279203101000000B905000001000000FFFFFFFFFFFFFFFF084D656D6F7279203200000000BA05000001000000FFFFFFFFFFFFFFFF084D656D6F7279203300000000BB05000001000000FFFFFFFFFFFFFFFF084D656D6F7279203400000000BC05000001000000FFFFFFFFFFFFFFFF105472616365204E617669676174696F6E00000000CB09000001000000FFFFFFFFFFFFFFFF0500000000000000000000000000000000000000000000000000000001000000FFFFFFFF8F07000001000000FFFFFFFF8F070000000000000000000000000000</Data>
+        <Data>000000000C000000000000000020000001000000FFFFFFFFFFFFFFFF29010000DD000000EC050000E10000000100000001000010040000000100000071FFFFFF4A020000FFFFFFFF08000000CB00000057010000CC000000F08B00005A01000079070000D601000045890000FFFF02000B004354616262656450616E6500200000010000002901000066000000EC050000F4000000290100004F000000EC050000DD0000000000000040280056080000000B446973617373656D626C7901000000CB00000001000000FFFFFFFFFFFFFFFF14506572666F726D616E636520416E616C797A6572000000005701000001000000FFFFFFFFFFFFFFFF14506572666F726D616E636520416E616C797A657200000000CC00000001000000FFFFFFFFFFFFFFFF0E4C6F67696320416E616C797A657200000000F08B000001000000FFFFFFFFFFFFFFFF0D436F646520436F766572616765000000005A01000001000000FFFFFFFFFFFFFFFF11496E737472756374696F6E205472616365000000007907000001000000FFFFFFFFFFFFFFFF0F53797374656D20416E616C797A657200000000D601000001000000FFFFFFFFFFFFFFFF104576656E742053746174697374696373000000004589000001000000FFFFFFFFFFFFFFFF00000000000000000000000000000000000000000000000001000000FFFFFFFFCB00000001000000FFFFFFFFCB000000000000000040000000000000FFFFFFFFFFFFFFFF9C0400004F000000A004000030020000000000000200000004000000010000000000000000000000FFFFFFFF2B000000E2050000CA0900002D8C00002E8C00002F8C0000308C0000318C0000328C0000338C0000348C0000358C0000368C0000378C0000388C0000398C00003A8C00003B8C00003C8C00003D8C00003E8C00003F8C0000408C0000418C000050C3000051C3000052C3000053C3000054C3000055C3000056C3000057C3000058C3000059C300005AC300005BC300005CC300005DC300005EC300005FC3000060C3000061C3000062C3000063C3000001800040000000000000A0040000660000009005000047020000A00400004F000000900500003002000000000000404100462B0000000753796D626F6C7300000000E205000001000000FFFFFFFFFFFFFFFF0A5472616365204461746100000000CA09000001000000FFFFFFFFFFFFFFFF00000000002D8C000001000000FFFFFFFFFFFFFFFF00000000002E8C000001000000FFFFFFFFFFFFFFFF00000000002F8C000001000000FFFFFFFFFFFFFFFF0000000000308C000001000000FFFFFFFFFFFFFFFF0000000000318C000001000000FFFFFFFFFFFFFFFF0000000000328C000001000000FFFFFFFFFFFFFFFF0000000000338C000001000000FFFFFFFFFFFFFFFF0000000000348C000001000000FFFFFFFFFFFFFFFF0000000000358C000001000000FFFFFFFFFFFFFFFF0000000000368C000001000000FFFFFFFFFFFFFFFF0000000000378C000001000000FFFFFFFFFFFFFFFF0000000000388C000001000000FFFFFFFFFFFFFFFF0000000000398C000001000000FFFFFFFFFFFFFFFF00000000003A8C000001000000FFFFFFFFFFFFFFFF00000000003B8C000001000000FFFFFFFFFFFFFFFF00000000003C8C000001000000FFFFFFFFFFFFFFFF00000000003D8C000001000000FFFFFFFFFFFFFFFF00000000003E8C000001000000FFFFFFFFFFFFFFFF00000000003F8C000001000000FFFFFFFFFFFFFFFF0000000000408C000001000000FFFFFFFFFFFFFFFF0000000000418C000001000000FFFFFFFFFFFFFFFF000000000050C3000001000000FFFFFFFFFFFFFFFF000000000051C3000001000000FFFFFFFFFFFFFFFF000000000052C3000001000000FFFFFFFFFFFFFFFF000000000053C3000001000000FFFFFFFFFFFFFFFF000000000054C3000001000000FFFFFFFFFFFFFFFF000000000055C3000001000000FFFFFFFFFFFFFFFF000000000056C3000001000000FFFFFFFFFFFFFFFF000000000057C3000001000000FFFFFFFFFFFFFFFF000000000058C3000001000000FFFFFFFFFFFFFFFF000000000059C3000001000000FFFFFFFFFFFFFFFF00000000005AC3000001000000FFFFFFFFFFFFFFFF00000000005BC3000001000000FFFFFFFFFFFFFFFF00000000005CC3000001000000FFFFFFFFFFFFFFFF00000000005DC3000001000000FFFFFFFFFFFFFFFF00000000005EC3000001000000FFFFFFFFFFFFFFFF00000000005FC3000001000000FFFFFFFFFFFFFFFF000000000060C3000001000000FFFFFFFFFFFFFFFF000000000061C3000001000000FFFFFFFFFFFFFFFF000000000062C3000001000000FFFFFFFFFFFFFFFF000000000063C3000001000000FFFFFFFFFFFFFFFFFFFFFFFF000000000000000000000000000000000000000001000000FFFFFFFFE205000001000000FFFFFFFFE2050000000000000010000001000000FFFFFFFFFFFFFFFF250100004F00000029010000330300000100000002000010040000000100000012FFFFFFF3040000FFFFFFFF05000000ED0300006D000000C3000000C400000073940000018000100000010000000000000066000000250100004A030000000000004F00000025010000330300000000000040410056050000000750726F6A65637401000000ED03000001000000FFFFFFFFFFFFFFFF05426F6F6B73000000006D00000001000000FFFFFFFFFFFFFFFF0946756E6374696F6E7300000000C300000001000000FFFFFFFFFFFFFFFF0954656D706C6174657300000000C400000001000000FFFFFFFFFFFFFFFF09526567697374657273010000007394000001000000FFFFFFFFFFFFFFFF00000000000000000000000000000000000000000000000001000000FFFFFFFFED03000001000000FFFFFFFFED030000000000000080000000000000FFFFFFFFFFFFFFFF000000000E0100006C0400001201000000000000010000000400000001000000F9FEFFFF2B00000000000000000000000000000001000000C60000000000000001000000000000000000000001000000FFFFFFFF0003000088020000040300001803000000000000020000000400000000000000000000000000000000000000000000000000000001000000C600000001000000C6000000000000000080000001000000FFFFFFFFFFFFFFFF0000000033030000EC0500003703000001000000010000100400000001000000F7FEFFFF21010000FFFFFFFF06000000C5000000C7000000B4010000D2010000CF0100007794000001800080000001000000000000004E030000EC050000070400000000000037030000EC050000F00300000000000040820056060000000C4275696C64204F757470757400000000C500000001000000FFFFFFFFFFFFFFFF0D46696E6420496E2046696C657301000000C700000001000000FFFFFFFFFFFFFFFF0A4572726F72204C69737400000000B401000001000000FFFFFFFFFFFFFFFF0E536F757263652042726F7773657200000000D201000001000000FFFFFFFFFFFFFFFF0E416C6C205265666572656E63657300000000CF01000001000000FFFFFFFFFFFFFFFF0642726F777365000000007794000001000000FFFFFFFFFFFFFFFF01000000000000000000000000000000000000000000000001000000FFFFFFFFC500000001000000FFFFFFFFC5000000000000000040000001000000FFFFFFFFFFFFFFFFEC0500004F000000F0050000F003000001000000020000100400000001000000EAFCFFFFEB01000000000000000000000000000001000000FFFFFFFF0F0000008F070000930700009407000095070000960700009007000091070000B5010000B801000038030000B9050000BA050000BB050000BC050000CB09000001800040000001000000F0050000660000008007000007040000F00500004F00000080070000F003000000000000404100560F0000001343616C6C20537461636B202B204C6F63616C73010000008F07000001000000FFFFFFFFFFFFFFFF0755415254202331000000009307000001000000FFFFFFFFFFFFFFFF0755415254202332000000009407000001000000FFFFFFFFFFFFFFFF0755415254202333000000009507000001000000FFFFFFFFFFFFFFFF15446562756720287072696E74662920566965776572000000009607000001000000FFFFFFFFFFFFFFFF0757617463682031010000009007000001000000FFFFFFFFFFFFFFFF0757617463682032010000009107000001000000FFFFFFFFFFFFFFFF10547261636520457863657074696F6E7300000000B501000001000000FFFFFFFFFFFFFFFF0E4576656E7420436F756E7465727300000000B801000001000000FFFFFFFFFFFFFFFF09554C494E4B706C7573000000003803000001000000FFFFFFFFFFFFFFFF084D656D6F7279203101000000B905000001000000FFFFFFFFFFFFFFFF084D656D6F7279203200000000BA05000001000000FFFFFFFFFFFFFFFF084D656D6F7279203300000000BB05000001000000FFFFFFFFFFFFFFFF084D656D6F7279203400000000BC05000001000000FFFFFFFFFFFFFFFF105472616365204E617669676174696F6E00000000CB09000001000000FFFFFFFFFFFFFFFF0500000000000000000000000000000000000000000000000000000001000000FFFFFFFF8F07000001000000FFFFFFFF8F070000000000000000000000000000</Data>
       </DockMan>
       <ToolBar>
         <RegID>59392</RegID>
         <Name>File</Name>
         <Buttons>
-          <Len>2598</Len>
-          <Data>00200000010000002800FFFF01001100434D4643546F6F6C426172427574746F6E00E100000000000000000000000000000000000000000000000100000001000000018001E100000000000001000000000000000000000000000000000100000001000000018003E1000000000000020000000000000000000000000000000001000000010000000180CD7F0000000000000300000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018023E100000000000004000000000000000000000000000000000100000001000000018022E100000000000005000000000000000000000000000000000100000001000000018025E10000000000000600000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001802BE10000000000000700000000000000000000000000000000010000000100000001802CE10000000004000800000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001807A8A0000000000000900000000000000000000000000000000010000000100000001807B8A0000000000000A00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180D3B00000000000000B000000000000000000000000000000000100000001000000018015B10000000004000C0000000000000000000000000000000001000000010000000180F4B00000000004000D000000000000000000000000000000000100000001000000018036B10000000004000E00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180FF88000000000000460000000000000000000000000000000001000000010000000180FE880000000000004500000000000000000000000000000000010000000100000001800B810000000000001300000000000000000000000000000000010000000100000001800C810000000000001400000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180F0880000020000000F000000000000000000000000000000000100000001000000FFFF0100120043555646696E64436F6D626F427574746F6EE803000000000000000000000000000000000000000000000001000000010000009600000002002050000000000D5F5F64697361626C655F697271960000000000000013000D5F5F64697361626C655F697271000F48414C5F43414E5F4D7370496E6974085049445F496E69740E5265667265736853797354696D6509636F6E6669674D41580F4A756467655F526561645F44617461144F66665F4C696E655F4465746563745F496E697424636F6E6669674D41585F53595343414C4C5F494E544552525550545F5052494F5249545925636F6E6669674D41585F53595343414C4C5F494E544552525550545F5052494F524954590A157461736B454E5445525F435249544943414C28293B0952656D6F74655F4E4F1153797374656D53746174655F496E69746506636F6C6F75720972657476616C5F74660C4652414D455F484541444552165573617274355F436C65616E5F49444C455F466C6167075365745F4158360741585F496E697400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018024E10000000000001100000000000000000000000000000000010000000100000001800A810000000000001200000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6E2280000002000100150000002153746172742F53746F70202644656275672053657373696F6E094374726C2B46350000000000000000000000000100000001000000000000000000000001000000020021802280000000000000150000002153746172742F53746F70202644656275672053657373696F6E094374726C2B4635000000000000000000000000010000000100000000000000000000000100000000002180E0010000000000007500000021456E65726779204D6561737572656D656E742026776974686F75742044656275670000000000000000000000000100000001000000000000000000000001000000000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180C488000000000000160000000000000000000000000000000001000000010000000180C988000000000400180000000000000000000000000000000001000000010000000180C788000000000000190000000000000000000000000000000001000000010000000180C8880000000000001700000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000021804C010000020001001A0000000F2650726F6A6563742057696E646F77000000000000000000000000010000000100000000000000000000000100000008002180DD880000000000001A0000000750726F6A656374000000000000000000000000010000000100000000000000000000000100000000002180DC8B0000000000003A00000005426F6F6B73000000000000000000000000010000000100000000000000000000000100000000002180E18B0000000000003B0000000946756E6374696F6E73000000000000000000000000010000000100000000000000000000000100000000002180E28B000000000000400000000954656D706C6174657300000000000000000000000001000000010000000000000000000000010000000000218018890000000000003D0000000E536F757263652042726F777365720000000000000000000000000100000001000000000000000000000001000000000021800000000000000400FFFFFFFF00000000000000000001000000000000000100000000000000000000000100000000002180D988000000000000390000000C4275696C64204F7574707574000000000000000000000000010000000100000000000000000000000100000000002180E38B000000000000410000000B46696E64204F75747075740000000000000000000000000100000001000000000000000000000001000000000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180FB7F0000000000001B000000000000000000000000000000000100000001000000000000000446696C65B9030000</Data>
+          <Len>2590</Len>
+          <Data>00200000010000002800FFFF01001100434D4643546F6F6C426172427574746F6E00E100000000000000000000000000000000000000000000000100000001000000018001E100000000000001000000000000000000000000000000000100000001000000018003E1000000000000020000000000000000000000000000000001000000010000000180CD7F0000000000000300000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018023E100000000040004000000000000000000000000000000000100000001000000018022E100000000040005000000000000000000000000000000000100000001000000018025E10000000000000600000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001802BE10000000000000700000000000000000000000000000000010000000100000001802CE10000000004000800000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001807A8A0000000000000900000000000000000000000000000000010000000100000001807B8A0000000000000A00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180D3B00000000000000B000000000000000000000000000000000100000001000000018015B10000000004000C0000000000000000000000000000000001000000010000000180F4B00000000004000D000000000000000000000000000000000100000001000000018036B10000000004000E00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180FF88000000000400460000000000000000000000000000000001000000010000000180FE880000000004004500000000000000000000000000000000010000000100000001800B810000000004001300000000000000000000000000000000010000000100000001800C810000000004001400000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180F0880000020000000F000000000000000000000000000000000100000001000000FFFF0100120043555646696E64436F6D626F427574746F6EE8030000000000000000000000000000000000000000000000010000000100000096000000020020500000000004636861729600000000000000120004636861721047696D62616C5F4D6F746F7236303230097961775F636F756E741448414C5F554152545F526563656976655F444D41085049445F43616C630E4352435F436865636B5F547275650C6672616D655F6865616465720F4352435F436865636B5F46616C73650E53656E645F4672616D65446174611A23696E636C75646520226F66666C696E655F636865636B2E68220B48414C5F4765745469636B10436861737369734D6F746F725F544F45144558544931355F31305F49525148616E646C65721B456E636F6465725F446972656374696F6E5F455854495F4952516E13436861737369735F506174726F6C5F4D6F64650A626C6F636B5F666C6167146D696E6970635F72782E626F70616E5F666C6167167074725F686561745F67756E5F742E7368745F666C67000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018024E10000000000001100000000000000000000000000000000010000000100000001800A810000000000001200000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6E2280000002000100150000002153746172742F53746F70202644656275672053657373696F6E094374726C2B46350000000000000000000000000100000001000000000000000000000001000000020021802280000000000000150000002153746172742F53746F70202644656275672053657373696F6E094374726C2B4635000000000000000000000000010000000100000000000000000000000100000000002180E0010000000000007500000021456E65726779204D6561737572656D656E742026776974686F75742044656275670000000000000000000000000100000001000000000000000000000001000000000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180C488000000000400160000000000000000000000000000000001000000010000000180C988000000000400180000000000000000000000000000000001000000010000000180C788000000000000190000000000000000000000000000000001000000010000000180C8880000000000001700000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000021804C010000020001001A0000000F2650726F6A6563742057696E646F77000000000000000000000000010000000100000000000000000000000100000008002180DD880000000000001A0000000750726F6A656374000000000000000000000000010000000100000000000000000000000100000000002180DC8B0000000000003A00000005426F6F6B73000000000000000000000000010000000100000000000000000000000100000000002180E18B0000000000003B0000000946756E6374696F6E73000000000000000000000000010000000100000000000000000000000100000000002180E28B000000000000400000000954656D706C6174657300000000000000000000000001000000010000000000000000000000010000000000218018890000000000003D0000000E536F757263652042726F777365720000000000000000000000000100000001000000000000000000000001000000000021800000000000000400FFFFFFFF00000000000000000001000000000000000100000000000000000000000100000000002180D988000000000000390000000C4275696C64204F7574707574000000000000000000000000010000000100000000000000000000000100000000002180E38B000000000000410000000B46696E64204F75747075740000000000000000000000000100000001000000000000000000000001000000000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180FB7F0000000000001B000000000000000000000000000000000100000001000000000000000446696C65B9030000</Data>
         </Buttons>
         <OriginalItems>
           <Len>1423</Len>
@@ -3559,7 +3559,7 @@
         <Name>Build</Name>
         <Buttons>
           <Len>955</Len>
-          <Data>00200000000000001000FFFF01001100434D4643546F6F6C426172427574746F6ECF7F0000000000001C0000000000000000000000000000000001000000010000000180D07F0000000000001D000000000000000000000000000000000100000001000000018030800000000000001E000000000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6EC7040000000000006A0000000C4261746368204275696C2664000000000000000000000000010000000100000000000000000000000100000004000580C7040000000000006A0000000C4261746368204275696C266400000000000000000000000001000000010000000000000000000000010000000000058046070000000000006B0000000D42617463682052656275696C640000000000000000000000000100000001000000000000000000000001000000000005804707000000000000FFFFFFFF0B426174636820436C65616E0100000000000000010000000000000001000000000000000000000001000000000005809E8A0000000000001F0000000F4261746326682053657475702E2E2E000000000000000000000000010000000100000000000000000000000100000000000180D17F0000000000002000000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001804C8A0000000000002100000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000FFFF01001900434D4643546F6F6C426172436F6D626F426F78427574746F6EBA00000000000000000000000000000000000000000000000001000000010000009600000003002050FFFFFFFF00960000000000000000000180EB880000000000002200000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180C07F000000000000230000000000000000000000000000000001000000010000000180B08A000000000000240000000000000000000000000000000001000000010000000180A8010000000000004E00000000000000000000000000000000010000000100000001807202000000000000530000000000000000000000000000000001000000010000000180BE010000000000005000000000000000000000000000000000010000000100000000000000054275696C64DC010000</Data>
+          <Data>00200000000000001000FFFF01001100434D4643546F6F6C426172427574746F6ECF7F0000000000001C0000000000000000000000000000000001000000010000000180D07F0000000000001D000000000000000000000000000000000100000001000000018030800000000000001E000000000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6EC7040000000000006A0000000C4261746368204275696C2664000000000000000000000000010000000100000000000000000000000100000004000580C7040000000000006A0000000C4261746368204275696C266400000000000000000000000001000000010000000000000000000000010000000000058046070000000000006B0000000D42617463682052656275696C640000000000000000000000000100000001000000000000000000000001000000000005804707000000000000FFFFFFFF0B426174636820436C65616E0000000000000000010000000000000001000000000000000000000001000000000005809E8A0000000000001F0000000F4261746326682053657475702E2E2E000000000000000000000000010000000100000000000000000000000100000000000180D17F0000000000002000000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001804C8A0000000000002100000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000FFFF01001900434D4643546F6F6C426172436F6D626F426F78427574746F6EBA00000000000000000000000000000000000000000000000001000000010000009600000003002050FFFFFFFF00960000000000000000000180EB880000000000002200000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180C07F000000000000230000000000000000000000000000000001000000010000000180B08A000000000000240000000000000000000000000000000001000000010000000180A8010000000000004E00000000000000000000000000000000010000000100000001807202000000000000530000000000000000000000000000000001000000010000000180BE010000000000005000000000000000000000000000000000010000000100000000000000054275696C64DC010000</Data>
         </Buttons>
         <OriginalItems>
           <Len>583</Len>
@@ -3575,7 +3575,7 @@
         <Name>Debug</Name>
         <Buttons>
           <Len>2362</Len>
-          <Data>00200000010000001900FFFF01001100434D4643546F6F6C426172427574746F6ECC880000000000002500000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018017800000000004002600000000000000000000000000000000010000000100000001801D800000000000002700000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001801A800000000004002800000000000000000000000000000000010000000100000001801B80000000000400290000000000000000000000000000000001000000010000000180E57F0000000004002A00000000000000000000000000000000010000000100000001801C800000000004002B00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018000890000000004002C00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180E48B0000020000002D0000000000000000000000000000000001000000010000000180F07F0000020001002E0000000000000000000000000000000001000000010000000180E8880000020000003700000000000000000000000000000000010000000100000001803B010000020001002F0000000000000000000000000000000001000000010000000180BB8A00000200010030000000000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6E0E01000002000100310000000D57617463682057696E646F7773000000000000000000000000010000000100000000000000000000000100000003001380D88B00000000000031000000085761746368202631000000000000000000000000010000000100000000000000000000000100000000001380D98B00000000000031000000085761746368202632000000000000000000000000010000000100000000000000000000000100000000001380CE01000000000000FFFFFFFF0C576174636820416E63686F720100000000000000010000000000000001000000000000000000000001000000000013800F0100000200010032000000094D656D6F7279202631000000000000000000000000010000000100000000000000000000000100000004001380D28B00000000000032000000094D656D6F7279202631000000000000000000000000010000000100000000000000000000000100000000001380D38B00000000000032000000094D656D6F7279202632000000000000000000000000010000000100000000000000000000000100000000001380D48B00000000000032000000094D656D6F7279202633000000000000000000000000010000000100000000000000000000000100000000001380D58B00000000000032000000094D656D6F72792026340000000000000000000000000100000001000000000000000000000001000000000013801001000002000000330000000855415254202326310000000000000000000000000100000001000000000000000000000001000000040013809307000000000000330000000855415254202326310000000000000000000000000100000001000000000000000000000001000000000013809407000000000000330000000855415254202326320000000000000000000000000100000001000000000000000000000001000000000013809507000000000000330000000855415254202326330000000000000000000000000100000001000000000000000000000001000000000013809607000000000000330000001626446562756720287072696E746629205669657765720000000000000000000000000100000001000000000000000000000001000000000013803C010000020000003400000010416E616C797369732057696E646F7773000000000000000000000000010000000100000000000000000000000100000004001380658A000000000000340000000F264C6F67696320416E616C797A6572000000000000000000000000010000000100000000000000000000000100000000001380DC7F0000000000003E0000001526506572666F726D616E636520416E616C797A6572000000000000000000000000010000000100000000000000000000000100000000001380E788000000000000380000000E26436F646520436F766572616765000000000000000000000000010000000100000000000000000000000100000000001380CD01000000000000FFFFFFFF0F416E616C7973697320416E63686F7201000000000000000100000000000000010000000000000000000000010000000000138053010000000000003F0000000D54726163652057696E646F77730000000000000000000000000100000001000000000000000000000001000000010013805401000000000000FFFFFFFF115472616365204D656E7520416E63686F720100000000000000010000000000000001000000000000000000000001000000000013802901000000000000350000001553797374656D205669657765722057696E646F77730000000000000000000000000100000001000000000000000000000001000000010013804B01000000000000FFFFFFFF1453797374656D2056696577657220416E63686F720100000000000000010000000000000001000000000000000000000001000000000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000013800189000002000000360000000F26546F6F6C626F782057696E646F7700000000000000000000000001000000010000000000000000000000010000000300138044C5000000000000FFFFFFFF0E5570646174652057696E646F77730100000000000000010000000000000001000000000000000000000001000000000013800000000000000400FFFFFFFF000000000000000000010000000000000001000000000000000000000001000000000013805B01000000000000FFFFFFFF12546F6F6C626F78204D656E75416E63686F72010000000000000001000000000000000100000000000000000000000100000000000000000005446562756764020000</Data>
+          <Data>00200000010000001900FFFF01001100434D4643546F6F6C426172427574746F6ECC880000000000002500000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018017800000000004002600000000000000000000000000000000010000000100000001801D800000000000002700000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000001801A800000000004002800000000000000000000000000000000010000000100000001801B80000000000400290000000000000000000000000000000001000000010000000180E57F0000000004002A00000000000000000000000000000000010000000100000001801C800000000004002B00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF000000000000000000000000000100000001000000018000890000000004002C00000000000000000000000000000000010000000100000001800000000001000000FFFFFFFF0000000000000000000000000001000000010000000180E48B0000020000002D0000000000000000000000000000000001000000010000000180F07F0000020001002E0000000000000000000000000000000001000000010000000180E8880000020000003700000000000000000000000000000000010000000100000001803B010000020001002F0000000000000000000000000000000001000000010000000180BB8A00000200010030000000000000000000000000000000000100000001000000FFFF01001500434D4643546F6F6C4261724D656E75427574746F6E0E01000002000100310000000D57617463682057696E646F7773000000000000000000000000010000000100000000000000000000000100000003001380D88B00000000000031000000085761746368202631000000000000000000000000010000000100000000000000000000000100000000001380D98B00000000000031000000085761746368202632000000000000000000000000010000000100000000000000000000000100000000001380CE01000000000000FFFFFFFF0C576174636820416E63686F720000000000000000010000000000000001000000000000000000000001000000000013800F0100000200010032000000094D656D6F7279202631000000000000000000000000010000000100000000000000000000000100000004001380D28B00000000000032000000094D656D6F7279202631000000000000000000000000010000000100000000000000000000000100000000001380D38B00000000000032000000094D656D6F7279202632000000000000000000000000010000000100000000000000000000000100000000001380D48B00000000000032000000094D656D6F7279202633000000000000000000000000010000000100000000000000000000000100000000001380D58B00000000000032000000094D656D6F72792026340000000000000000000000000100000001000000000000000000000001000000000013801001000002000000330000000855415254202326310000000000000000000000000100000001000000000000000000000001000000040013809307000000000000330000000855415254202326310000000000000000000000000100000001000000000000000000000001000000000013809407000000000000330000000855415254202326320000000000000000000000000100000001000000000000000000000001000000000013809507000000000000330000000855415254202326330000000000000000000000000100000001000000000000000000000001000000000013809607000000000000330000001626446562756720287072696E746629205669657765720000000000000000000000000100000001000000000000000000000001000000000013803C010000020000003400000010416E616C797369732057696E646F7773000000000000000000000000010000000100000000000000000000000100000004001380658A000000000000340000000F264C6F67696320416E616C797A6572000000000000000000000000010000000100000000000000000000000100000000001380DC7F0000000000003E0000001526506572666F726D616E636520416E616C797A6572000000000000000000000000010000000100000000000000000000000100000000001380E788000000000000380000000E26436F646520436F766572616765000000000000000000000000010000000100000000000000000000000100000000001380CD01000000000000FFFFFFFF0F416E616C7973697320416E63686F7200000000000000000100000000000000010000000000000000000000010000000000138053010000000000003F0000000D54726163652057696E646F77730000000000000000000000000100000001000000000000000000000001000000010013805401000000000000FFFFFFFF115472616365204D656E7520416E63686F720000000000000000010000000000000001000000000000000000000001000000000013802901000000000000350000001553797374656D205669657765722057696E646F77730000000000000000000000000100000001000000000000000000000001000000010013804B01000000000000FFFFFFFF1453797374656D2056696577657220416E63686F720000000000000000010000000000000001000000000000000000000001000000000001800000000001000000FFFFFFFF00000000000000000000000000010000000100000013800189000002000000360000000F26546F6F6C626F782057696E646F7700000000000000000000000001000000010000000000000000000000010000000300138044C5000000000000FFFFFFFF0E5570646174652057696E646F77730000000000000000010000000000000001000000000000000000000001000000000013800000000000000400FFFFFFFF000000000000000000010000000000000001000000000000000000000001000000000013805B01000000000000FFFFFFFF12546F6F6C626F78204D656E75416E63686F72000000000000000001000000000000000100000000000000000000000100000000000000000005446562756764020000</Data>
         </Buttons>
         <OriginalItems>
           <Len>898</Len>
@@ -3599,153 +3599,18 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>25</ActiveTab>
+      <ActiveTab>2</ActiveTab>
       <Doc>
-        <Name>..\Module\Module-application\encoder.c</Name>
-        <ColumnNumber>3</ColumnNumber>
-        <TopLine>1</TopLine>
-        <CurrentLine>5</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\Module\Module-application\encoder.h</Name>
-        <ColumnNumber>14</ColumnNumber>
-        <TopLine>1</TopLine>
-        <CurrentLine>5</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\Module\Module-application\offline_check.c</Name>
-        <ColumnNumber>36</ColumnNumber>
-        <TopLine>138</TopLine>
-        <CurrentLine>152</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\Module\Module-application\offline_check.h</Name>
-        <ColumnNumber>1</ColumnNumber>
-        <TopLine>7</TopLine>
-        <CurrentLine>22</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\Boards_BSP\bsp.c</Name>
-        <ColumnNumber>41</ColumnNumber>
-        <TopLine>43</TopLine>
-        <CurrentLine>51</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\Boards_BSP\bsp_can.c</Name>
-        <ColumnNumber>3</ColumnNumber>
-        <TopLine>1</TopLine>
-        <CurrentLine>9</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\Boards_BSP\bsp_usart.c</Name>
-        <ColumnNumber>3</ColumnNumber>
-        <TopLine>8</TopLine>
-        <CurrentLine>9</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\Module\Module-communication\usart_printf.c</Name>
-        <ColumnNumber>14</ColumnNumber>
-        <TopLine>52</TopLine>
-        <CurrentLine>62</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\README\资源分配表.txt</Name>
-        <ColumnNumber>22</ColumnNumber>
-        <TopLine>1</TopLine>
-        <CurrentLine>17</CurrentLine>
-        <Folding>0</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\App_Tasks\shoot_task.c</Name>
-        <ColumnNumber>23</ColumnNumber>
-        <TopLine>76</TopLine>
-        <CurrentLine>86</CurrentLine>
+        <Name>../Core/Src/main.c</Name>
+        <ColumnNumber>5</ColumnNumber>
+        <TopLine>27</TopLine>
+        <CurrentLine>43</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
       </Doc>
       <Doc>
         <Name>..\App_Tasks\offline_check_task.c</Name>
-        <ColumnNumber>12</ColumnNumber>
-        <TopLine>144</TopLine>
-        <CurrentLine>160</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\App_Tasks\vision_task.c</Name>
-        <ColumnNumber>50</ColumnNumber>
-        <TopLine>17</TopLine>
-        <CurrentLine>37</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\Module\Module-communication\vision.c</Name>
-        <ColumnNumber>26</ColumnNumber>
-        <TopLine>4</TopLine>
-        <CurrentLine>17</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>startup_stm32f427xx.s</Name>
-        <ColumnNumber>17</ColumnNumber>
-        <TopLine>194</TopLine>
-        <CurrentLine>216</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c</Name>
-        <ColumnNumber>0</ColumnNumber>
-        <TopLine>396</TopLine>
-        <CurrentLine>400</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\Module\Module-communication\vision.h</Name>
-        <ColumnNumber>0</ColumnNumber>
-        <TopLine>3</TopLine>
-        <CurrentLine>7</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\App_Tasks\offline_check_task.h</Name>
         <ColumnNumber>0</ColumnNumber>
         <TopLine>1</TopLine>
         <CurrentLine>1</CurrentLine>
@@ -3755,18 +3620,9 @@
       </Doc>
       <Doc>
         <Name>..\App_Tasks\remote_control_task.c</Name>
-        <ColumnNumber>21</ColumnNumber>
-        <TopLine>20</TopLine>
-        <CurrentLine>28</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\App_Tasks\referee_task.c</Name>
-        <ColumnNumber>51</ColumnNumber>
-        <TopLine>18</TopLine>
-        <CurrentLine>37</CurrentLine>
+        <ColumnNumber>22</ColumnNumber>
+        <TopLine>13</TopLine>
+        <CurrentLine>14</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
@@ -3774,26 +3630,8 @@
       <Doc>
         <Name>..\App_Tasks\gimbal_control_task.c</Name>
         <ColumnNumber>0</ColumnNumber>
-        <TopLine>1</TopLine>
-        <CurrentLine>1</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\Module\Module-moter_driver\motor_use_can.c</Name>
-        <ColumnNumber>55</ColumnNumber>
-        <TopLine>63</TopLine>
-        <CurrentLine>75</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\Module\Module-moter_driver\motor_use_can.h</Name>
-        <ColumnNumber>0</ColumnNumber>
-        <TopLine>1</TopLine>
-        <CurrentLine>1</CurrentLine>
+        <TopLine>40</TopLine>
+        <CurrentLine>50</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
@@ -3801,35 +3639,8 @@
       <Doc>
         <Name>..\App_Tasks\chassis_control_task.c</Name>
         <ColumnNumber>0</ColumnNumber>
-        <TopLine>45</TopLine>
-        <CurrentLine>60</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\Boards_BSP\myinclude.h</Name>
-        <ColumnNumber>39</ColumnNumber>
-        <TopLine>53</TopLine>
-        <CurrentLine>69</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\Module\Module-communication\referee.c</Name>
-        <ColumnNumber>26</ColumnNumber>
-        <TopLine>1</TopLine>
-        <CurrentLine>19</CurrentLine>
-        <Folding>1</Folding>
-        <ContractedFolders></ContractedFolders>
-        <PaneID>0</PaneID>
-      </Doc>
-      <Doc>
-        <Name>..\Module\Module-communication\remote_control.c</Name>
-        <ColumnNumber>43</ColumnNumber>
-        <TopLine>185</TopLine>
-        <CurrentLine>26</CurrentLine>
+        <TopLine>46</TopLine>
+        <CurrentLine>56</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
