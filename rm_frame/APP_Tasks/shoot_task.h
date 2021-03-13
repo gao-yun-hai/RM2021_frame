@@ -2,7 +2,6 @@
 #define  __SHOOT_FRICTION_TASK_H
 /* 包含头文件 ---------------------------------------------------------------*/
 #include "myinclude.h"
-#include "user_lib.h"
 
 /* 本模块向外部提供的宏定义 -------------------------------------------------*/
 #define SHOOT_FRIC_PWM_ADD_VALUE    5.0f

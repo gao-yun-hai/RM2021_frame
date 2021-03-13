@@ -193,4 +193,40 @@ static void SBUS_To_Referee(uint8_t *buff, Referee_Struct  *Referee)
 			}
 	 }			
 }
+/**
+  * @brief				获取底盘功率与剩余缓存能量
+  * @param[in]		
+	* @param[out]		
+  * @retval				
+*/
+void get_chassis_power_and_buffer(fp32 *power, fp32 *buffer)
+{
+    *power = referee.power_heat_data.chassis_power;
+    *buffer = referee.power_heat_data.chassis_power_buffer;
+
+}
+
+/**
+  * @brief				获取17mm枪口热量及上限
+  * @param[in]		
+	* @param[out]		
+  * @retval				
+*/
+void get_shoot_heat0_limit_and_heat0(uint16_t *heat0_limit, uint16_t *heat0)
+{
+    *heat0_limit = referee.game_robot_status.shooter_heat0_cooling_limit;
+    *heat0 = referee.power_heat_data.shooter_heat0;
+}
+
+/**
+  * @brief				获取42mm枪口热量及上限
+  * @param[in]		
+	* @param[out]		
+  * @retval				
+*/
+void get_shoot_heat1_limit_and_heat1(uint16_t *heat1_limit, uint16_t *heat1)
+{
+    *heat1_limit = referee.game_robot_status.shooter_heat1_cooling_limit;
+    *heat1 = referee.power_heat_data.shooter_heat1;
+}
 

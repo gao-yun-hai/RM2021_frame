@@ -89,7 +89,7 @@ void Trigger_Drive_Task(void const * argument)
 	
 	for(;;)
 	{
-		Refresh_Task_OffLine_Time(TriggerDriveTask_TOE);//记录任务运行的时间点
+    Refresh_Task_OffLine_Time(TriggerDriveTask_TOE);//记录任务运行的时间点
 		
 		
 		osDelayUntil(&xLastWakeTime,TRIGGER_PERIOD);		

@@ -41,6 +41,7 @@ void Referee_Data_Task(void const * argument)
     if(NotifyValue == 1)
 		{
 			Refresh_Task_OffLine_Time(RefereeDataTask_TOE);
+			
 		}
 		
 		osDelayUntil(&xLastWakeTime, REFEREE_PERIOD);

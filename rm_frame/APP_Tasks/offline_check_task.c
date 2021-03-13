@@ -66,49 +66,49 @@ void OffLine_Check_Task(void const *argument)
 		//任务掉线对应操作
 		if((off_line.task_offline_flag & 0x01))//遥控器任务掉线
 		{
-			printf("Remote_Data_Task is offline\r\n");
+//			printf("Remote_Data_Task is offline\r\n");
 		}
 				
 		if((off_line.task_offline_flag & 0x02))//视觉任务掉线
 		{
-			printf("Vision_Data_Task is offline\r\n");
+//			printf("Vision_Data_Task is offline\r\n");
 		} 
 		
 		if((off_line.task_offline_flag & 0x04))//裁判系统掉线
 		{
-			printf("Referee_Data_Task is offline\r\n");
+//			printf("Referee_Data_Task is offline\r\n");
 		}	
 		
 		if((off_line.task_offline_flag & 0x08))//摩擦轮任务掉线
 		{
-			printf("Friction_Drive_Task is offline\r\n");
+//			printf("Friction_Drive_Task is offline\r\n");
 		}
 		
 		if((off_line.task_offline_flag & 0x10))//拨盘任务掉线
 		{
-			printf("Trigger_Drive_Task is offline\r\n");
+//			printf("Trigger_Drive_Task is offline\r\n");
 		}	
 
 		if((off_line.task_offline_flag & 0x20))//云台任务掉线
 		{
-			printf("Gimbal_Control_Task is offline\r\n");
+//			printf("Gimbal_Control_Task is offline\r\n");
 		}	
 		
 		if((off_line.task_offline_flag & 0x40))//底盘任务掉线
 		{
-			printf("Chassis_Control_Task is offline\r\n");
+//			printf("Chassis_Control_Task is offline\r\n");
 		}	
 		
 		if((off_line.task_offline_flag & 0x80))//断线检测任务掉线
 		{
-			printf("OffLine_Check_Task is offline\r\n");
+//			printf("OffLine_Check_Task is offline\r\n");
 		}
 		
 		
 		//外设掉线对应操作
 		if((off_line.device_offline_flag & 0x01))//无法接收yaw轴电机返回值 LED1
 		{
-			LED1_TOG();
+			LED1_OFF();
 //			printf("Cannot receive yaw_motor return data\r\n");
 		}
 		else 
@@ -116,7 +116,7 @@ void OffLine_Check_Task(void const *argument)
 		
 		if((off_line.device_offline_flag & 0x02))//无法接收pitch轴电机返回值 LED2
 		{
-			LED2_TOG();
+			LED2_OFF();
 //			printf("Cannot receive pitch_motor return data\r\n");
 		}
 		else 
@@ -124,7 +124,7 @@ void OffLine_Check_Task(void const *argument)
 		
 		if((off_line.device_offline_flag & 0x04))//无法接收拨盘电机返回值 LED3
 		{
-			LED3_TOG();
+			LED3_OFF();
 //			printf("Cannot receive trigger_motor return data\r\n");
 		}
 		else 
@@ -132,7 +132,7 @@ void OffLine_Check_Task(void const *argument)
 
 		if((off_line.device_offline_flag & 0x08))//无法接收底盘电机返回值 LED4
 		{
-			LED4_TOG();
+			LED4_OFF();
 //			printf("Cannot receive chassis_motor return data\r\n");
 		}
 		else 
@@ -140,7 +140,7 @@ void OffLine_Check_Task(void const *argument)
 		
 		if((off_line.device_offline_flag & 0x10))//无法接收遥控器返回值 LED5
 		{
-			LED5_TOG();
+			LED5_OFF();
 //			printf("Cannot receive remote_control return data\r\n");
 		}
 		else 
@@ -148,7 +148,7 @@ void OffLine_Check_Task(void const *argument)
 
 		if((off_line.device_offline_flag & 0x20))//无法接收裁判系统返回值 LED6
 		{
-			LED6_TOG();
+			LED6_OFF();
 //			printf("Cannot receive referee return data\r\n");
 		}
 		else 
@@ -156,7 +156,7 @@ void OffLine_Check_Task(void const *argument)
 		
 		if((off_line.device_offline_flag & 0x40))//无法接收视觉返回值 LED7
 		{
-			LED7_TOG();
+			LED7_OFF();
 //			printf("Cannot receive vision return data\r\n");
 		}
 		else 

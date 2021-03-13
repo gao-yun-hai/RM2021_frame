@@ -54,7 +54,6 @@
 "rm_frame\power_restriction.o"
 "rm_frame\motor_use_tim.o"
 "rm_frame\motor_use_can.o"
-"rm_frame\motor_use_usart.o"
 "rm_frame\vision.o"
 "rm_frame\referee.o"
 "rm_frame\usart_printf.o"
@@ -64,8 +63,8 @@
 "rm_frame\vision_task.o"
 "rm_frame\referee_task.o"
 "rm_frame\offline_check_task.o"
-"rm_frame\gimbal_control_task.o"
 "rm_frame\remote_control_task.o"
+"rm_frame\gimbal_control_task.o"
 "rm_frame\chassis_control_task.o"
 --library_type=microlib --strict --scatter "rm_frame\rm_frame.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

@@ -702,11 +702,6 @@
               <FileType>1</FileType>
               <FilePath>..\Module\Module-moter_driver\motor_use_can.c</FilePath>
             </File>
-            <File>
-              <FileName>motor_use_usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Module\Module-moter_driver\motor_use_usart.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -763,14 +758,14 @@
               <FilePath>..\App_Tasks\offline_check_task.c</FilePath>
             </File>
             <File>
-              <FileName>gimbal_control_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\App_Tasks\gimbal_control_task.c</FilePath>
-            </File>
-            <File>
               <FileName>remote_control_task.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\App_Tasks\remote_control_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>gimbal_control_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App_Tasks\gimbal_control_task.c</FilePath>
             </File>
             <File>
               <FileName>chassis_control_task.c</FileName>

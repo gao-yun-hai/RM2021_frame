@@ -16,6 +16,8 @@
 #include "gpio.h"
 #include "cmsis_os.h"
 
+#include "user_lib.h"
+
 #define GREEN_ON()    HAL_GPIO_WritePin(GREEN_LED_GPIO_Port,GREEN_LED_Pin,GPIO_PIN_RESET)
 #define GREEN_OFF()   HAL_GPIO_WritePin(GREEN_LED_GPIO_Port,GREEN_LED_Pin,GPIO_PIN_SET)
 #define	GREEN_TOG() 	HAL_GPIO_TogglePin(GREEN_LED_GPIO_Port,GREEN_LED_Pin)
@@ -58,7 +60,7 @@ typedef enum
 	VISION_PERIOD = 10,
 	REFEREE_PERIOD = 10,
 	GIMBAL_PERIOD = 1,
-	CHASSIS_PERIOD = 2,
+	CHASSIS_PERIOD = 1,
 	FRICTION_PERIOD = 1,
 	TRIGGER_PERIOD = 1,
 	OFFLINE_PERIOD = 10,

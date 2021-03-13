@@ -373,6 +373,10 @@ extern Referee_Struct  referee;
 /* 本模块向外部提供的接口函数原型声明 ---------------------------------------*/
 void RefereeDate_Receive_USART_Init(void);
 void Referee_UART_IRQHandler(void);
+void get_chassis_power_and_buffer(fp32 *power, fp32 *buffer);
+void get_shoot_heat0_limit_and_heat0(uint16_t *heat0_limit, uint16_t *heat0);
+void get_shoot_heat1_limit_and_heat1(uint16_t *heat1_limit, uint16_t *heat1);
+
 
 
 

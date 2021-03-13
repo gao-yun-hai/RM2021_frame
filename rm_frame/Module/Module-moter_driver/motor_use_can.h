@@ -9,20 +9,20 @@
 /* 本模块向外部提供的结构体/枚举定义 ----------------------------------------*/
 typedef enum
 {
-	CHASSIS_3508MOTOR,
-	TRIGGER_2006MOTOR,
-	YAW_3508MOTOR,
-	PITCH_6020MOTOR,
+	CHASSIS_MOTOR,
+	TRIGGER_MOTOR,
+	GIMBAL_YAW_MOTOR,
+	GIMBAL_PITCH_MOTOR,
 	
 	NUM_OF_MOTOR      //电机的数量
 }motor_ID;//电机数据接收结构体对应存储的数组编号
 
 typedef enum
 {
-	CAN_CHASSIS_3508MOTOR_ID = 0x201,
-	CAN_TRIGGER_2006MOTOR_ID = 0x203,
-	CAN_YAW_3508MOTOR_ID = 0x205,
-	CAN_PITCH_6020MOTOR_ID = 0x206,
+	CAN_CHASSIS_MOTOR_ID = 0x201,
+	CAN_TRIGGER_MOTOR_ID = 0x203,
+	CAN_YAW_MOTOR_ID = 0x205,
+	CAN_PITCH_MOTOR_ID = 0x206,
 	CAN_SEND_REMOTEDATE_ID = 0x110,
 	CAN_SEND_REFEREEDATE_ID = 0x120,
 	
@@ -46,13 +46,13 @@ typedef struct{
 extern motor_measure_t  motor_get[NUM_OF_MOTOR];
 
 /* 本模块向外部提供的接口函数原型声明 ---------------------------------------*/
-HAL_StatusTypeDef Gimbal_Motor6020(CAN_HandleTypeDef * hcan,int16_t yaw,int16_t	pitch);
-HAL_StatusTypeDef Gimbal_Motor6020_Disable(CAN_HandleTypeDef * hcan);
-HAL_StatusTypeDef Gimbal_Motor6623_Calibration(CAN_HandleTypeDef * hcan);
-HAL_StatusTypeDef Chassis_Motor3508( CAN_HandleTypeDef * hcan,int16_t iq1, int16_t iq2, int16_t iq3, int16_t iq4);
-HAL_StatusTypeDef Chassis_Motor3508_Disable( CAN_HandleTypeDef * hcan);
-HAL_StatusTypeDef Trigger_Motor2006(CAN_HandleTypeDef * hcan,int16_t value);
-HAL_StatusTypeDef CAN_Send_RemoteDate( CAN_HandleTypeDef * hcan,int16_t key_v, int16_t rc_ch0, int16_t rc_ch1, uint8_t rc_s1, uint8_t rc_s2);
-HAL_StatusTypeDef CAN_Send_RefereeData( CAN_HandleTypeDef * hcan, uint16_t data0, uint16_t data1 , uint16_t data2 ,uint16_t data3);
+HAL_StatusTypeDef Gimbal_Motor_Drive(CAN_HandleTypeDef * hcan,int16_t yaw,int16_t	pitch);
+HAL_StatusTypeDef Gimbal_Motor_Disable(CAN_HandleTypeDef * hcan);
+HAL_StatusTypeDef Gimbal_Motor_Calibration(CAN_HandleTypeDef * hcan);
+HAL_StatusTypeDef Chassis_Motor_Drive(CAN_HandleTypeDef * hcan,int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4);
+HAL_StatusTypeDef Chassis_Motor_Disable(CAN_HandleTypeDef * hcan);
+HAL_StatusTypeDef Trigger_Motor_Drive(CAN_HandleTypeDef * hcan,int16_t value);
+HAL_StatusTypeDef CAN_Send_RemoteDate(CAN_HandleTypeDef * hcan,int16_t key_v, int16_t rc_ch0, int16_t rc_ch1, uint8_t rc_s1, uint8_t rc_s2);
+HAL_StatusTypeDef CAN_Send_RefereeData(CAN_HandleTypeDef * hcan, uint16_t data0, uint16_t data1 , uint16_t data2 ,uint16_t data3);
 
 #endif

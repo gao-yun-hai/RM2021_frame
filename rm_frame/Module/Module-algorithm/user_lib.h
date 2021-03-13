@@ -11,6 +11,9 @@ typedef double fp64;
 #define PI 3.14159265358979f
 #endif
 
+//弧度格式化为-PI~PI
+#define rad_format(Ang) loop_fp32_constrain((Ang), -PI, PI)
+
 typedef __packed struct
 {
     fp32 input;        //输入数据
@@ -57,19 +60,20 @@ extern fp32 loop_fp32_constrain(fp32 Input, fp32 minValue, fp32 maxValue);
 extern fp32 theta_format(fp32 Ang);
 
 
-float Window_sliding_filter(float *buff);
-float LPF_1st(float oldData, float newData, float lpf_factor);
-
-
-extern ramp_function_source_t shoot;
-
 int IsPositive(float x);//判断是否是正数  正数返回1 负数返回0
 int IsStrInc(char* data,char* temp);//判断字符串中是否包含模板字符
 float str2f(unsigned char *s);//字符串转float
-#define my_abs(x) ((x)>0?(x):-(x)) //ABS宏定义
+float Getnum(unsigned char *s);//截取中间的数字
+void swap(float *a,float *b);//交换两float型变量值
+int Partition(float data[],int low,int high);//将数组分成两部分，前一部分的值均比后一部分值小
+void QSort(float data[],int low,int high);//进行的递归的调用，达到排序的目的
+float Median_value_fliter(uint32_t *buff,int length);//求得缓存的中值
+float Median_average_fliter(uint32_t *buff,int length);//中值平均滤波
+float Average_value_fliter(uint32_t *buff);//均值滤波
+float Window_sliding_filter(float *buff);//窗口滑动滤波
+float LPF_1st(float oldData, float newData, float lpf_factor);//一阶低通滤波
+float Limit_filter(float oldData,float newData,float val);//限幅滤波
 
-//弧度格式化为-PI~PI
-#define rad_format(Ang) loop_fp32_constrain((Ang), -PI, PI)
 
 
 

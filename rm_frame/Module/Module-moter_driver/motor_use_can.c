@@ -10,22 +10,22 @@
 							 注：其中遥控器数据及裁判系统发送及接收函数待完善与开发。
   函数列表   : 1) HAL_CAN_RxFifo0MsgPendingCallback() 【HAL库函数，CAN回调函数】
 							 //CAN发送
-							 2) Gimbal_Motor6020()									【外部调用：使用处】
-							 3) Gimbal_Motor6020_Disable()					【外部调用：使用处】
-							 4) Gimbal_Motor6623_Calibration()			【外部调用：使用处】
-							 5) Chassis_Motor3508()									【外部调用：使用处】
-							 6) Chassis_Motor3508_Disable()					【外部调用：使用处】
-							 7) Trigger_Motor2006()									【外部调用：使用处】
-							 8) CAN_Send_RefereeData()							【外部调用：使用处】
-							 9) CAN_Send_RemoteDate()								【外部调用：使用处】
+							 2) Gimbal_Motor_Drive()									【外部调用：使用处】
+							 3) Gimbal_Motor_Disable()								【外部调用：使用处】
+							 4) Gimbal_Motor_Calibration()						【外部调用：使用处】
+							 5) Chassis_Motor_Drive()									【外部调用：使用处】
+							 6) Chassis_Motor_Disable()								【外部调用：使用处】
+							 7) Trigger_Motor_Drive()									【外部调用：使用处】
+							 8) CAN_Send_RefereeData()								【外部调用：使用处】
+							 9) CAN_Send_RemoteDate()									【外部调用：使用处】
 							 //CAN接收
-							 10) Get_Moto_Measure_6623()						【内部调用：CAN回调中调用】
-							 11) Get_Moto_Measure_3508()						【内部调用：CAN回调中调用】
-							 12) Get_Moto_Measure_2006()						【内部调用：CAN回调中调用】
-							 13) Get_Moto_Measure_6020()						【内部调用：CAN回调中调用】
-							 14) Get_Moto_Offset()									【内部调用：CAN回调中调用】
-							 15) CAN_GET_Remote()										【内部调用：CAN回调中调用】
-							 16) CAN_GET_RefereeData()							【内部调用：CAN回调中调用】
+							 10) Get_Moto_Measure_6623()							【内部调用：CAN回调中调用】
+							 11) Get_Moto_Measure_3508()							【内部调用：CAN回调中调用】
+							 12) Get_Moto_Measure_2006()							【内部调用：CAN回调中调用】
+							 13) Get_Moto_Measure_6020()							【内部调用：CAN回调中调用】
+							 14) Get_Moto_Offset()										【内部调用：CAN回调中调用】
+							 15) CAN_GET_Remote()											【内部调用：CAN回调中调用】
+							 16) CAN_GET_RefereeData()								【内部调用：CAN回调中调用】
 *******************************************************************************/
 /* 包含头文件 ----------------------------------------------------------------*/
 #include "motor_use_can.h"
@@ -70,63 +70,63 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 		HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &CAN1_Rx_Header, CAN1_RX_date);
 		switch(CAN1_Rx_Header.StdId)
 		{
-			case CAN_CHASSIS_3508MOTOR_ID://底盘电机
+			case CAN_CHASSIS_MOTOR_ID://底盘电机
 			{		
 				Refresh_Device_OffLine_Time(ChassisMotor_TOE);//刷新时间
 				
-				if(motor_get[CHASSIS_3508MOTOR].msg_cnt++ <= 50)	
+				if(motor_get[CHASSIS_MOTOR].msg_cnt++ <= 50)	
 				{
-					Get_Moto_Offset(&motor_get[CHASSIS_3508MOTOR],CAN1_RX_date);
+					Get_Moto_Offset(&motor_get[CHASSIS_MOTOR],CAN1_RX_date);
 				}
 				else
 				{	
-					motor_get[CHASSIS_3508MOTOR].msg_cnt = 51;	
-					Get_Moto_Measure_3508(&motor_get[CHASSIS_3508MOTOR],CAN1_RX_date);
+					motor_get[CHASSIS_MOTOR].msg_cnt = 51;	
+					Get_Moto_Measure_3508(&motor_get[CHASSIS_MOTOR],CAN1_RX_date);
 				}
 			}break;
 			
-			case CAN_TRIGGER_2006MOTOR_ID://拨盘电机 
+			case CAN_TRIGGER_MOTOR_ID://拨盘电机 
 			{		
 				Refresh_Device_OffLine_Time(TriggerMotor_TOE);//刷新时间
 				
-				if(motor_get[TRIGGER_2006MOTOR].msg_cnt++ <= 50)	
+				if(motor_get[TRIGGER_MOTOR].msg_cnt++ <= 50)	
 				{
-					Get_Moto_Offset(&motor_get[TRIGGER_2006MOTOR],CAN1_RX_date);
+					Get_Moto_Offset(&motor_get[TRIGGER_MOTOR],CAN1_RX_date);
 				}
 				else
 				{		
-				motor_get[TRIGGER_2006MOTOR].msg_cnt=51;	
-				Get_Moto_Measure_2006(&motor_get[TRIGGER_2006MOTOR], CAN1_RX_date);
+				motor_get[TRIGGER_MOTOR].msg_cnt=51;	
+				Get_Moto_Measure_2006(&motor_get[TRIGGER_MOTOR], CAN1_RX_date);
 				}
 			}break;			
 			
-			case CAN_YAW_3508MOTOR_ID://yaw轴电机反馈
+			case CAN_YAW_MOTOR_ID://yaw轴电机反馈
 			{		
 				Refresh_Device_OffLine_Time(YawGimbalMotor_TOE);//刷新时间
 				
-				if(motor_get[YAW_3508MOTOR].msg_cnt++ <= 50)
+				if(motor_get[GIMBAL_YAW_MOTOR].msg_cnt++ <= 50)
 				{
-					Get_Moto_Offset(&motor_get[YAW_3508MOTOR],CAN1_RX_date);
+					Get_Moto_Offset(&motor_get[GIMBAL_YAW_MOTOR],CAN1_RX_date);
 				}
 				else
 				{
-					motor_get[YAW_3508MOTOR].msg_cnt = 51;
-					Get_Moto_Measure_3508(&motor_get[YAW_3508MOTOR],CAN1_RX_date);
+					motor_get[GIMBAL_YAW_MOTOR].msg_cnt = 51;
+					Get_Moto_Measure_3508(&motor_get[GIMBAL_YAW_MOTOR],CAN1_RX_date);
 				}								
 			}break;
 			
-			case CAN_PITCH_6020MOTOR_ID://pitch轴电机反馈
+			case CAN_PITCH_MOTOR_ID://pitch轴电机反馈
 			{	
 				Refresh_Device_OffLine_Time(PitchGimbalMotor_TOE);//刷新时间
 
-				if(motor_get[PITCH_6020MOTOR].msg_cnt++ <= 50)
+				if(motor_get[GIMBAL_PITCH_MOTOR].msg_cnt++ <= 50)
 				{
-					Get_Moto_Offset(&motor_get[PITCH_6020MOTOR],CAN1_RX_date);
+					Get_Moto_Offset(&motor_get[GIMBAL_PITCH_MOTOR],CAN1_RX_date);
 				}
 				else
 				{
-					motor_get[PITCH_6020MOTOR].msg_cnt = 51;
-					Get_Moto_Measure_6020(&motor_get[PITCH_6020MOTOR],CAN1_RX_date);
+					motor_get[GIMBAL_PITCH_MOTOR].msg_cnt = 51;
+					Get_Moto_Measure_6020(&motor_get[GIMBAL_PITCH_MOTOR],CAN1_RX_date);
 				}				
 			}break;
 			default: break;
@@ -165,15 +165,15 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
                   pitch:pitch电流值
   * @retval				none
 */
-HAL_StatusTypeDef Gimbal_Motor6020(CAN_HandleTypeDef * hcan,int16_t yaw,int16_t	pitch)
+HAL_StatusTypeDef 	Gimbal_Motor_Drive(CAN_HandleTypeDef * hcan,int16_t yaw,int16_t	pitch)
 {
-	static CAN_TxHeaderTypeDef  Cloud_Platform_Data;
+	static CAN_TxHeaderTypeDef  Gimbal_TX_Message;
 	uint8_t CAN_TX_DATA[8];
 
-	Cloud_Platform_Data.StdId = 0x1FF;
-	Cloud_Platform_Data.IDE = CAN_ID_STD;
-	Cloud_Platform_Data.RTR = CAN_RTR_DATA;
-	Cloud_Platform_Data.DLC = 0X08;
+	Gimbal_TX_Message.StdId = 0x1FF;
+	Gimbal_TX_Message.IDE = CAN_ID_STD;
+	Gimbal_TX_Message.RTR = CAN_RTR_DATA;
+	Gimbal_TX_Message.DLC = 0X08;
 	
 	CAN_TX_DATA[0] = yaw >> 8;
 	CAN_TX_DATA[1] = yaw;
@@ -184,7 +184,7 @@ HAL_StatusTypeDef Gimbal_Motor6020(CAN_HandleTypeDef * hcan,int16_t yaw,int16_t	
 	CAN_TX_DATA[6] = 0x00;
 	CAN_TX_DATA[7] = 0x00;
 
-	if (HAL_CAN_AddTxMessage(hcan, &Cloud_Platform_Data, CAN_TX_DATA, (uint32_t *)CAN_TX_MAILBOX0) == HAL_OK)		
+	if (HAL_CAN_AddTxMessage(hcan, &Gimbal_TX_Message, CAN_TX_DATA, (uint32_t *)CAN_TX_MAILBOX0) == HAL_OK)		
 		return HAL_OK;
 	else 
 		return HAL_ERROR;	
@@ -195,15 +195,15 @@ HAL_StatusTypeDef Gimbal_Motor6020(CAN_HandleTypeDef * hcan,int16_t yaw,int16_t	
   * @param[in]		hcan:要使用的CAN1
   * @retval				
 */
-HAL_StatusTypeDef Gimbal_Motor6020_Disable(CAN_HandleTypeDef * hcan)
+HAL_StatusTypeDef Gimbal_Motor_Disable(CAN_HandleTypeDef * hcan)
 {
-	static CAN_TxHeaderTypeDef  Cloud_Platform_Data;
+	static CAN_TxHeaderTypeDef  Gimbal_TX_Message;
 	uint8_t CAN_TX_DATA[8];
 
-	Cloud_Platform_Data.StdId = 0x1FF;
-	Cloud_Platform_Data.IDE = CAN_ID_STD;
-	Cloud_Platform_Data.RTR = CAN_RTR_DATA;
-	Cloud_Platform_Data.DLC = 0X08;
+	Gimbal_TX_Message.StdId = 0x1FF;
+	Gimbal_TX_Message.IDE = CAN_ID_STD;
+	Gimbal_TX_Message.RTR = CAN_RTR_DATA;
+	Gimbal_TX_Message.DLC = 0X08;
 	
 	CAN_TX_DATA[0] = 0x00;
 	CAN_TX_DATA[1] = 0x00;
@@ -214,27 +214,27 @@ HAL_StatusTypeDef Gimbal_Motor6020_Disable(CAN_HandleTypeDef * hcan)
 	CAN_TX_DATA[6] = 0x00;
 	CAN_TX_DATA[7] = 0x00;
 
-	if (HAL_CAN_AddTxMessage(hcan, &Cloud_Platform_Data, CAN_TX_DATA, (uint32_t *)CAN_TX_MAILBOX0) == HAL_OK)		
+	if (HAL_CAN_AddTxMessage(hcan, &Gimbal_TX_Message, CAN_TX_DATA, (uint32_t *)CAN_TX_MAILBOX0) == HAL_OK)		
 		return HAL_OK;
 	else 
 		return HAL_ERROR;	
 }
 
 /**
-  * @brief				6623云台电机校准函数
+  * @brief				云台电机校准函数(仅GM6623可用)
   * @param[out]		
   * @param[in]		hcan:要使用的CAN1
   * @retval				
 */
-HAL_StatusTypeDef Gimbal_Motor6623_Calibration(CAN_HandleTypeDef * hcan)
+HAL_StatusTypeDef Gimbal_Motor_Calibration(CAN_HandleTypeDef * hcan)
 {
-	static CAN_TxHeaderTypeDef  Cloud_Platform_Data;
+	static CAN_TxHeaderTypeDef  Gimbal_TX_Message;
 	uint8_t CAN_TX_DATA[8];
 
-	Cloud_Platform_Data.StdId = 0x3F0;
-	Cloud_Platform_Data.IDE = CAN_ID_STD;
-	Cloud_Platform_Data.RTR = CAN_RTR_DATA;
-	Cloud_Platform_Data.DLC = 0X08;
+	Gimbal_TX_Message.StdId = 0x3F0;
+	Gimbal_TX_Message.IDE = CAN_ID_STD;
+	Gimbal_TX_Message.RTR = CAN_RTR_DATA;
+	Gimbal_TX_Message.DLC = 0X08;
 	
 	CAN_TX_DATA[0] = 'c' ;
 	CAN_TX_DATA[1] = 0x00;
@@ -245,7 +245,7 @@ HAL_StatusTypeDef Gimbal_Motor6623_Calibration(CAN_HandleTypeDef * hcan)
 	CAN_TX_DATA[6] = 0x00;
 	CAN_TX_DATA[7] = 0x00;
 
-	if (HAL_CAN_AddTxMessage(hcan, &Cloud_Platform_Data, CAN_TX_DATA, (uint32_t *)CAN_TX_MAILBOX0) == HAL_OK)		
+	if (HAL_CAN_AddTxMessage(hcan, &Gimbal_TX_Message, CAN_TX_DATA, (uint32_t *)CAN_TX_MAILBOX0) == HAL_OK)		
 		return HAL_OK;
 	else 
 		return HAL_ERROR;	
@@ -258,26 +258,26 @@ HAL_StatusTypeDef Gimbal_Motor6623_Calibration(CAN_HandleTypeDef * hcan)
                   iqn:第n个底盘电机的电流值
   * @retval				
 */
-HAL_StatusTypeDef Chassis_Motor3508( CAN_HandleTypeDef * hcan, int16_t iq1, int16_t iq2, int16_t iq3, int16_t iq4)
+HAL_StatusTypeDef Chassis_Motor_Drive( CAN_HandleTypeDef * hcan, int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4)
 {
-	static CAN_TxHeaderTypeDef	Chassis_Motor_Data;
+	static CAN_TxHeaderTypeDef	Chassis_TX_Message;
 	uint8_t CAN_TX_DATA[8];
 
-	Chassis_Motor_Data.DLC = 0x08;
-	Chassis_Motor_Data.IDE = CAN_ID_STD;
-	Chassis_Motor_Data.RTR = CAN_RTR_DATA;
-	Chassis_Motor_Data.StdId = 0x200;
+	Chassis_TX_Message.DLC = 0x08;
+	Chassis_TX_Message.IDE = CAN_ID_STD;
+	Chassis_TX_Message.RTR = CAN_RTR_DATA;
+	Chassis_TX_Message.StdId = 0x200;
 
-	CAN_TX_DATA[0] = iq1 >> 8;
-	CAN_TX_DATA[1] = iq1;
-	CAN_TX_DATA[2] = iq2 >> 8;
-	CAN_TX_DATA[3] = iq2;
-	CAN_TX_DATA[4] = iq3 >> 8;
-	CAN_TX_DATA[5] = iq3;
-	CAN_TX_DATA[6] = iq4 >> 8;
-	CAN_TX_DATA[7] = iq4;
+	CAN_TX_DATA[0] = motor1 >> 8;
+	CAN_TX_DATA[1] = motor1;
+	CAN_TX_DATA[2] = motor2 >> 8;
+	CAN_TX_DATA[3] = motor2;
+	CAN_TX_DATA[4] = motor3 >> 8;
+	CAN_TX_DATA[5] = motor3;
+	CAN_TX_DATA[6] = motor4 >> 8;
+	CAN_TX_DATA[7] = motor4;
 
-	if (HAL_CAN_AddTxMessage(hcan, &Chassis_Motor_Data, CAN_TX_DATA, (uint32_t *)CAN_TX_MAILBOX0) == HAL_OK)		
+	if (HAL_CAN_AddTxMessage(hcan, &Chassis_TX_Message, CAN_TX_DATA, (uint32_t *)CAN_TX_MAILBOX0) == HAL_OK)		
 		return HAL_OK;
 	else 
 		return HAL_ERROR;		
@@ -289,15 +289,15 @@ HAL_StatusTypeDef Chassis_Motor3508( CAN_HandleTypeDef * hcan, int16_t iq1, int1
   * @param[in]		hcan:要使用的CAN1
   * @retval				
 */
-HAL_StatusTypeDef Chassis_Motor3508_Disable( CAN_HandleTypeDef * hcan)
+HAL_StatusTypeDef Chassis_Motor_Disable( CAN_HandleTypeDef * hcan)
 {
-	static CAN_TxHeaderTypeDef	Chassis_Motor_Data;
+	static CAN_TxHeaderTypeDef	Chassis_TX_Message;
 	uint8_t CAN_TX_DATA[8];
 
-	Chassis_Motor_Data.DLC = 0x08;
-	Chassis_Motor_Data.IDE = CAN_ID_STD;
-	Chassis_Motor_Data.RTR = CAN_RTR_DATA;
-	Chassis_Motor_Data.StdId = 0x200;
+	Chassis_TX_Message.DLC = 0x08;
+	Chassis_TX_Message.IDE = CAN_ID_STD;
+	Chassis_TX_Message.RTR = CAN_RTR_DATA;
+	Chassis_TX_Message.StdId = 0x200;
 
 	CAN_TX_DATA[0] = 0x00;
 	CAN_TX_DATA[1] = 0x00;
@@ -308,7 +308,7 @@ HAL_StatusTypeDef Chassis_Motor3508_Disable( CAN_HandleTypeDef * hcan)
 	CAN_TX_DATA[6] = 0x00;
 	CAN_TX_DATA[7] = 0x00;
 
-	if( HAL_CAN_AddTxMessage(hcan, &Chassis_Motor_Data, CAN_TX_DATA, (uint32_t *)CAN_TX_MAILBOX0) == HAL_OK)
+	if( HAL_CAN_AddTxMessage(hcan, &Chassis_TX_Message, CAN_TX_DATA, (uint32_t *)CAN_TX_MAILBOX0) == HAL_OK)
 		return HAL_OK;
 	else 
 		return HAL_ERROR;		
@@ -320,15 +320,15 @@ HAL_StatusTypeDef Chassis_Motor3508_Disable( CAN_HandleTypeDef * hcan)
                   value:拨弹电机的电流值
   * @retval				
 */
-HAL_StatusTypeDef Trigger_Motor2006(CAN_HandleTypeDef * hcan,int16_t value)
+HAL_StatusTypeDef Trigger_Motor_Drive(CAN_HandleTypeDef * hcan,int16_t value)
 {
-	static CAN_TxHeaderTypeDef  Trigger_Motor_Data;
+	static CAN_TxHeaderTypeDef  Trigger_TX_Message;
 	uint8_t CAN_TX_DATA[8];
 
-	Trigger_Motor_Data.DLC = 0x08;
-	Trigger_Motor_Data.IDE = CAN_ID_STD;
-	Trigger_Motor_Data.RTR = CAN_RTR_DATA;
-	Trigger_Motor_Data.StdId = 0x200;
+	Trigger_TX_Message.DLC = 0x08;
+	Trigger_TX_Message.IDE = CAN_ID_STD;
+	Trigger_TX_Message.RTR = CAN_RTR_DATA;
+	Trigger_TX_Message.StdId = 0x200;
 
 	CAN_TX_DATA[0] = 0;
 	CAN_TX_DATA[1] = 0;
@@ -339,7 +339,7 @@ HAL_StatusTypeDef Trigger_Motor2006(CAN_HandleTypeDef * hcan,int16_t value)
 	CAN_TX_DATA[6] = 0;
 	CAN_TX_DATA[7] = 0;
 
-	if (HAL_CAN_AddTxMessage(hcan, &Trigger_Motor_Data, CAN_TX_DATA, (uint32_t *)CAN_TX_MAILBOX0) == HAL_OK)		
+	if (HAL_CAN_AddTxMessage(hcan, &Trigger_TX_Message, CAN_TX_DATA, (uint32_t *)CAN_TX_MAILBOX0) == HAL_OK)		
 		return HAL_OK;
 	else 
 		return HAL_ERROR;		
@@ -354,13 +354,13 @@ HAL_StatusTypeDef Trigger_Motor2006(CAN_HandleTypeDef * hcan,int16_t value)
 */
 HAL_StatusTypeDef CAN_Send_RefereeData( CAN_HandleTypeDef * hcan, uint16_t data0, uint16_t data1 , uint16_t data2 ,uint16_t data3)//待续
 {
-	static CAN_TxHeaderTypeDef  CAN_Send_RefereeData;
+	static CAN_TxHeaderTypeDef  Referee_TX_Message;
 	uint8_t CAN_TX_DATA[8];
 
-	CAN_Send_RefereeData.DLC = 0x08;
-	CAN_Send_RefereeData.IDE = CAN_ID_STD;
-	CAN_Send_RefereeData.RTR = CAN_RTR_DATA;
-	CAN_Send_RefereeData.StdId = 0x120;
+	Referee_TX_Message.DLC = 0x08;
+	Referee_TX_Message.IDE = CAN_ID_STD;
+	Referee_TX_Message.RTR = CAN_RTR_DATA;
+	Referee_TX_Message.StdId = 0x120;
 
 	CAN_TX_DATA[0] = data0 >>8;
 	CAN_TX_DATA[1] = data0;
@@ -371,7 +371,7 @@ HAL_StatusTypeDef CAN_Send_RefereeData( CAN_HandleTypeDef * hcan, uint16_t data0
 	CAN_TX_DATA[6] = data3>>8;
 	CAN_TX_DATA[7] = data3;
 
-	if (HAL_CAN_AddTxMessage(hcan, &CAN_Send_RefereeData, CAN_TX_DATA, (uint32_t *)CAN_TX_MAILBOX0) == HAL_OK)		
+	if (HAL_CAN_AddTxMessage(hcan, &Referee_TX_Message, CAN_TX_DATA, (uint32_t *)CAN_TX_MAILBOX0) == HAL_OK)		
 		return HAL_OK;
 	else 
 		return HAL_ERROR;	
@@ -387,13 +387,13 @@ HAL_StatusTypeDef CAN_Send_RefereeData( CAN_HandleTypeDef * hcan, uint16_t data0
 HAL_StatusTypeDef CAN_Send_RemoteDate( CAN_HandleTypeDef * hcan,
 									                int16_t key_v, int16_t rc_ch0, int16_t rc_ch1, uint8_t rc_s1, uint8_t rc_s2)
 {
-	static CAN_TxHeaderTypeDef  CAN_Send_RemoteDate;
+	static CAN_TxHeaderTypeDef  Remote_TX_Message;
 	uint8_t CAN_TX_DATA[8];
 
-	CAN_Send_RemoteDate.DLC = 0x08;
-	CAN_Send_RemoteDate.IDE = CAN_ID_STD;
-	CAN_Send_RemoteDate.RTR = CAN_RTR_DATA;
-	CAN_Send_RemoteDate.StdId = 0x110;
+	Remote_TX_Message.DLC = 0x08;
+	Remote_TX_Message.IDE = CAN_ID_STD;
+	Remote_TX_Message.RTR = CAN_RTR_DATA;
+	Remote_TX_Message.StdId = 0x110;
 
 	CAN_TX_DATA[0] = key_v >> 8;
 	CAN_TX_DATA[1] = key_v;
@@ -404,7 +404,7 @@ HAL_StatusTypeDef CAN_Send_RemoteDate( CAN_HandleTypeDef * hcan,
 	CAN_TX_DATA[6] = rc_s1;
 	CAN_TX_DATA[7] = rc_s2;
 
-	if (HAL_CAN_AddTxMessage(hcan, &CAN_Send_RemoteDate, CAN_TX_DATA, (uint32_t *)CAN_TX_MAILBOX0) == HAL_OK)		
+	if (HAL_CAN_AddTxMessage(hcan, &Remote_TX_Message, CAN_TX_DATA, (uint32_t *)CAN_TX_MAILBOX0) == HAL_OK)		
 		return HAL_OK;
 	else 
 		return HAL_ERROR;	
