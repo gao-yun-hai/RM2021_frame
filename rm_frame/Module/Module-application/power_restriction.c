@@ -40,7 +40,7 @@
 void chassis_power_control(float current[4])
 {
     fp32 chassis_power = 0.0f;
-    fp32 chassis_power_buffer = 0.0f;
+    uint16_t chassis_power_buffer = 0.0f;
     fp32 total_current_limit = 0.0f;
     fp32 total_current = 0.0f;
 

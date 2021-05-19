@@ -35,9 +35,9 @@ void Chassis_Motor_PID_Init(void);
 */
 void Chassis_Control_Task(void const * argument)
 {
-	int16_t get_speed;
-	int16_t set_speed;			  
-	static  float Current_Value = 0;
+	static int16_t get_speed;
+	static int16_t set_speed;			  
+	static  float chassis_current_value = 0;
 	
 	Chassis_Motor_PID_Init();//使用无线调参时需要将该函数注释掉
 	
@@ -49,10 +49,10 @@ void Chassis_Control_Task(void const * argument)
 		Refresh_Task_OffLine_Time(ChassisControlTask_TOE);
 		mini512_cnt = Get_TIM_COUNTER();
 		set_speed = 500;
-		get_speed = motor_get[CHASSIS_MOTOR].speed_rpm;
-		Current_Value = PID_Calc(&motor_pid[PID_CHASSIS_MOTOR_SPEED], get_speed, set_speed);
+		get_speed = motor_get[CHASSIS_MOTOR_LF].speed_rpm;
+		chassis_current_value = PID_Calc(&motor_pid[PID_CHASSIS_MOTOR_RF_SPD], get_speed, set_speed);
 	
-		Chassis_Motor_Drive(&hcan1,Current_Value,0,0,0);
+		Chassis_Motor_Drive(&hcan1,chassis_current_value,0,0,0);
 
 		
 		osDelayUntil(&xLastWakeTime,CHASSIS_PERIOD);		
@@ -70,7 +70,7 @@ void Chassis_Control_Task(void const * argument)
 */
 void Chassis_Motor_PID_Init(void)
 {
-	PID_Param_Init(&motor_pid[PID_CHASSIS_MOTOR_SPEED], POSITION_PID, 1000, 3000,
+	PID_Param_Init(&motor_pid[PID_CHASSIS_MOTOR_RF_SPD], POSITION_PID, 1000, 3000,
 									10.0f, 0.0f, 0.0f);
 }
 

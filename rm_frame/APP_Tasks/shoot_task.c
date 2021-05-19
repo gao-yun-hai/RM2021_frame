@@ -16,6 +16,8 @@
 #include "remote_control.h"
 #include "motor_use_can.h"
 #include "offline_check.h"
+#include "referee.h"
+
 /* 内部宏定义 ----------------------------------------------------------------*/
 
 /* 内部自定义数据类型的变量 --------------------------------------------------*/
@@ -37,6 +39,10 @@ shoot_control_t shoot_control;          //射击数据结构体
 */
 void Friction_Drive_Task(void const *argument)
 {
+  static uint8_t mains_power_gimbal_output;
+  static uint8_t mains_power_chassis_output;
+  static uint8_t mains_power_shooter_output;
+
 	portTickType xLastWakeTime;
 	xLastWakeTime = xTaskGetTickCount();
 
@@ -48,30 +54,45 @@ void Friction_Drive_Task(void const *argument)
 	for(;;)  
 	{
 		Refresh_Task_OffLine_Time(FrictionDriveTask_TOE);//记录任务运行的时间点
-		if(rc_ctrl.rc.s1 == 1)
-		{
-			shoot_control.fric1_ramp.max_value = 125;
-			shoot_control.fric2_ramp.max_value = 125;
-		}
-		else if(rc_ctrl.rc.s1 == 2)
-		{
-			shoot_control.fric1_ramp.max_value = 130;
-			shoot_control.fric2_ramp.max_value = 130;
-		}
-		else 
-		{
+    get_robot_mains_power_state(&mains_power_gimbal_output, &mains_power_chassis_output, &mains_power_shooter_output);
+
+
+    //摩擦轮重启（可跟换为按键控制）
+    if(rc_ctrl.rc.s2 == RIGHT_S2_UP)
+    {
+        Shoot_Firction_Motor_Restart();
+        shoot_control.fric1_ramp.max_value = 100;
+        shoot_control.fric2_ramp.max_value = 100;      
+    }
+    //摩擦轮转速调节（可跟换为按键控制）
+    if(rc_ctrl.rc.s1 == LEFT_S1_UP)
+    {
+        shoot_control.fric1_ramp.max_value = 120;
+        shoot_control.fric2_ramp.max_value = 120;        
+    }
+    else if(rc_ctrl.rc.s1 == LEFT_S1_DOWN)
+    {
+        shoot_control.fric1_ramp.max_value = 130;
+        shoot_control.fric2_ramp.max_value = 130;    
+    }
+    else
+    {
 			shoot_control.fric1_ramp.max_value = 100;
-			shoot_control.fric2_ramp.max_value = 100;
-		}
-		 ramp_calc(&shoot_control.fric1_ramp, SHOOT_FRIC_PWM_ADD_VALUE);
-		 ramp_calc(&shoot_control.fric2_ramp, SHOOT_FRIC_PWM_ADD_VALUE);
+			shoot_control.fric2_ramp.max_value = 100;    
+    }
+     
+ 
+   ramp_calc(&shoot_control.fric1_ramp, SHOOT_FRIC_PWM_ADD_VALUE);
+   ramp_calc(&shoot_control.fric2_ramp, SHOOT_FRIC_PWM_ADD_VALUE);
+
+   Shoot_Firction_Motor(shoot_control.fric1_ramp.out,shoot_control.fric2_ramp.out);
 		
-		 Shoot_Firction_Motor(shoot_control.fric1_ramp.out,shoot_control.fric2_ramp.out);
-			
-		 osDelayUntil(&xLastWakeTime,FRICTION_PERIOD);
+	 osDelayUntil(&xLastWakeTime,FRICTION_PERIOD);
 		
 	}
 }
+
+
 
 //===================================================================================================================//
 /*******************************************************拨盘**********************************************************/
@@ -90,8 +111,16 @@ void Trigger_Drive_Task(void const * argument)
 	for(;;)
 	{
     Refresh_Task_OffLine_Time(TriggerDriveTask_TOE);//记录任务运行的时间点
-		
-		
+    
+/****************注意*********************/
+    
+/*若底盘与云台为不同控制板，可使用拨弹电机驱动函数驱动拨弹电机，对应拨盘ID设为0x203*/
+//		Trigger_Motor_Drive();
+/*若底盘与云台为相同控制板，则使用云台电机驱动函数驱动拨弹电机，对应拨盘ID设为0x207*/		
+//    Gimbal_Motor_Drive();
+    
+/****************注意*********************/
+    
 		osDelayUntil(&xLastWakeTime,TRIGGER_PERIOD);		
 
 	}

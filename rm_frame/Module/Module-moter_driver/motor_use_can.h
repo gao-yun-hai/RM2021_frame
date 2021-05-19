@@ -9,7 +9,11 @@
 /* 本模块向外部提供的结构体/枚举定义 ----------------------------------------*/
 typedef enum
 {
-	CHASSIS_MOTOR,
+	CHASSIS_MOTOR_RF,
+  CHASSIS_MOTOR_LF,
+  CHASSIS_MOTOR_LB,
+  CHASSIS_MOTOR_RB,
+  
 	TRIGGER_MOTOR,
 	GIMBAL_YAW_MOTOR,
 	GIMBAL_PITCH_MOTOR,
@@ -19,10 +23,17 @@ typedef enum
 
 typedef enum
 {
-	CAN_CHASSIS_MOTOR_ID = 0x201,
-	CAN_TRIGGER_MOTOR_ID = 0x203,
+  CAN_CHASSIS_ALL_ID = 0x200,
+	CAN_CHASSIS_MOTOR_RF_ID = 0x201,  //右前
+	CAN_CHASSIS_MOTOR_LF_ID = 0x202,  //左前
+	CAN_CHASSIS_MOTOR_LB_ID = 0x203,  //左后
+	CAN_CHASSIS_MOTOR_RB_ID = 0x204,  //右后
+  
+  CAN_GIMBAL_ALL_ID = 0x1FF,  
 	CAN_YAW_MOTOR_ID = 0x205,
 	CAN_PITCH_MOTOR_ID = 0x206,
+	CAN_TRIGGER_MOTOR_ID = 0x207,
+  
 	CAN_SEND_REMOTEDATE_ID = 0x110,
 	CAN_SEND_REFEREEDATE_ID = 0x120,
 	
@@ -46,7 +57,7 @@ typedef struct{
 extern motor_measure_t  motor_get[NUM_OF_MOTOR];
 
 /* 本模块向外部提供的接口函数原型声明 ---------------------------------------*/
-HAL_StatusTypeDef Gimbal_Motor_Drive(CAN_HandleTypeDef * hcan,int16_t yaw,int16_t	pitch);
+HAL_StatusTypeDef 	Gimbal_Motor_Drive(CAN_HandleTypeDef * hcan, int16_t yaw, int16_t	pitch, int16_t shoot);
 HAL_StatusTypeDef Gimbal_Motor_Disable(CAN_HandleTypeDef * hcan);
 HAL_StatusTypeDef Gimbal_Motor_Calibration(CAN_HandleTypeDef * hcan);
 HAL_StatusTypeDef Chassis_Motor_Drive(CAN_HandleTypeDef * hcan,int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4);

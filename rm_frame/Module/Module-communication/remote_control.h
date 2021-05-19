@@ -7,6 +7,13 @@
 #define DR16_RX_BUFFER_SIZE 36u
 #define DR16_DATA_LEN 18u
 
+#define LEFT_S1_UP   1
+#define LEFT_S1_MID  3
+#define LEFT_S1_DOWN 2
+
+#define RIGHT_S2_UP   1
+#define RIGHT_S2_MID  3
+#define RIGHT_S2_DOWN 2
 /* 本模块向外部提供的结构体/枚举定义 ----------------------------------------*/
 //遥控器数据结构体
 typedef __packed struct

@@ -194,39 +194,72 @@ static void SBUS_To_Referee(uint8_t *buff, Referee_Struct  *Referee)
 	 }			
 }
 /**
+  * @brief				获取机器人剩余血量
+  * @param[in]		
+	* @param[out]		
+  * @retval				
+*/
+void get_robot_remain_hp(uint16_t *remain_hp)
+{
+   *remain_hp = referee.game_robot_status.remain_HP;
+}
+
+/**
+  * @brief				获取裁判系统供电接口状态
+  * @param[in]		
+	* @param[out]		
+  * @retval				
+*/
+void get_robot_mains_power_state(uint8_t *gimbal_output,uint8_t *chassis_output,uint8_t *shooter_output)
+{
+    *gimbal_output  = referee.game_robot_status.mains_power_gimbal_output;
+    *chassis_output = referee.game_robot_status.mains_power_chassis_output;
+    *shooter_output = referee.game_robot_status.mains_power_shooter_output;
+}
+
+
+/**
   * @brief				获取底盘功率与剩余缓存能量
   * @param[in]		
 	* @param[out]		
   * @retval				
 */
-void get_chassis_power_and_buffer(fp32 *power, fp32 *buffer)
+void get_chassis_power_and_buffer(fp32 *power, uint16_t *buffer)
 {
     *power = referee.power_heat_data.chassis_power;
     *buffer = referee.power_heat_data.chassis_power_buffer;
-
 }
 
 /**
-  * @brief				获取17mm枪口热量及上限
+  * @brief				获取1号17mm枪口热量及上限
   * @param[in]		
 	* @param[out]		
   * @retval				
 */
-void get_shoot_heat0_limit_and_heat0(uint16_t *heat0_limit, uint16_t *heat0)
+void get_shooter_17mm_heat(uint16_t *heat1, uint16_t *heat2, uint16_t *heat1_limit, uint16_t *heat2_limit)
 {
-    *heat0_limit = referee.game_robot_status.shooter_heat0_cooling_limit;
-    *heat0 = referee.power_heat_data.shooter_heat0;
+    *heat1 = referee.power_heat_data.shooter_id1_17mm_cooling_heat;
+    *heat1_limit = referee.game_robot_status.shooter_id1_17mm_cooling_limit;
+    *heat2 = referee.power_heat_data.shooter_id2_17mm_cooling_heat;
+    *heat2_limit = referee.game_robot_status.shooter_id2_17mm_cooling_limit;
+
 }
 
+
 /**
-  * @brief				获取42mm枪口热量及上限
-  * @param[in]		
+  * @brief				获取枪口射频及射速
+  * @param[in]		type：枪管类型
+                  id：枪管ID
+                  freq：射频
+                  speed：射速
 	* @param[out]		
   * @retval				
 */
-void get_shoot_heat1_limit_and_heat1(uint16_t *heat1_limit, uint16_t *heat1)
+void get_shooter_bullet_freq_speed(uint8_t *type,uint8_t *id,uint8_t *freq,float *speed)
 {
-    *heat1_limit = referee.game_robot_status.shooter_heat1_cooling_limit;
-    *heat1 = referee.power_heat_data.shooter_heat1;
+    *type = referee.shoot_data.bullet_type;
+    *id   = referee.shoot_data.shooter_id;  
+    *freq = referee.shoot_data.bullet_freq;
+    *speed= referee.shoot_data.bullet_speed;
 }
 

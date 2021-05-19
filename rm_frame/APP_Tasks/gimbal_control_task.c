@@ -35,7 +35,8 @@ void Gimbal_Control_Task(void const * argument)
 {
 	int32_t get_pitch_pos = 0;
 	int32_t set_pitch_pos = 0;			  
-	static  float pitch_current_value = 0;
+	static  float pit_current_value = 0;
+  static  float yaw_current_value = 0;
 	Gimbal_Motor_PID_Init();
 	portTickType xLastWakeTime;
 	xLastWakeTime = xTaskGetTickCount();
@@ -46,8 +47,8 @@ void Gimbal_Control_Task(void const * argument)
 		
 		set_pitch_pos = 200;
 		get_pitch_pos = motor_get[GIMBAL_PITCH_MOTOR].total_angle;
-		pitch_current_value = PID_Calc(&motor_pid[PID_PITCH_MOTOR_POS], get_pitch_pos, set_pitch_pos);
-		Gimbal_Motor_Drive(&hcan1,0,pitch_current_value);
+		pit_current_value = PID_Calc(&motor_pid[PID_PITCH_MOTOR_POS], get_pitch_pos, set_pitch_pos);
+//		Gimbal_Motor_Drive(&hcan1,yaw_current_value,pit_current_value,0);
 
 		osDelayUntil(&xLastWakeTime,GIMBAL_PERIOD);		
 

@@ -70,18 +70,63 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 		HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &CAN1_Rx_Header, CAN1_RX_date);
 		switch(CAN1_Rx_Header.StdId)
 		{
-			case CAN_CHASSIS_MOTOR_ID://底盘电机
+			case CAN_CHASSIS_MOTOR_RF_ID://底盘右前方电机
 			{		
 				Refresh_Device_OffLine_Time(ChassisMotor_TOE);//刷新时间
 				
-				if(motor_get[CHASSIS_MOTOR].msg_cnt++ <= 50)	
+				if(motor_get[CHASSIS_MOTOR_RF].msg_cnt++ <= 50)	
 				{
-					Get_Moto_Offset(&motor_get[CHASSIS_MOTOR],CAN1_RX_date);
+					Get_Moto_Offset(&motor_get[CHASSIS_MOTOR_RF],CAN1_RX_date);
 				}
 				else
 				{	
-					motor_get[CHASSIS_MOTOR].msg_cnt = 51;	
-					Get_Moto_Measure_3508(&motor_get[CHASSIS_MOTOR],CAN1_RX_date);
+					motor_get[CHASSIS_MOTOR_RF].msg_cnt = 51;	
+					Get_Moto_Measure_3508(&motor_get[CHASSIS_MOTOR_RF],CAN1_RX_date);
+				}
+			}break;
+      
+      case CAN_CHASSIS_MOTOR_LF_ID://底盘左前方电机
+			{		
+				Refresh_Device_OffLine_Time(ChassisMotor_TOE);//刷新时间
+				
+				if(motor_get[CHASSIS_MOTOR_LF].msg_cnt++ <= 50)	
+				{
+					Get_Moto_Offset(&motor_get[CHASSIS_MOTOR_LF],CAN1_RX_date);
+				}
+				else
+				{	
+					motor_get[CHASSIS_MOTOR_LF].msg_cnt = 51;	
+					Get_Moto_Measure_3508(&motor_get[CHASSIS_MOTOR_LF],CAN1_RX_date);
+				}
+			}break;
+      
+      case CAN_CHASSIS_MOTOR_LB_ID://底盘左后方电机
+			{		
+				Refresh_Device_OffLine_Time(ChassisMotor_TOE);//刷新时间
+				
+				if(motor_get[CHASSIS_MOTOR_LB].msg_cnt++ <= 50)	
+				{
+					Get_Moto_Offset(&motor_get[CHASSIS_MOTOR_LB],CAN1_RX_date);
+				}
+				else
+				{	
+					motor_get[CHASSIS_MOTOR_LB].msg_cnt = 51;	
+					Get_Moto_Measure_3508(&motor_get[CHASSIS_MOTOR_LB],CAN1_RX_date);
+				}
+			}break;
+      
+      case CAN_CHASSIS_MOTOR_RB_ID://底盘右后方电机
+			{		
+				Refresh_Device_OffLine_Time(ChassisMotor_TOE);//刷新时间
+				
+				if(motor_get[CHASSIS_MOTOR_RB].msg_cnt++ <= 50)	
+				{
+					Get_Moto_Offset(&motor_get[CHASSIS_MOTOR_RB],CAN1_RX_date);
+				}
+				else
+				{	
+					motor_get[CHASSIS_MOTOR_RB].msg_cnt = 51;	
+					Get_Moto_Measure_3508(&motor_get[CHASSIS_MOTOR_RB],CAN1_RX_date);
 				}
 			}break;
 			
@@ -158,19 +203,19 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 /************************************************各电机通过CAN发送数据************************************************/
 //===================================================================================================================//
 /**
-  * @brief				云台电机驱动函数(6020与6623电机驱动函数相同)
+  * @brief				云台电机驱动函数(6020与6623电机驱动函数相同)【yaw轴、pitch轴、拨弹】
   * @param[out]		
   * @param[in]		hcan:要使用的CAN1
                   yaw:yaw轴电流值
                   pitch:pitch电流值
   * @retval				none
 */
-HAL_StatusTypeDef 	Gimbal_Motor_Drive(CAN_HandleTypeDef * hcan,int16_t yaw,int16_t	pitch)
+HAL_StatusTypeDef 	Gimbal_Motor_Drive(CAN_HandleTypeDef * hcan, int16_t yaw, int16_t	pitch, int16_t shoot)
 {
 	static CAN_TxHeaderTypeDef  Gimbal_TX_Message;
 	uint8_t CAN_TX_DATA[8];
 
-	Gimbal_TX_Message.StdId = 0x1FF;
+	Gimbal_TX_Message.StdId = CAN_GIMBAL_ALL_ID;
 	Gimbal_TX_Message.IDE = CAN_ID_STD;
 	Gimbal_TX_Message.RTR = CAN_RTR_DATA;
 	Gimbal_TX_Message.DLC = 0X08;
@@ -179,8 +224,8 @@ HAL_StatusTypeDef 	Gimbal_Motor_Drive(CAN_HandleTypeDef * hcan,int16_t yaw,int16
 	CAN_TX_DATA[1] = yaw;
 	CAN_TX_DATA[2] = pitch >> 8;
 	CAN_TX_DATA[3] = pitch;
-	CAN_TX_DATA[4] = 0x00;
-	CAN_TX_DATA[5] = 0x00;
+	CAN_TX_DATA[4] = shoot >> 8;
+	CAN_TX_DATA[5] = shoot;
 	CAN_TX_DATA[6] = 0x00;
 	CAN_TX_DATA[7] = 0x00;
 
@@ -200,7 +245,7 @@ HAL_StatusTypeDef Gimbal_Motor_Disable(CAN_HandleTypeDef * hcan)
 	static CAN_TxHeaderTypeDef  Gimbal_TX_Message;
 	uint8_t CAN_TX_DATA[8];
 
-	Gimbal_TX_Message.StdId = 0x1FF;
+	Gimbal_TX_Message.StdId = CAN_GIMBAL_ALL_ID;
 	Gimbal_TX_Message.IDE = CAN_ID_STD;
 	Gimbal_TX_Message.RTR = CAN_RTR_DATA;
 	Gimbal_TX_Message.DLC = 0X08;
@@ -266,7 +311,7 @@ HAL_StatusTypeDef Chassis_Motor_Drive( CAN_HandleTypeDef * hcan, int16_t motor1,
 	Chassis_TX_Message.DLC = 0x08;
 	Chassis_TX_Message.IDE = CAN_ID_STD;
 	Chassis_TX_Message.RTR = CAN_RTR_DATA;
-	Chassis_TX_Message.StdId = 0x200;
+	Chassis_TX_Message.StdId = CAN_CHASSIS_ALL_ID;
 
 	CAN_TX_DATA[0] = motor1 >> 8;
 	CAN_TX_DATA[1] = motor1;
@@ -297,7 +342,7 @@ HAL_StatusTypeDef Chassis_Motor_Disable( CAN_HandleTypeDef * hcan)
 	Chassis_TX_Message.DLC = 0x08;
 	Chassis_TX_Message.IDE = CAN_ID_STD;
 	Chassis_TX_Message.RTR = CAN_RTR_DATA;
-	Chassis_TX_Message.StdId = 0x200;
+	Chassis_TX_Message.StdId = CAN_CHASSIS_ALL_ID;
 
 	CAN_TX_DATA[0] = 0x00;
 	CAN_TX_DATA[1] = 0x00;
@@ -314,7 +359,8 @@ HAL_StatusTypeDef Chassis_Motor_Disable( CAN_HandleTypeDef * hcan)
 		return HAL_ERROR;		
 }	
 /**
-  * @brief				拨弹2006电机驱动函数
+  * @brief				拨弹2006电机驱动函数【若底盘与云台为不同控制板，可使用该函数驱动拨盘电机，对应拨盘ID可设为0x203；
+                                        反之，拨弹电机则使用云台电机驱动函数，对应拨盘ID设为0x207，具体按实际情况定】
   * @param[out]		
   * @param[in]		hcan:要使用的CAN1
                   value:拨弹电机的电流值
@@ -328,7 +374,7 @@ HAL_StatusTypeDef Trigger_Motor_Drive(CAN_HandleTypeDef * hcan,int16_t value)
 	Trigger_TX_Message.DLC = 0x08;
 	Trigger_TX_Message.IDE = CAN_ID_STD;
 	Trigger_TX_Message.RTR = CAN_RTR_DATA;
-	Trigger_TX_Message.StdId = 0x200;
+	Trigger_TX_Message.StdId = CAN_CHASSIS_ALL_ID;
 
 	CAN_TX_DATA[0] = 0;
 	CAN_TX_DATA[1] = 0;

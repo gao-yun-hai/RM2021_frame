@@ -21,6 +21,7 @@
 
 /* 内部变量 ------------------------------------------------------------------*/
 
+
 /* 内部函数原型声明 ----------------------------------------------------------*/
 void TIM_Compare_Value_Set(uint32_t value1,uint32_t value2);
 
@@ -39,7 +40,7 @@ TIM5：通道1-通道4对应 -> PH10/PH11/PH12/PI0
 void TIM_Compare_Value_Set(uint32_t value1,uint32_t value2)
 {
 	  PWM_htim.Instance->CCR1=value1;
-	  PWM_htim.Instance->CCR2=value1;
+	  PWM_htim.Instance->CCR2=value2;
 }
 
 /**
@@ -54,16 +55,34 @@ void Shoot_Firction_Motor(uint32_t wheel1,uint32_t wheel2)
 }
 
 /**
-  * @brief				摩擦轮电机停止函数（不常用，一般通过将比较值设定为最低电机即可停转）
+  * @brief				关闭摩擦轮
   * @param[out]		
   * @param[in]		
   * @retval				none
 */
 void Shoot_Firction_Motor_Stop(void)
 {
-	
-	PWM_htim.Instance->CR1 &= ~(0x01);  //关闭定时器
-		
+  PWM_htim.Instance->CNT = 0;
+	PWM_htim.Instance->CCR1 = 0;
+  PWM_htim.Instance->CCR2 = 0;
+	__HAL_TIM_DISABLE(&PWM_htim);  //关闭定时器
+  HAL_TIM_PWM_Stop(&PWM_htim,TIM_CHANNEL_1);
+  HAL_TIM_PWM_Stop(&PWM_htim,TIM_CHANNEL_2);	
+}
+
+/**
+  * @brief				摩擦轮重启
+  * @param[in]		
+	* @param[out]		
+  * @retval				none
+*/
+void Shoot_Firction_Motor_Restart(void)
+{
+    Shoot_Firction_Motor_Stop();
+    osDelay(2000);
+    __HAL_TIM_ENABLE(&PWM_htim);									//开启定时器
+    HAL_TIM_PWM_Start(&PWM_htim,TIM_CHANNEL_1);   //PH10,右侧摩擦轮(TIM5)
+    HAL_TIM_PWM_Start(&PWM_htim,TIM_CHANNEL_2);   //PH11,左侧摩擦轮(TIM5)
 }
 
 /**
@@ -80,5 +99,5 @@ void Shoot_Firction_Motor_PWM_Init(void)
 	Shoot_Firction_Motor (HIGH_SPEED,HIGH_SPEED);
 	HAL_Delay(2000);
 	Shoot_Firction_Motor (LOW_SPEED,LOW_SPEED);
-	HAL_Delay(1000);   
+	HAL_Delay(2000); 
 }

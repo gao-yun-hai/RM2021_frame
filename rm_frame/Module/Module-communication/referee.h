@@ -17,26 +17,31 @@
 /***************命令码ID********************/
 /* 
 
-	ID: 0x0001  Byte:  3    比赛状态数据       							1Hz周期发送     
+	ID: 0x0001  Byte:  11   比赛状态数据       							1Hz周期发送     
 	ID: 0x0002  Byte:  1    比赛结果数据         						比赛结束后发送      
-	ID: 0x0003  Byte:  32   比赛机器人血量数据   						1Hz周期发送
+	ID: 0x0003  Byte:  28   比赛机器人血量数据   						1Hz周期发送
 	ID: 0x0004  Byte:  3    飞镖发射状态   									飞镖发射时发送
-	ID: 0x0005  Byte:  3    人工智能挑战赛加成与惩罚区状态  1Hz周期发送
+	ID: 0x0005  Byte:  11   人工智能挑战赛加成与惩罚区状态  1Hz周期发送
 	ID: 0x0101  Byte:  4    场地事件数据   									1Hz周期发送
-	ID: 0x0102  Byte:  4    场地补给站动作标识数据    			动作发生后发送 
+	ID: 0x0102  Byte:  3    场地补给站动作标识数据    			动作发生后发送
+  ID：0x0103  Byte:  2    请求补给站补弹数据    			    由参赛队发送，上限 10Hz（RM 对抗赛尚未开放）
 	ID: 0X0104  Byte:  2    裁判警告数据    							  警告发生后发送 
 	ID: 0X0105  Byte:  1    飞镖发射口倒计时    						1Hz周期发送 
-	ID: 0X0201  Byte: 18    机器人状态数据        					10Hz周期发送
-	ID: 0X0202  Byte: 16    实时功率热量数据   							50Hz周期发送       
-	ID: 0x0203  Byte: 16    机器人位置数据           				10Hz周期发送
+	ID: 0X0201  Byte:  27   机器人状态数据        					10Hz周期发送
+	ID: 0X0202  Byte:  14   实时功率热量数据   							50Hz周期发送       
+	ID: 0x0203  Byte:  16   机器人位置数据           				10Hz周期发送
 	ID: 0x0204  Byte:  1    机器人增益数据           				1Hz周期发送
 	ID: 0x0205  Byte:  3    空中机器人能量状态数据    			10Hz周期发送，只有空中机器人主控发送
 	ID: 0x0206  Byte:  1    伤害状态数据           					伤害发生后发送
 	ID: 0x0207  Byte:  6    实时射击数据           					子弹发射后发送
 	ID: 0x0208  Byte:  2    弹丸剩余发射数          				仅空中机器人以及哨兵机器人主控发送该数据，1Hz周期发送
 	ID: 0x0209  Byte:  4    机器人 RFID 状态          			1Hz周期发送
-	ID: 0x020A  Byte: 12    飞镖机器人客户端指令数据        1Hz周期发送
+	ID: 0x020A  Byte:  12   飞镖机器人客户端指令数据        1Hz周期发送
 	ID: 0x0301  Byte:  n    机器人间交互数据          			发送方触发发送,10Hz
+	ID: 0x0302  Byte:  n    自定义控制器交互数据接口        通过客户端触发发送，上限 30Hz
+	ID: 0x0303  Byte:  15   客户端小地图交互数据          	触发发送
+	ID: 0x0304  Byte:  12   键盘、鼠标信息，          			通过图传串口发送
+  
 	
 */
 typedef enum
@@ -61,31 +66,36 @@ typedef enum
 	ID_RFID_STATUS									= 0x0209,//机器人 RFID 状态
 	ID_DART_CLIENT_CMD							= 0x020A,//飞镖机器人客户端指令数据
 	ID_INTERATIVE_DATE							= 0x0301,//机器人间交互数据
+	ID_CUSTOMCONTROLLER_DATE        = 0x0302,//自定义控制器交互数据接口，通过客户端触发发送，上限30HZ
+	ID_MAP_DATE                     = 0x0303,//客户端小地图交互数据
+	ID_KEYBOARD_AND_MOUSE_DATE      = 0x0304,//键盘、鼠标信息，通过图传串口发送     
 	
 } xCmdID;
 
 //命令码所对应各种数据段的长度,根据官方协议来定义长度
 typedef enum
 {
-	LEN_GAME_STATE       				    =  3,	//0x0001
+	LEN_GAME_STATE       				    = 11,	//0x0001
 	LEN_GAME_RESULT       					=  1,	//0x0002
 	LEN_GAME_ROBOT_HP				      	= 32,	//0x0003
 	LEN_DART_STATUS									=  3, //0x0004
-	LEN_ICRA_BUFF_DEBUFF_ZONE_STATUS=  3, //0x0005
+	LEN_ICRA_BUFF_DEBUFF_ZONE_STATUS= 11, //0x0005
 	LEN_EVENT_DATE  								=  4,	//0x0101
 	LEN_SUPPLY_PROJRCTILE_ACTION    =  4,	//0x0102
 	LEN_REFEREE_WARNING							=  2, //0x0104
 	LEN_DART_REMAINING_TIME					=  1, //0x0105
-	LEN_GAME_ROBOT_STATUS    				= 18,	//0x0201
+	LEN_GAME_ROBOT_STATUS    				= 27,	//0x0201
 	LEN_POWER_HEAT_DATE    				  = 16,	//0x0202
 	LEN_GAME_ROBOT_POS        			= 16,	//0x0203
 	LEN_BUFF											  =  1,	//0x0204
-	LEN_AERIAL_ROBOT_ENERGY			 	  =  3,	//0x0205
+	LEN_AERIAL_ROBOT_ENERGY			 	  =  2,	//0x0205
 	LEN_ROBOT_HURT									=  1,	//0x0206
-	LEN_SHOOT_DATE								  =  6,	//0x0207
-	LEN_BULLET_REAMINING						=  2, //0x0208
+	LEN_SHOOT_DATE								  =  7,	//0x0207
+	LEN_BULLET_REAMINING						=  6, //0x0208
 	LEN_RFID_STATUS									=  4, //0x0209
 	LEN_DART_CLIENT_CMD							= 12, //0x020A
+  LEN_MAP_DATE                    = 15, //0x0303
+	LEN_KEYBOARD_AND_MOUSE_DATE     = 12, //0x0304
 	
 } RefereeDataLength;
 
@@ -100,13 +110,15 @@ typedef __packed struct
 	
 } xFrameHeader;
 
-/* ID: 0x0001  Byte:  3    比赛状态数据 */
+/* ID: 0x0001  Byte:  11    比赛状态数据 */
 typedef __packed struct 
 { 
 	uint8_t game_type : 4;
 	uint8_t game_progress : 4;
 	uint16_t stage_remain_time;
 	
+  uint64_t SyncTimeStamp;  //机器人接收到该指令的精确 Unix 时间，当机载端收到有效的 NTP 服务器授 时后生效 
+
 } ext_game_state_t; 
 
 
@@ -118,7 +130,7 @@ typedef __packed struct
 } ext_game_result_t; 
 
 
-/* ID: 0x0003  Byte:  2    比赛机器人血量数据 */
+/* ID: 0x0003  Byte:  32    比赛机器人血量数据 */
 typedef __packed struct
 {
 	uint16_t red_1_robot_HP;		//红 1 英雄机器人血量，未上场以及罚下血量为 0
@@ -150,7 +162,7 @@ typedef __packed struct
 } ext_dart_status_t;
 
 
-/* ID: 0x0005  Byte:  3    人工智能挑战赛加成与惩罚区状态数据 */
+/* ID: 0x0005  Byte:  11    人工智能挑战赛加成与惩罚区状态数据 */
 typedef __packed struct
 {
 	uint8_t F1_zone_status:1;
@@ -165,6 +177,11 @@ typedef __packed struct
 	uint8_t F5_zone_buff_debuff_status:3;
 	uint8_t F6_zone_status:1;
 	uint8_t F6_zone_buff_debuff_status:3;
+  
+  uint16_t red1_bullet_left;
+  uint16_t red2_bullet_left;
+  uint16_t blue1_bullet_left;
+  uint16_t blue2_bullet_left;
 	
 } ext_ICRA_buff_debuff_zone_status_t;
 
@@ -205,7 +222,7 @@ typedef __packed struct
 } ext_dart_remaining_time_t;
 
 
-/* ID: 0X0201  Byte: 18    机器人状态数据 */
+/* ID: 0X0201  Byte: 27    机器人状态数据 */
 typedef __packed struct 
 { 
 	uint8_t robot_id;   										//机器人ID，1： 红方英雄机器人；2： 红方工程机器人； 3/4/5： 红方步兵机器人；	
@@ -215,13 +232,17 @@ typedef __packed struct
 	uint8_t robot_level; 										//1：一级，2：二级，3：三级
 	uint16_t remain_HP;  										//机器人剩余血量
 	uint16_t max_HP; 												//机器人上限血量
-	uint16_t shooter_heat0_cooling_rate;  	//机器人 17mm 子弹热量冷却速度 单位 /s
-	uint16_t shooter_heat0_cooling_limit;   //机器人 17mm 子弹热量上限
-	uint16_t shooter_heat1_cooling_rate;    //机器人 42mm 枪口每秒冷却值 单位 /s
-	uint16_t shooter_heat1_cooling_limit;   //机器人 42mm 枪口热量上限
-	uint8_t shooter_heat0_speed_limit;			//机器人 17mm 枪口上限速度 单位 m/s
-	uint8_t shooter_heat1_speed_limit;			//机器人 42mm 枪口上限速度 单位 m/s
-	uint8_t max_chassis_power;							//机器人最大底盘， 单位 瓦/W
+  uint16_t shooter_id1_17mm_cooling_rate; //机器人 1 号 17mm 枪口每秒冷却值
+  uint16_t shooter_id1_17mm_cooling_limit;//机器人 1 号 17mm 枪口热量上限
+  uint16_t shooter_id1_17mm_speed_limit;  //机器人 1 号 17mm 枪口上限速度 单位 m/s
+  uint16_t shooter_id2_17mm_cooling_rate; //机器人 2 号 17mm 枪口每秒冷却值
+  uint16_t shooter_id2_17mm_cooling_limit;//机器人 2 号 17mm 枪口热量上限
+  uint16_t shooter_id2_17mm_speed_limit;  //机器人 2 号 17mm 枪口上限速度 单位 m/s
+  uint16_t shooter_id1_42mm_cooling_rate; //机器人 42mm 枪口每秒冷却值
+  uint16_t shooter_id1_42mm_cooling_limit;//机器人 42mm 枪口热量上限
+  uint16_t shooter_id1_42mm_speed_limit;  //机器人 42mm 枪口上限速度 单位 m/s
+  
+	uint16_t chassis_power_limit;						//机器人底盘功率限制上限， 单位 瓦/W
 	uint8_t mains_power_gimbal_output : 1;  //0 bit： gimbal 口输出：  1 为有 24V 输出， 0 为无 24v 输出
 	uint8_t mains_power_chassis_output : 1; //1 bit： chassis 口输出： 1 为有 24V 输出， 0 为无 24v 输出
 	uint8_t mains_power_shooter_output : 1; //2 bit： shooter 口输出： 1 为有 24V 输出， 0 为无 24v 输出
@@ -232,13 +253,13 @@ typedef __packed struct
 /* ID: 0X0202  Byte: 16    实时功率热量数据 */
 typedef __packed struct 
 { 
-	uint16_t chassis_volt;   				//底盘输出电压 单位 毫伏/mV
-	uint16_t chassis_current;   		//底盘输出电流 单位 毫安/mA
-	float chassis_power;   					//底盘输出功率 单位 瓦/W
-	uint16_t chassis_power_buffer;	//底盘功率缓冲 单位 焦耳/J 备注：飞坡根据规则增加至 250J
-	uint16_t shooter_heat0;					//17mm 枪口热量
-	uint16_t shooter_heat1;					//42mm 枪口热量  
-	uint16_t mobile_shooter_heat2;	//机动 17 mm 枪口热量
+	uint16_t chassis_volt;   				        //底盘输出电压 单位 毫伏/mV
+	uint16_t chassis_current;   		        //底盘输出电流 单位 毫安/mA
+	float chassis_power;   					        //底盘输出功率 单位 瓦/W
+	uint16_t chassis_power_buffer;	        //底盘功率缓冲 单位 焦耳/J 备注：飞坡根据规则增加至 250J
+	uint16_t shooter_id1_17mm_cooling_heat;	//1 号 17mm 枪口热量
+	uint16_t shooter_id2_17mm_cooling_heat;	//2 号 17mm 枪口热量
+  uint16_t shooter_id1_42mm_cooling_heat; //42mm 枪口热量
 	
 } ext_power_heat_data_t; 
 
@@ -262,11 +283,11 @@ typedef __packed struct
 } ext_buff_t; 
 
 
-/* ID: 0x0205  Byte:  3    空中机器人能量状态数据 */
+/* ID: 0x0205  Byte:  2    空中机器人能量状态数据 */
 typedef __packed struct 
 { 
-	uint8_t energy_point;		//积累的能量点
 	uint8_t attack_time; 		//可攻击时间， 单位 s， 30s 递减至 0
+  uint8_t energy_point;		//积累的能量点
 	
 } aerial_robot_energy_t; 
 
@@ -279,21 +300,26 @@ typedef __packed struct
 } ext_robot_hurt_t; 
 
 
-/* ID: 0x0207  Byte:  6    实时射击数据 */
+/* ID: 0x0207  Byte:  7    实时射击数据 */
 typedef __packed struct 
 { 
 	uint8_t bullet_type;   //子弹类型: 1： 17mm 弹丸 2： 42mm 弹丸
+  uint8_t shooter_id;    //发射机构 ID：1： 1 号 17mm 发射机构
+                                      //2： 2 号 17mm 发射机构
+                                      //3： 42mm 发射机构
 	uint8_t bullet_freq;   //子弹射频 单位 Hz
 	float bullet_speed;  	 //子弹射速 单位 m/s
 	
 } ext_shoot_data_t; 
 
 
-/* ID: 0x0208  Byte:  2    子弹剩余发射数 */
+/* ID: 0x0208  Byte:  6    子弹剩余发射数 */
 typedef __packed struct
 {
-	uint16_t bullet_remaining_num;	//子弹剩余发射数目
-	
+  uint16_t bullet_remaining_num_17mm;   //17mm 子弹剩余发射数目
+  uint16_t bullet_remaining_num_42mm;   //42mm 子弹剩余发射数目
+  uint16_t coin_remaining_num;	        //剩余金币数量
+  
 } ext_bullet_remaining_t;
 
 
@@ -369,13 +395,15 @@ typedef  struct
 /* 本模块向外部提供的变量声明 -----------------------------------------------*/
 
 /* 本模块向外部提供的自定义数据类型变量声明 ---------------------------------*/
-extern Referee_Struct  referee;
+
 /* 本模块向外部提供的接口函数原型声明 ---------------------------------------*/
 void RefereeDate_Receive_USART_Init(void);
 void Referee_UART_IRQHandler(void);
-void get_chassis_power_and_buffer(fp32 *power, fp32 *buffer);
-void get_shoot_heat0_limit_and_heat0(uint16_t *heat0_limit, uint16_t *heat0);
-void get_shoot_heat1_limit_and_heat1(uint16_t *heat1_limit, uint16_t *heat1);
+void get_robot_remain_hp(uint16_t *remain_hp);
+void get_robot_mains_power_state(uint8_t *gimbal_output, uint8_t *chassis_output, uint8_t *shooter_output);
+void get_chassis_power_and_buffer(fp32 *power, uint16_t *buffer);
+void get_shooter_17mm_heat(uint16_t *heat1, uint16_t *heat2, uint16_t *heat1_limit, uint16_t *heat2_limit);
+void get_shooter_bullet_freq_speed(uint8_t *type,uint8_t *id,uint8_t *freq,float *speed);
 
 
 

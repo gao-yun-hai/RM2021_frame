@@ -738,6 +738,11 @@
           <GroupName>APP_Tasks</GroupName>
           <Files>
             <File>
+              <FileName>printf_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP_Tasks\printf_task.c</FilePath>
+            </File>
+            <File>
               <FileName>shoot_task.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\App_Tasks\shoot_task.c</FilePath>
