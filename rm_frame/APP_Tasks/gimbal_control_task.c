@@ -48,7 +48,7 @@ void Gimbal_Control_Task(void const * argument)
 		set_pitch_pos = 200;
 		get_pitch_pos = motor_get[GIMBAL_PITCH_MOTOR].total_angle;
 		pit_current_value = PID_Calc(&motor_pid[PID_PITCH_MOTOR_POS], get_pitch_pos, set_pitch_pos);
-//		Gimbal_Motor_Drive(&hcan1,yaw_current_value,pit_current_value,0);
+		Gimbal_Motor_Drive(&hcan1,yaw_current_value,pit_current_value,0);
 
 		osDelayUntil(&xLastWakeTime,GIMBAL_PERIOD);		
 

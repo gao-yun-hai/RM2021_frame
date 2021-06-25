@@ -71,90 +71,84 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 		switch(CAN1_Rx_Header.StdId)
 		{
 			case CAN_CHASSIS_MOTOR_RF_ID://底盘右前方电机
-			{		
-				Refresh_Device_OffLine_Time(ChassisMotor_TOE);//刷新时间
-				
+			{						
 				if(motor_get[CHASSIS_MOTOR_RF].msg_cnt++ <= 50)	
 				{
 					Get_Moto_Offset(&motor_get[CHASSIS_MOTOR_RF],CAN1_RX_date);
 				}
 				else
 				{	
+          Refresh_Device_OffLine_Time(ChassisMotor_TOE);//刷新时间
 					motor_get[CHASSIS_MOTOR_RF].msg_cnt = 51;	
 					Get_Moto_Measure_3508(&motor_get[CHASSIS_MOTOR_RF],CAN1_RX_date);
 				}
 			}break;
       
       case CAN_CHASSIS_MOTOR_LF_ID://底盘左前方电机
-			{		
-				Refresh_Device_OffLine_Time(ChassisMotor_TOE);//刷新时间
-				
+			{						
 				if(motor_get[CHASSIS_MOTOR_LF].msg_cnt++ <= 50)	
 				{
 					Get_Moto_Offset(&motor_get[CHASSIS_MOTOR_LF],CAN1_RX_date);
 				}
 				else
 				{	
+          Refresh_Device_OffLine_Time(ChassisMotor_TOE);//刷新时间
 					motor_get[CHASSIS_MOTOR_LF].msg_cnt = 51;	
 					Get_Moto_Measure_3508(&motor_get[CHASSIS_MOTOR_LF],CAN1_RX_date);
 				}
 			}break;
       
       case CAN_CHASSIS_MOTOR_LB_ID://底盘左后方电机
-			{		
-				Refresh_Device_OffLine_Time(ChassisMotor_TOE);//刷新时间
-				
+			{						
 				if(motor_get[CHASSIS_MOTOR_LB].msg_cnt++ <= 50)	
 				{
 					Get_Moto_Offset(&motor_get[CHASSIS_MOTOR_LB],CAN1_RX_date);
 				}
 				else
-				{	
+				{
+          Refresh_Device_OffLine_Time(ChassisMotor_TOE);//刷新时间          
 					motor_get[CHASSIS_MOTOR_LB].msg_cnt = 51;	
 					Get_Moto_Measure_3508(&motor_get[CHASSIS_MOTOR_LB],CAN1_RX_date);
 				}
 			}break;
       
       case CAN_CHASSIS_MOTOR_RB_ID://底盘右后方电机
-			{		
-				Refresh_Device_OffLine_Time(ChassisMotor_TOE);//刷新时间
-				
+			{						
 				if(motor_get[CHASSIS_MOTOR_RB].msg_cnt++ <= 50)	
 				{
 					Get_Moto_Offset(&motor_get[CHASSIS_MOTOR_RB],CAN1_RX_date);
 				}
 				else
-				{	
+				{
+          Refresh_Device_OffLine_Time(ChassisMotor_TOE);//刷新时间          
 					motor_get[CHASSIS_MOTOR_RB].msg_cnt = 51;	
 					Get_Moto_Measure_3508(&motor_get[CHASSIS_MOTOR_RB],CAN1_RX_date);
 				}
 			}break;
 			
 			case CAN_TRIGGER_MOTOR_ID://拨盘电机 
-			{		
-				Refresh_Device_OffLine_Time(TriggerMotor_TOE);//刷新时间
-				
+			{						
 				if(motor_get[TRIGGER_MOTOR].msg_cnt++ <= 50)	
 				{
 					Get_Moto_Offset(&motor_get[TRIGGER_MOTOR],CAN1_RX_date);
 				}
 				else
-				{		
-				motor_get[TRIGGER_MOTOR].msg_cnt=51;	
-				Get_Moto_Measure_2006(&motor_get[TRIGGER_MOTOR], CAN1_RX_date);
+				{
+          Refresh_Device_OffLine_Time(TriggerMotor_TOE);//刷新时间          
+          motor_get[TRIGGER_MOTOR].msg_cnt=51;	
+          Get_Moto_Measure_2006(&motor_get[TRIGGER_MOTOR], CAN1_RX_date);
 				}
 			}break;			
 			
 			case CAN_YAW_MOTOR_ID://yaw轴电机反馈
-			{		
-				Refresh_Device_OffLine_Time(YawGimbalMotor_TOE);//刷新时间
-				
+			{						
 				if(motor_get[GIMBAL_YAW_MOTOR].msg_cnt++ <= 50)
 				{
 					Get_Moto_Offset(&motor_get[GIMBAL_YAW_MOTOR],CAN1_RX_date);
 				}
 				else
 				{
+          Refresh_Device_OffLine_Time(YawGimbalMotor_TOE);//刷新时间
 					motor_get[GIMBAL_YAW_MOTOR].msg_cnt = 51;
 					Get_Moto_Measure_3508(&motor_get[GIMBAL_YAW_MOTOR],CAN1_RX_date);
 				}								
@@ -162,14 +156,13 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 			
 			case CAN_PITCH_MOTOR_ID://pitch轴电机反馈
 			{	
-				Refresh_Device_OffLine_Time(PitchGimbalMotor_TOE);//刷新时间
-
 				if(motor_get[GIMBAL_PITCH_MOTOR].msg_cnt++ <= 50)
 				{
 					Get_Moto_Offset(&motor_get[GIMBAL_PITCH_MOTOR],CAN1_RX_date);
 				}
 				else
 				{
+          Refresh_Device_OffLine_Time(PitchGimbalMotor_TOE);//刷新时间
 					motor_get[GIMBAL_PITCH_MOTOR].msg_cnt = 51;
 					Get_Moto_Measure_6020(&motor_get[GIMBAL_PITCH_MOTOR],CAN1_RX_date);
 				}				
@@ -203,7 +196,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 /************************************************各电机通过CAN发送数据************************************************/
 //===================================================================================================================//
 /**
-  * @brief				云台电机驱动函数(6020与6623电机驱动函数相同)【yaw轴、pitch轴、拨弹】
+  * @brief				云台电机驱动函数【yaw轴、pitch轴、拨弹】
   * @param[out]		
   * @param[in]		hcan:要使用的CAN1
                   yaw:yaw轴电流值
@@ -235,7 +228,7 @@ HAL_StatusTypeDef 	Gimbal_Motor_Drive(CAN_HandleTypeDef * hcan, int16_t yaw, int
 		return HAL_ERROR;	
 }
 /**
-  * @brief				云台电机失能函数(6020与6623电机失能函数相同)
+  * @brief				云台电机失能函数
   * @param[out]		
   * @param[in]		hcan:要使用的CAN1
   * @retval				

@@ -21,6 +21,10 @@ typedef enum
 	NUM_OF_MOTOR      //电机的数量
 }motor_ID;//电机数据接收结构体对应存储的数组编号
 
+/*注：最终ID设置应根据实际所用电机进行设置，包括硬件与软件设置
+硬件设置：电机电调ID设置
+软件设置：宏设置与CAN接收处ID判断设置
+*/
 typedef enum
 {
   CAN_CHASSIS_ALL_ID = 0x200,
