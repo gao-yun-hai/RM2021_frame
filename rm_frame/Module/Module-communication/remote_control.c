@@ -40,7 +40,7 @@ uint8_t RC_Data_Error(void);//接收数据错误判断函数
 */
 void Remote_Control_USART_Init(void)
 {
-    UART_IT_Init(&RC_huart,sbus_rx_buf,DR16_RX_BUFFER_SIZE);
+    USER_UART_IT_Init(&RC_huart,sbus_rx_buf,DR16_RX_BUFFER_SIZE);
 }
 
 

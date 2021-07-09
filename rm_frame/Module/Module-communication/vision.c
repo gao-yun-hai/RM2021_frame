@@ -36,7 +36,7 @@ static void SBUS_To_Vision(volatile const uint8_t *buff, Minipc_Rx_Struct *Minip
 */
 void VisionDate_Receive_USART_Init(void)
 {
-    UART_IT_Init(&VD_huart,vision_rx_buf,VISION_RX_BUFFER_SIZE);
+    USER_UART_IT_Init(&VD_huart,vision_rx_buf,VISION_RX_BUFFER_SIZE);
 }
 
 

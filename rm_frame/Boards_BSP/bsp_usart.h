@@ -12,8 +12,9 @@
 /* 本模块向外部提供的自定义数据类型变量声明 ---------------------------------*/
 
 /* 本模块向外部提供的接口函数原型声明 ---------------------------------------*/
-HAL_StatusTypeDef Bsp_UART_Receive_DMA(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
-void UART_IT_Init(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
+HAL_StatusTypeDef USER_UART_Receive_DMA(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
+void USER_UART_IT_Init(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
+void HAL_UART_IT_Init(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
 
 #endif
 

@@ -25,7 +25,22 @@
 
 /* 函数主体部分 --------------------------------------------------------------*/
 /**
-  * @brief				使用DMA接收数据并触发串口空闲中断。
+* @brief				使用HAL库中的DMA数据接收并触发串口空闲中断。(需要使用串口发送是使用该函数开启)
+  * @param[out]		
+  * @param[in]		huart: 串口
+                  pData: 指向接受数据缓冲区的指针
+									Size:  可接收数据的最大长度
+	* @retval				HAL status
+*/
+void HAL_UART_IT_Init(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size)
+{
+	HAL_UART_Receive_DMA(huart,pData,Size);//利用DMA接受数据	
+	__HAL_UART_ENABLE_IT(huart, UART_IT_IDLE);//开启串口空闲中断
+}
+
+
+/**
+  * @brief				使用自定义DMA接收数据并触发串口空闲中断。(不需要使用串口发送是使用该函数开启)
 									通过非阻塞方式接收数据，数据长度有最大限度，但是在最大限度之内可以接受任意长度的数据。
   * @param[out]		
   * @param[in]		huart: 串口
@@ -33,9 +48,9 @@
 									Size:  可接收数据的最大长度
 	* @retval				HAL status
 */
-void UART_IT_Init(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size)
+void USER_UART_IT_Init(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size)
 {
-	Bsp_UART_Receive_DMA(huart,pData,Size);//利用DMA接受数据	
+	USER_UART_Receive_DMA(huart,pData,Size);//利用DMA接受数据	
 	__HAL_UART_ENABLE_IT(huart, UART_IT_IDLE);//开启串口空闲中断
 }
 
@@ -47,7 +62,7 @@ void UART_IT_Init(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size)
 									Size: 可接收数据的最大长度
   * @retval				HAL status
 */
-HAL_StatusTypeDef Bsp_UART_Receive_DMA(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size)
+HAL_StatusTypeDef USER_UART_Receive_DMA(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size)
 {
   uint32_t *tmp;
   uint32_t tmp1 = 0;

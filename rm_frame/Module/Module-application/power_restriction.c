@@ -34,27 +34,23 @@
 /* 函数原型声明 ----------------------------------------------------------*/
 /**
   * @brief          限制功率，主要限制电机电流(底盘共有四个电机)
-  * @param[in]      chassis_power_control: 底盘数据
+  * @param[in]      referee_used.chassis_power_control: 底盘数据
   * @retval         none
   */
 void chassis_power_control(float current[4])
 {
-    fp32 chassis_power = 0.0f;
-    uint16_t chassis_power_buffer = 0.0f;
     fp32 total_current_limit = 0.0f;
     fp32 total_current = 0.0f;
-
-    get_chassis_power_and_buffer(&chassis_power, &chassis_power_buffer);
     // power > 80w and buffer < 60j, because buffer < 60 means power has been more than 80w
     //功率超过80w 和缓冲能量小于60j,因为缓冲能量小于60意味着功率超过80w
-    if(chassis_power_buffer < WARNING_POWER_BUFF)
+    if(referee_used.chassis_power_buffer < WARNING_POWER_BUFF)
     {
         fp32 power_scale;
-        if(chassis_power_buffer > 5.0f)
+        if(referee_used.chassis_power_buffer > 5.0f)
         {
             //scale down WARNING_POWER_BUFF
             //缩小WARNING_POWER_BUFF
-            power_scale = chassis_power_buffer / WARNING_POWER_BUFF;
+            power_scale = referee_used.chassis_power_buffer / WARNING_POWER_BUFF;
         }
         else
         {
@@ -69,16 +65,16 @@ void chassis_power_control(float current[4])
     {
         //power > WARNING_POWER
         //功率大于WARNING_POWER
-        if(chassis_power > WARNING_POWER)
+        if(referee_used.chassis_power > WARNING_POWER)
         {
             fp32 power_scale;
             //power < 80w
             //功率小于80w
-            if(chassis_power < POWER_LIMIT)
+            if(referee_used.chassis_power < POWER_LIMIT)
             {
                 //scale down
                 //缩小
-                power_scale = (POWER_LIMIT - chassis_power) / (POWER_LIMIT - WARNING_POWER);
+                power_scale = (POWER_LIMIT - referee_used.chassis_power) / (POWER_LIMIT - WARNING_POWER);
                 
             }
             //power > 80w

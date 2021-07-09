@@ -39,13 +39,9 @@ shoot_control_t shoot_control;          //射击数据结构体
 */
 void Friction_Drive_Task(void const *argument)
 {
-  static uint8_t mains_power_gimbal_output;
-  static uint8_t mains_power_chassis_output;
-  static uint8_t mains_power_shooter_output;
 
 	portTickType xLastWakeTime;
 	xLastWakeTime = xTaskGetTickCount();
-
 
 	//斜坡函数初始化
 	ramp_init(&shoot_control.fric1_ramp, 0.01f, 120,100);//0.01为斜坡函数的斜率(时间间隔)  120和100为最大、最小值(最大值也为目标值)
@@ -54,8 +50,6 @@ void Friction_Drive_Task(void const *argument)
 	for(;;)  
 	{
 		Refresh_Task_OffLine_Time(FrictionDriveTask_TOE);//记录任务运行的时间点
-    get_robot_mains_power_state(&mains_power_gimbal_output, &mains_power_chassis_output, &mains_power_shooter_output);
-
 
     //摩擦轮重启（可跟换为按键控制）
     if(rc_ctrl.rc.s2 == RIGHT_S2_UP)

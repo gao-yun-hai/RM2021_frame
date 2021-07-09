@@ -17,32 +17,32 @@
 /***************ÃüÁîÂëID********************/
 /* 
 
-	ID: 0x0001  Byte:  11   ±ÈÈü×´Ì¬Êı¾İ       							1HzÖÜÆÚ·¢ËÍ     
-	ID: 0x0002  Byte:  1    ±ÈÈü½á¹ûÊı¾İ         						±ÈÈü½áÊøºó·¢ËÍ      
-	ID: 0x0003  Byte:  28   ±ÈÈü»úÆ÷ÈËÑªÁ¿Êı¾İ   						1HzÖÜÆÚ·¢ËÍ
-	ID: 0x0004  Byte:  3    ·ÉïÚ·¢Éä×´Ì¬   									·ÉïÚ·¢ÉäÊ±·¢ËÍ
-	ID: 0x0005  Byte:  11   ÈË¹¤ÖÇÄÜÌôÕ½Èü¼Ó³ÉÓë³Í·£Çø×´Ì¬  1HzÖÜÆÚ·¢ËÍ
-	ID: 0x0101  Byte:  4    ³¡µØÊÂ¼şÊı¾İ   									1HzÖÜÆÚ·¢ËÍ
-	ID: 0x0102  Byte:  3    ³¡µØ²¹¸øÕ¾¶¯×÷±êÊ¶Êı¾İ    			¶¯×÷·¢Éúºó·¢ËÍ
-  ID£º0x0103  Byte:  2    ÇëÇó²¹¸øÕ¾²¹µ¯Êı¾İ    			    ÓÉ²ÎÈü¶Ó·¢ËÍ£¬ÉÏÏŞ 10Hz£¨RM ¶Ô¿¹ÈüÉĞÎ´¿ª·Å£©
-	ID: 0X0104  Byte:  2    ²ÃÅĞ¾¯¸æÊı¾İ    							  ¾¯¸æ·¢Éúºó·¢ËÍ 
-	ID: 0X0105  Byte:  1    ·ÉïÚ·¢Éä¿Úµ¹¼ÆÊ±    						1HzÖÜÆÚ·¢ËÍ 
-	ID: 0X0201  Byte:  27   »úÆ÷ÈË×´Ì¬Êı¾İ        					10HzÖÜÆÚ·¢ËÍ
-	ID: 0X0202  Byte:  14   ÊµÊ±¹¦ÂÊÈÈÁ¿Êı¾İ   							50HzÖÜÆÚ·¢ËÍ       
-	ID: 0x0203  Byte:  16   »úÆ÷ÈËÎ»ÖÃÊı¾İ           				10HzÖÜÆÚ·¢ËÍ
-	ID: 0x0204  Byte:  1    »úÆ÷ÈËÔöÒæÊı¾İ           				1HzÖÜÆÚ·¢ËÍ
-	ID: 0x0205  Byte:  3    ¿ÕÖĞ»úÆ÷ÈËÄÜÁ¿×´Ì¬Êı¾İ    			10HzÖÜÆÚ·¢ËÍ£¬Ö»ÓĞ¿ÕÖĞ»úÆ÷ÈËÖ÷¿Ø·¢ËÍ
-	ID: 0x0206  Byte:  1    ÉËº¦×´Ì¬Êı¾İ           					ÉËº¦·¢Éúºó·¢ËÍ
-	ID: 0x0207  Byte:  6    ÊµÊ±Éä»÷Êı¾İ           					×Óµ¯·¢Éäºó·¢ËÍ
-	ID: 0x0208  Byte:  2    µ¯ÍèÊ£Óà·¢ÉäÊı          				½ö¿ÕÖĞ»úÆ÷ÈËÒÔ¼°ÉÚ±ø»úÆ÷ÈËÖ÷¿Ø·¢ËÍ¸ÃÊı¾İ£¬1HzÖÜÆÚ·¢ËÍ
-	ID: 0x0209  Byte:  4    »úÆ÷ÈË RFID ×´Ì¬          			1HzÖÜÆÚ·¢ËÍ
-	ID: 0x020A  Byte:  12   ·ÉïÚ»úÆ÷ÈË¿Í»§¶ËÖ¸ÁîÊı¾İ        1HzÖÜÆÚ·¢ËÍ
-	ID: 0x0301  Byte:  n    »úÆ÷ÈË¼ä½»»¥Êı¾İ          			·¢ËÍ·½´¥·¢·¢ËÍ,10Hz
-	ID: 0x0302  Byte:  n    ×Ô¶¨Òå¿ØÖÆÆ÷½»»¥Êı¾İ½Ó¿Ú        Í¨¹ı¿Í»§¶Ë´¥·¢·¢ËÍ£¬ÉÏÏŞ 30Hz
-	ID: 0x0303  Byte:  15   ¿Í»§¶ËĞ¡µØÍ¼½»»¥Êı¾İ          	´¥·¢·¢ËÍ
-	ID: 0x0304  Byte:  12   ¼üÅÌ¡¢Êó±êĞÅÏ¢£¬          			Í¨¹ıÍ¼´«´®¿Ú·¢ËÍ
-  
-	
+	CMD_ID: 0x0001  Byte:  11   ±ÈÈü×´Ì¬Êı¾İ       							1HzÖÜÆÚ·¢ËÍ     
+	CMD_ID: 0x0002  Byte:  1    ±ÈÈü½á¹ûÊı¾İ         						±ÈÈü½áÊøºó·¢ËÍ      
+	CMD_ID: 0x0003  Byte:  28   ±ÈÈü»úÆ÷ÈËÑªÁ¿Êı¾İ   						1HzÖÜÆÚ·¢ËÍ
+	CMD_ID: 0x0004  Byte:  3    ·ÉïÚ·¢Éä×´Ì¬   									·ÉïÚ·¢ÉäÊ±·¢ËÍ¡¾2021 V2.1°æĞ­ÒéÖĞÉ¾³ı ¡¿
+	CMD_ID: 0x0005  Byte:  11   ÈË¹¤ÖÇÄÜÌôÕ½Èü¼Ó³ÉÓë³Í·£Çø×´Ì¬  1HzÖÜÆÚ·¢ËÍ
+	CMD_ID: 0x0101  Byte:  4    ³¡µØÊÂ¼şÊı¾İ   									1HzÖÜÆÚ·¢ËÍ
+	CMD_ID: 0x0102  Byte:  3    ³¡µØ²¹¸øÕ¾¶¯×÷±êÊ¶Êı¾İ    			¶¯×÷·¢Éúºó·¢ËÍ
+  CMD_ID£º0x0103  Byte:  2    ÇëÇó²¹¸øÕ¾²¹µ¯Êı¾İ    			    ÓÉ²ÎÈü¶Ó·¢ËÍ£¬ÉÏÏŞ 10Hz£¨RM ¶Ô¿¹ÈüÉĞÎ´¿ª·Å£©
+	CMD_ID: 0X0104  Byte:  2    ²ÃÅĞ¾¯¸æÊı¾İ    							  ¾¯¸æ·¢Éúºó·¢ËÍ 
+	CMD_ID: 0X0105  Byte:  1    ·ÉïÚ·¢Éä¿Úµ¹¼ÆÊ±    						1HzÖÜÆÚ·¢ËÍ 
+	CMD_ID: 0X0201  Byte:  27   »úÆ÷ÈË×´Ì¬Êı¾İ        					10HzÖÜÆÚ·¢ËÍ
+	CMD_ID: 0X0202  Byte:  14   ÊµÊ±¹¦ÂÊÈÈÁ¿Êı¾İ   							50HzÖÜÆÚ·¢ËÍ       
+	CMD_ID: 0x0203  Byte:  16   »úÆ÷ÈËÎ»ÖÃÊı¾İ           				10HzÖÜÆÚ·¢ËÍ
+	CMD_ID: 0x0204  Byte:  1    »úÆ÷ÈËÔöÒæÊı¾İ           				1HzÖÜÆÚ·¢ËÍ
+	CMD_ID: 0x0205  Byte:  3    ¿ÕÖĞ»úÆ÷ÈËÄÜÁ¿×´Ì¬Êı¾İ    			10HzÖÜÆÚ·¢ËÍ£¬Ö»ÓĞ¿ÕÖĞ»úÆ÷ÈËÖ÷¿Ø·¢ËÍ
+	CMD_ID: 0x0206  Byte:  1    ÉËº¦×´Ì¬Êı¾İ           					ÉËº¦·¢Éúºó·¢ËÍ
+	CMD_ID: 0x0207  Byte:  6    ÊµÊ±Éä»÷Êı¾İ           					×Óµ¯·¢Éäºó·¢ËÍ
+	CMD_ID: 0x0208  Byte:  2    µ¯ÍèÊ£Óà·¢ÉäÊı          				½ö¿ÕÖĞ»úÆ÷ÈËÒÔ¼°ÉÚ±ø»úÆ÷ÈËÖ÷¿Ø·¢ËÍ¸ÃÊı¾İ£¬1HzÖÜÆÚ·¢ËÍ
+	CMD_ID: 0x0209  Byte:  4    »úÆ÷ÈË RFID ×´Ì¬          			1HzÖÜÆÚ·¢ËÍ
+	CMD_ID: 0x020A  Byte:  6   ·ÉïÚ»úÆ÷ÈË¿Í»§¶ËÖ¸ÁîÊı¾İ        1HzÖÜÆÚ·¢ËÍ
+	CMD_ID: 0x0301  Byte:  n    »úÆ÷ÈË¼ä½»»¥Êı¾İ          			·¢ËÍ·½´¥·¢·¢ËÍ,10Hz
+	CMD_ID: 0x0302  Byte:  n    ×Ô¶¨Òå¿ØÖÆÆ÷½»»¥Êı¾İ½Ó¿Ú        Í¨¹ı¿Í»§¶Ë´¥·¢·¢ËÍ£¬ÉÏÏŞ 30Hz
+	CMD_ID: 0x0303  Byte:  15   ¿Í»§¶ËĞ¡µØÍ¼½»»¥Êı¾İ          	´¥·¢·¢ËÍ
+	CMD_ID: 0x0304  Byte:  12   ¼üÅÌ¡¢Êó±êĞÅÏ¢£¬          			Í¨¹ıÍ¼´«´®¿Ú·¢ËÍ£¬30Hz
+	CMD_ID: 0x0305  Byte:  10   ¿Í»§¶ËĞ¡µØÍ¼½ÓÊÕĞÅÏ¢£¬          À×´ïÕ¾·¢ËÍµÄ×ø±êĞÅÏ¢¿ÉÒÔ±»ËùÓĞ¼º·½²Ù×÷ÊÖÔÚµÚÒ»ÊÓ½ÇĞ¡µØÍ¼¿´µ½¡£×î´ó½ÓÊÕÆµÂÊ£º 10Hz¡£ 
+  	
 */
 typedef enum
 { 
@@ -65,7 +65,7 @@ typedef enum
 	ID_BULLET_REAMINING							= 0x0208,//µ¯ÍèÊ£Óà·¢ÉäÊı
 	ID_RFID_STATUS									= 0x0209,//»úÆ÷ÈË RFID ×´Ì¬
 	ID_DART_CLIENT_CMD							= 0x020A,//·ÉïÚ»úÆ÷ÈË¿Í»§¶ËÖ¸ÁîÊı¾İ
-	ID_INTERATIVE_DATE							= 0x0301,//»úÆ÷ÈË¼ä½»»¥Êı¾İ
+	ID_STUDENT_INTERACTIVE_HEADER		= 0x0301,//»úÆ÷ÈË¼ä½»»¥Êı¾İ
 	ID_CUSTOMCONTROLLER_DATE        = 0x0302,//×Ô¶¨Òå¿ØÖÆÆ÷½»»¥Êı¾İ½Ó¿Ú£¬Í¨¹ı¿Í»§¶Ë´¥·¢·¢ËÍ£¬ÉÏÏŞ30HZ
 	ID_MAP_DATE                     = 0x0303,//¿Í»§¶ËĞ¡µØÍ¼½»»¥Êı¾İ
 	ID_KEYBOARD_AND_MOUSE_DATE      = 0x0304,//¼üÅÌ¡¢Êó±êĞÅÏ¢£¬Í¨¹ıÍ¼´«´®¿Ú·¢ËÍ     
@@ -93,14 +93,32 @@ typedef enum
 	LEN_SHOOT_DATE								  =  7,	//0x0207
 	LEN_BULLET_REAMINING						=  6, //0x0208
 	LEN_RFID_STATUS									=  4, //0x0209
-	LEN_DART_CLIENT_CMD							= 12, //0x020A
+	LEN_DART_CLIENT_CMD							=  6, //0x020A
+  LEN_STUDENT_INTERACTIVE_HEADER  =  1, //0x0301
   LEN_MAP_DATE                    = 15, //0x0303
 	LEN_KEYBOARD_AND_MOUSE_DATE     = 12, //0x0304
 	
 } RefereeDataLength;
 
+//×Óµ¯ÀàĞÍ
+typedef enum
+{
+  BULLET_17MM = 1,
+  BULLET_42MM = 2,
+  
+} bullet_type_t;
 
-/* ×Ô¶¨ÒåÖ¡Í· */
+//·¢Éä»ú¹¹ID
+typedef enum
+{
+  SHOOTER1_17MM = 1,
+  SHOOTER2_17MM  = 2,
+  SHOOTER1_42MM  = 3,
+  
+} shooter_id_t;
+
+
+/* Ö¡Í· */
 typedef __packed struct
 {
 	uint8_t  SOF;
@@ -110,7 +128,7 @@ typedef __packed struct
 	
 } xFrameHeader;
 
-/* ID: 0x0001  Byte:  11    ±ÈÈü×´Ì¬Êı¾İ */
+/* CMD_ID: 0x0001  Byte:  11    ±ÈÈü×´Ì¬Êı¾İ */
 typedef __packed struct 
 { 
 	uint8_t game_type : 4;
@@ -122,7 +140,7 @@ typedef __packed struct
 } ext_game_state_t; 
 
 
-/* ID: 0x0002  Byte:  1    ±ÈÈü½á¹ûÊı¾İ */
+/* CMD_ID: 0x0002  Byte:  1    ±ÈÈü½á¹ûÊı¾İ */
 typedef __packed struct 
 { 
 	uint8_t winner;
@@ -130,7 +148,7 @@ typedef __packed struct
 } ext_game_result_t; 
 
 
-/* ID: 0x0003  Byte:  32    ±ÈÈü»úÆ÷ÈËÑªÁ¿Êı¾İ */
+/* CMD_ID: 0x0003  Byte:  32    ±ÈÈü»úÆ÷ÈËÑªÁ¿Êı¾İ */
 typedef __packed struct
 {
 	uint16_t red_1_robot_HP;		//ºì 1 Ó¢ĞÛ»úÆ÷ÈËÑªÁ¿£¬Î´ÉÏ³¡ÒÔ¼°·£ÏÂÑªÁ¿Îª 0
@@ -153,7 +171,7 @@ typedef __packed struct
 } ext_game_robot_HP_t;
 
 
-/* ID: 0x0004  Byte:  3    ·ÉïÚ·¢Éä×´Ì¬Êı¾İ */
+/* CMD_ID: 0x0004  Byte:  3    ·ÉïÚ·¢Éä×´Ì¬Êı¾İ */
 typedef __packed struct
 {
 	uint8_t dart_belong;						//·¢Éä·ÉïÚµÄ¶ÓÎé£º1£ººì·½·ÉïÚ2£ºÀ¶·½·ÉïÚ	
@@ -162,7 +180,7 @@ typedef __packed struct
 } ext_dart_status_t;
 
 
-/* ID: 0x0005  Byte:  11    ÈË¹¤ÖÇÄÜÌôÕ½Èü¼Ó³ÉÓë³Í·£Çø×´Ì¬Êı¾İ */
+/* CMD_ID: 0x0005  Byte:  11    ÈË¹¤ÖÇÄÜÌôÕ½Èü¼Ó³ÉÓë³Í·£Çø×´Ì¬Êı¾İ */
 typedef __packed struct
 {
 	uint8_t F1_zone_status:1;
@@ -186,7 +204,7 @@ typedef __packed struct
 } ext_ICRA_buff_debuff_zone_status_t;
 
 
-/* ID: 0x0101  Byte:  4    ³¡µØÊÂ¼şÊı¾İ */
+/* CMD_ID: 0x0101  Byte:  4    ³¡µØÊÂ¼şÊı¾İ */
 typedef __packed struct 
 { 
 	uint32_t event_type;
@@ -194,7 +212,7 @@ typedef __packed struct
 } ext_event_data_t; 
 
 
-/* ID: 0x0102  Byte:  4    ²¹¸øÕ¾¶¯×÷±êÊ¶Êı¾İ */
+/* CMD_ID: 0x0102  Byte:  4    ²¹¸øÕ¾¶¯×÷±êÊ¶Êı¾İ */
 typedef __packed struct 
 { 
 	uint8_t supply_projectile_id;
@@ -205,7 +223,7 @@ typedef __packed struct
 } ext_supply_projectile_action_t;
 
 
-/* ID: 0x0104  Byte:  2    ²ÃÅĞ¾¯¸æĞÅÏ¢Êı¾İ */
+/* CMD_ID: 0x0104  Byte:  2    ²ÃÅĞ¾¯¸æĞÅÏ¢Êı¾İ */
 typedef __packed struct
 {
 uint8_t level;					//¾¯¸æµÈ¼¶£º
@@ -214,7 +232,7 @@ uint8_t foul_robot_id;	//·¸¹æ»úÆ÷ÈË ID£º1 ¼¶ÒÔ¼° 5 ¼¶¾¯¸æÊ±£¬»úÆ÷ÈË ID Îª 0¡£¶şÈ
 } ext_referee_warning_t;
 
 
-/* ID: 0x0105  Byte:  1    ·ÉïÚ·¢Éä¿Úµ¹¼ÆÊ±Êı¾İ */
+/* CMD_ID: 0x0105  Byte:  1    ·ÉïÚ·¢Éä¿Úµ¹¼ÆÊ±Êı¾İ */
 typedef __packed struct
 {
 	uint8_t dart_remaining_time;  //15s µ¹¼ÆÊ±
@@ -222,7 +240,7 @@ typedef __packed struct
 } ext_dart_remaining_time_t;
 
 
-/* ID: 0X0201  Byte: 27    »úÆ÷ÈË×´Ì¬Êı¾İ */
+/* CMD_ID: 0X0201  Byte: 27    »úÆ÷ÈË×´Ì¬Êı¾İ */
 typedef __packed struct 
 { 
 	uint8_t robot_id;   										//»úÆ÷ÈËID£¬1£º ºì·½Ó¢ĞÛ»úÆ÷ÈË£»2£º ºì·½¹¤³Ì»úÆ÷ÈË£» 3/4/5£º ºì·½²½±ø»úÆ÷ÈË£»	
@@ -232,17 +250,21 @@ typedef __packed struct
 	uint8_t robot_level; 										//1£ºÒ»¼¶£¬2£º¶ş¼¶£¬3£ºÈı¼¶
 	uint16_t remain_HP;  										//»úÆ÷ÈËÊ£ÓàÑªÁ¿
 	uint16_t max_HP; 												//»úÆ÷ÈËÉÏÏŞÑªÁ¿
+  
   uint16_t shooter_id1_17mm_cooling_rate; //»úÆ÷ÈË 1 ºÅ 17mm Ç¹¿ÚÃ¿ÃëÀäÈ´Öµ
   uint16_t shooter_id1_17mm_cooling_limit;//»úÆ÷ÈË 1 ºÅ 17mm Ç¹¿ÚÈÈÁ¿ÉÏÏŞ
   uint16_t shooter_id1_17mm_speed_limit;  //»úÆ÷ÈË 1 ºÅ 17mm Ç¹¿ÚÉÏÏŞËÙ¶È µ¥Î» m/s
+  
   uint16_t shooter_id2_17mm_cooling_rate; //»úÆ÷ÈË 2 ºÅ 17mm Ç¹¿ÚÃ¿ÃëÀäÈ´Öµ
   uint16_t shooter_id2_17mm_cooling_limit;//»úÆ÷ÈË 2 ºÅ 17mm Ç¹¿ÚÈÈÁ¿ÉÏÏŞ
   uint16_t shooter_id2_17mm_speed_limit;  //»úÆ÷ÈË 2 ºÅ 17mm Ç¹¿ÚÉÏÏŞËÙ¶È µ¥Î» m/s
+  
   uint16_t shooter_id1_42mm_cooling_rate; //»úÆ÷ÈË 42mm Ç¹¿ÚÃ¿ÃëÀäÈ´Öµ
   uint16_t shooter_id1_42mm_cooling_limit;//»úÆ÷ÈË 42mm Ç¹¿ÚÈÈÁ¿ÉÏÏŞ
   uint16_t shooter_id1_42mm_speed_limit;  //»úÆ÷ÈË 42mm Ç¹¿ÚÉÏÏŞËÙ¶È µ¥Î» m/s
   
 	uint16_t chassis_power_limit;						//»úÆ÷ÈËµ×ÅÌ¹¦ÂÊÏŞÖÆÉÏÏŞ£¬ µ¥Î» Íß/W
+  
 	uint8_t mains_power_gimbal_output : 1;  //0 bit£º gimbal ¿ÚÊä³ö£º  1 ÎªÓĞ 24V Êä³ö£¬ 0 ÎªÎŞ 24v Êä³ö
 	uint8_t mains_power_chassis_output : 1; //1 bit£º chassis ¿ÚÊä³ö£º 1 ÎªÓĞ 24V Êä³ö£¬ 0 ÎªÎŞ 24v Êä³ö
 	uint8_t mains_power_shooter_output : 1; //2 bit£º shooter ¿ÚÊä³ö£º 1 ÎªÓĞ 24V Êä³ö£¬ 0 ÎªÎŞ 24v Êä³ö
@@ -250,7 +272,7 @@ typedef __packed struct
 } ext_game_robot_status_t; 
 
 
-/* ID: 0X0202  Byte: 16    ÊµÊ±¹¦ÂÊÈÈÁ¿Êı¾İ */
+/* CMD_ID: 0X0202  Byte: 16    ÊµÊ±¹¦ÂÊÈÈÁ¿Êı¾İ */
 typedef __packed struct 
 { 
 	uint16_t chassis_volt;   				        //µ×ÅÌÊä³öµçÑ¹ µ¥Î» ºÁ·ü/mV
@@ -264,7 +286,7 @@ typedef __packed struct
 } ext_power_heat_data_t; 
 
 
-/* ID: 0x0203  Byte: 16    »úÆ÷ÈËÎ»ÖÃÊı¾İ */
+/* CMD_ID: 0x0203  Byte: 16    »úÆ÷ÈËÎ»ÖÃÊı¾İ */
 typedef __packed struct 
 {   
 	float x;   //Î»ÖÃ x ×ø±ê£¬µ¥Î» Ã×/m
@@ -275,7 +297,7 @@ typedef __packed struct
 } ext_game_robot_pos_t; 
 
 
-/* ID: 0x0204  Byte:  1    »úÆ÷ÈËÔöÒæÊı¾İ */
+/* CMD_ID: 0x0204  Byte:  1    »úÆ÷ÈËÔöÒæÊı¾İ */
 typedef __packed struct 
 { 
 	uint8_t power_rune_buff;	//bit 0£º »úÆ÷ÈËÑªÁ¿²¹Ñª×´Ì¬ bit 1£º Ç¹¿ÚÈÈÁ¿ÀäÈ´¼ÓËÙ
@@ -283,7 +305,7 @@ typedef __packed struct
 } ext_buff_t; 
 
 
-/* ID: 0x0205  Byte:  2    ¿ÕÖĞ»úÆ÷ÈËÄÜÁ¿×´Ì¬Êı¾İ */
+/* CMD_ID: 0x0205  Byte:  2    ¿ÕÖĞ»úÆ÷ÈËÄÜÁ¿×´Ì¬Êı¾İ */
 typedef __packed struct 
 { 
 	uint8_t attack_time; 		//¿É¹¥»÷Ê±¼ä£¬ µ¥Î» s£¬ 30s µİ¼õÖÁ 0
@@ -292,7 +314,7 @@ typedef __packed struct
 } aerial_robot_energy_t; 
 
 
-/* ID: 0x0206  Byte:  1    ÉËº¦×´Ì¬Êı¾İ */
+/* CMD_ID: 0x0206  Byte:  1    ÉËº¦×´Ì¬Êı¾İ */
 typedef __packed struct 
 { 
 	uint8_t armor_id : 4; 
@@ -300,7 +322,7 @@ typedef __packed struct
 } ext_robot_hurt_t; 
 
 
-/* ID: 0x0207  Byte:  7    ÊµÊ±Éä»÷Êı¾İ */
+/* CMD_ID: 0x0207  Byte:  7    ÊµÊ±Éä»÷Êı¾İ */
 typedef __packed struct 
 { 
 	uint8_t bullet_type;   //×Óµ¯ÀàĞÍ: 1£º 17mm µ¯Íè 2£º 42mm µ¯Íè
@@ -313,7 +335,7 @@ typedef __packed struct
 } ext_shoot_data_t; 
 
 
-/* ID: 0x0208  Byte:  6    ×Óµ¯Ê£Óà·¢ÉäÊı */
+/* CMD_ID: 0x0208  Byte:  6    ×Óµ¯Ê£Óà·¢ÉäÊı */
 typedef __packed struct
 {
   uint16_t bullet_remaining_num_17mm;   //17mm ×Óµ¯Ê£Óà·¢ÉäÊıÄ¿
@@ -323,7 +345,7 @@ typedef __packed struct
 } ext_bullet_remaining_t;
 
 
-/* ID: 0x0209  Byte:  4    »úÆ÷ÈË RFID ×´Ì¬ */
+/* CMD_ID: 0x0209  Byte:  4    »úÆ÷ÈË RFID ×´Ì¬ */
 typedef __packed struct
 {
 	uint32_t rfid_status;
@@ -331,31 +353,288 @@ typedef __packed struct
 } ext_rfid_status_t;
 
 
-/* ID: 0x020A  Byte: 12    ·ÉïÚ»úÆ÷ÈË¿Í»§¶ËÖ¸ÁîÊı¾İ */
+/* CMD_ID: 0x020A  Byte: 6    ·ÉïÚ»úÆ÷ÈË¿Í»§¶ËÖ¸ÁîÊı¾İ */
 typedef __packed struct
 {
 	uint8_t dart_launch_opening_status;	//µ±Ç°·ÉïÚ·¢Éä¿ÚµÄ×´Ì¬0£º¹Ø±Õ£»1£ºÕıÔÚ¿ªÆô»òÕß¹Ø±ÕÖĞ£»2£ºÒÑ¾­¿ªÆô¡£
 	uint8_t dart_attack_target;					//·ÉïÚµÄ´ò»÷Ä¿±ê£¬Ä¬ÈÏÎªÇ°ÉÚÕ¾£»1£ºÇ°ÉÚÕ¾£»2£º»ùµØ¡£
 	uint16_t target_change_time;				//ÇĞ»»´ò»÷Ä¿±êÊ±µÄ±ÈÈüÊ£ÓàÊ±¼ä£¬µ¥Î»Ãë£¬´ÓÎ´ÇĞ»»Ä¬ÈÏÎª 0¡£
-	uint8_t first_dart_speed;						//¼ì²âµ½µÄµÚÒ»Ã¶·ÉïÚËÙ¶È£¬µ¥Î» 0.1m/s/LSB, Î´¼ì²âÊÇÎª 0¡£
-	uint8_t second_dart_speed;					//¼ì²âµ½µÄµÚ¶şÃ¶·ÉïÚËÙ¶È£¬µ¥Î» 0.1m/s/LSB£¬Î´¼ì²âÊÇÎª 0¡£
-	uint8_t third_dart_speed;						//¼ì²âµ½µÄµÚÈıÃ¶·ÉïÚËÙ¶È£¬µ¥Î» 0.1m/s/LSB£¬Î´¼ì²âÊÇÎª 0¡£
-	uint8_t fourth_dart_speed;					//¼ì²âµ½µÄµÚËÄÃ¶·ÉïÚËÙ¶È£¬µ¥Î» 0.1m/s/LSB£¬Î´¼ì²âÊÇÎª 0¡£
-	uint16_t last_dart_launch_time;			//×î½üÒ»´ÎµÄ·¢Éä·ÉïÚµÄ±ÈÈüÊ£ÓàÊ±¼ä£¬µ¥Î»Ãë£¬³õÊ¼ÖµÎª 0¡£
 	uint16_t operate_launch_cmd_time;		//×î½üÒ»´Î²Ù×÷ÊÖÈ·¶¨·¢ÉäÖ¸ÁîÊ±µÄ±ÈÈüÊ£ÓàÊ±¼ä£¬µ¥Î»Ãë, ³õÊ¼ÖµÎª 0¡£
 	
 } ext_dart_client_cmd_t;
 
+//===================================================================================================================//
+/***************************  ¡ı   CMD_ID: 0x0301  Byte: 128    »úÆ÷ÈË¼ä½»»¥Êı¾İ  ¡ı  **********************************/
+//===================================================================================================================//
+#define  LEN_ALL_ID  6        //×ÜID³¤¶È£ºÄÚÈİID³¤¶È£¨2£© + ·¢ËÍÕßµÄID³¤¶È£¨2£© + ½ÓÊÕÕßµÄID³¤¶È£¨2£©
 
-/* ID: 0x0301  Byte: 128    »úÆ÷ÈË¼ä½»»¥Êı¾İ */
+/* Ò»Ö¡Êı¾İ = frame_header(Ö¡Í·) + cmd_id(ÃüÁîÂëID£º0x0301) + »úÆ÷ÈË¼ä½»»¥Êı¾İ + frame_tail(Ö¡Î²)*/ 
+/* »úÆ÷ÈË¼ä½»»¥Êı¾İ = data_cmd_id(ÄÚÈİ ID) + sender_ID(·¢ËÍÕßµÄ ID) + receiver_ID(½ÓÊÕÕßµÄ ID) + data(Êı¾İ¶Î) */
+
+/***************ÄÚÈİID********************/
+/* 
+	ID: 0x0200~0x02FF  Byte:  6+n    ¼º·À»úÆ÷ÈË¼äÍ¨ĞÅ 
+	ID: 0x0100         Byte:  6+2    ¿Í»§¶ËÉ¾³ıÍ¼ĞÎ 
+	ID: 0x0101         Byte:  6+15   ¿Í»§¶Ë»æÖÆÒ»¸öÍ¼ĞÎ 
+	ID: 0x0102         Byte:  6+30   ¿Í»§¶Ë»æÖÆ¶ş¸öÍ¼ĞÎ 
+	ID: 0x0103         Byte:  6+75   ¿Í»§¶Ë»æÖÆÎå¸öÍ¼ĞÎ 
+	ID: 0x0104         Byte:  6+105  ¿Í»§¶Ë»æÖÆÆß¸öÍ¼ĞÎ 
+	ID: 0x0110         Byte:  6+45   ¿Í»§¶Ë»æÖÆ×Ö·ûÍ¼ĞÎ  
+*/
+
+/***************»úÆ÷ÈËID********************/
+/*
+  1  £¬Ó¢ĞÛ(ºì)£» 2  £¬¹¤³Ì(ºì)£» 3  /4  /5  £¬²½±ø(ºì)£» 6  £¬¿ÕÖĞ(ºì)£» 7  £¬ÉÚ±ø(ºì)£» 9  £¬À×´ïÕ¾£¨ºì£©£»
+  101£¬Ó¢ĞÛ(À¶)£» 102£¬¹¤³Ì(À¶)£» 103/104/105£¬²½±ø(À¶)£» 106£¬¿ÕÖĞ(À¶)£» 107£¬ÉÚ±ø(À¶)£» 109£¬À×´ïÕ¾£¨À¶£©¡£
+*/
+
+/***************¿Í»§¶ËID********************/
+/*
+  0x0101£¬Ó¢ĞÛ²Ù×÷ÊÖ¿Í»§¶Ë(ºì)£»0x0102£¬¹¤³Ì²Ù×÷ÊÖ¿Í»§¶Ë(ºì)£»0x0103/0x0104/0x0105£¬²½±ø²Ù×÷ÊÖ¿Í»§¶Ë(ºì)£» 0x0106£¬¿ÕÖĞ²Ù×÷ÊÖ¿Í»§¶Ë(ºì)£» 
+  0x0165£¬Ó¢ĞÛ²Ù×÷ÊÖ¿Í»§¶Ë(À¶)£»0x0166£¬¹¤³Ì²Ù×÷ÊÖ¿Í»§¶Ë(À¶)£»0x0167/0x0168/0x0169£¬²½±ø²Ù×÷ÊÖ¿Í»§¶Ë(À¶)£» 0x016A£¬¿ÕÖĞ²Ù×÷ÊÖ¿Í»§¶Ë(À¶)¡£
+*/
+
+typedef enum
+{   
+  ID_CLIENT_CUSTOM_GRAPHIC_DELETE = 0x0100,//¿Í»§¶ËÉ¾³ıÍ¼ĞÎ
+  ID_CLIENT_CUSTOM_GRAPHIC_SINGLE = 0x0101,//¿Í»§¶Ë»æÖÆÒ»¸öÍ¼ĞÎ
+  ID_CLIENT_CUSTOM_GRAPHIC_DOUBLE = 0x0102,//¿Í»§¶Ë»æÖÆ¶ş¸öÍ¼ĞÎ
+  ID_CLIENT_CUSTOM_GRAPHIC_FIVE   = 0x0103,//¿Í»§¶Ë»æÖÆÎå¸öÍ¼ĞÎ 
+  ID_CLIENT_CUSTOM_GRAPHIC_SEVEN  = 0x0104,//¿Í»§¶Ë»æÖÆÆß¸öÍ¼ĞÎ
+  ID_CLIENT_CUSTOM_CHARACTER      = 0x0110,//¿Í»§¶Ë»æÖÆ×Ö·û
+  ID_AERIAL_ROBOT_TO_SENTRY_ROBOT = 0x0201,//¿ÕÖĞ»úÆ÷ÈË·¢ËÍÊı¾İ¸øÉÚ±ø»úÆ÷ÈË
+  ID_AERIAL_ROBOT_TO_DART_ROBOT   = 0x0202,//¿ÕÖĞ»úÆ÷ÈË·¢ËÍÊı¾İ¸ø·ÉïÚ»úÆ÷ÈË
+  //ºóĞø¸ù¾İÊµ¼ÊÊ¹ÓÃÇé¿ö×ÔĞĞÔö¼Ó£¨0x0200~0x02FF£©  
+} xdateCmdID;//ÄÚÈİ ID
+
+typedef enum
+{ 
+  LEN_AERIAL_ROBOT_TO_SENTRY_ROBOT = 1,  //¿ÕÖĞ»úÆ÷ÈË·¢ËÍ¸øÉÚ±øÊı¾İ³¤¶È
+  LEN_AERIAL_ROBOT_TO_DART_ROBOT   = 1,  //¿ÕÖĞ»úÆ÷ÈË·¢ËÍ¸ø·ÉïÚÊı¾İ³¤¶È
+  LEN_ROBOT_INTERACTIVE_DATE = 10,       //»úÆ÷ÈË¼äÊı¾İ½»»¥Êı¾İ×ÜÉè¶¨³¤¶È
+  LEN_ROBOT_INTERACTIVE_DATE_MAX  = 113, //»úÆ÷ÈË¼äÊı¾İ½»»¥Êı¾İ×î´ó³¤¶È
+  LEN_SEND_CLIENT_SIDE_DATE_MAX   = 105, //»úÆ÷ÈË·¢ËÍ¸ø¿Í»§¶ËÊı¾İ×î´ó³¤¶È
+  LEN_SEND_CLIENT_SIDE_BUFFER     = 15,  //»úÆ÷ÈË·¢ËÍ¸ø¿Í»§¶ËÍ¼ĞÎÊı¾İµÄ³¤¶È£¨¸ù¾İĞ­ÒéÈ·¶¨£©
+  LEN_SEND_CLIENT_SIDE_BUFFER_NUM = 2,   //»úÆ÷ÈË·¢ËÍ¸ø¿Í»§¶ËÊı¾İÉè¶¨Êı×é¸öÊı£¨×ÔĞĞ¸ù¾İĞèÒª»­µÄÍ¼ĞÎÊıÁ¿È·¶¨£©
+  
+} xrobot_interactive_data;//ÄÚÈİ³¤¶È  Êµ¼Ê³¤¶È×ÔĞĞµ÷
+
+
+typedef enum
+{ 
+  HERO_ROBOT      = 1,
+  ENGINEER_ROBOT  = 2,
+  INFATRY3_ROBOT  = 3,
+  INFATRY4_ROBOT  = 4,
+  INFATRY5_ROBOT  = 5,
+  AERIAL_ROBOT    = 6,
+  SENTRY_ROBOT    = 7,
+  RADAR_ROBOT     = 9, 
+  
+} xrobotType;//»úÆ÷ÈËID
+
+
+typedef enum
+{ 
+  ID_HERO_ROBOT_RED      = 1,
+  ID_ENGINEER_ROBOT_RED  = 2,
+  ID_INFATRY3_ROBOT_RED  = 3,
+  ID_INFATRY4_ROBOT_RED  = 4,
+  ID_INFATRY5_ROBOT_RED  = 5,
+  ID_AERIAL_ROBOT_RED    = 6,
+  ID_SENTRY_ROBOT_RED    = 7,
+  ID_RADAR_ROBOT_RED     = 9,
+  ID_HERO_ROBOT_BLUE     = 101,
+  ID_ENGINEER_ROBOT_BLUE = 102,
+  ID_INFATRY3_ROBOT_BLUE = 103,
+  ID_INFATRY4_ROBOT_BLUE = 104,
+  ID_INFATRY5_ROBOT_BLUE = 105,
+  ID_AERIAL_ROBOT_BLUE   = 106,
+  ID_SENTRY_ROBOT_BLUE   = 107,
+  ID_RADAR_ROBOT_BLUE    = 109,  
+  
+} xrobotID;//»úÆ÷ÈËID
+
+
+
+typedef enum
+{ 
+  ID_HERO_CLIENT_RED      = 0x101,
+  ID_ENGINEER_CLIENT_RED  = 0x102,
+  ID_INFATRY3_CLIENT_RED  = 0x103,
+  ID_INFATRY4_CLIENT_RED  = 0x104,
+  ID_INFATRY5_CLIENT_RED  = 0x105,
+  ID_AERIAL_CLIENT_RED    = 0x106,
+  ID_HERO_CLIENT_BLUE     = 0x165,
+  ID_ENGINEER_CLIENT_BLUE = 0x166,
+  ID_INFATRY3_CLIENT_BLUE = 0x167,
+  ID_INFATRY4_CLIENT_BLUE = 0x168,
+  ID_INFATRY5_CLIENT_BLUE = 0x169,
+  ID_AERIAL_CLIENT_BLUE   = 0x16A,
+
+} xclientID;//¿Í»§¶ËID
+
+typedef enum
+{
+	NULL_OPERATION =0,//¿Õ²Ù×÷
+	ADD  =1,          //Ôö¼Ó
+	MODIFY  =2,       //ĞŞ¸Ä
+	DELETE  =3,       //É¾³ı
+}Operate;
+
+typedef enum
+{
+	RED_AND_BULE  =0,  //ºìÀ¶Ö÷É«
+	YELLOW =1,         //»ÆÉ«
+	GREEN  =2,         //ÂÌÉ«
+	ORANGE =3,         //³ÈÉ«
+	PURPLISH_RED =4,   //×ÏºìÉ«
+	PINK  =5,          //·ÛÉ«
+	CYAN  =6,          //ÇàÉ«
+	BLACK =7,          //ºÚÉ«
+	WRITE =8,          //°×É«
+}Color;
+
+typedef enum
+{
+  STRAIGHT_LINE =0,  //Ö±Ïß
+	RECTANGLE     =1,  //¾ØĞÎ
+	FULL_CIRCLE   =2,  //ÕûÔ²
+	ELLIPSE       =3,  //ÍÖÔ²
+	ARC           =4,  //Ô²»¡
+	FLOATING_POINT=5,  //¸¡µãÊı
+  INTEGER       =6,  //ÕûĞÍÊı 
+	CHARCTER      =7,  //×Ö·û
+}Type;
+
+
+//»úÆ÷ÈË¼ä½»»¥Êı¾İÖ¡Í·
 typedef __packed struct
 {
-	uint16_t data_cmd_id;
-	uint16_t sender_ID;
-	uint16_t receiver_ID;
-	uint8_t	 date[10];
-	
+	uint16_t data_cmd_id; //Êı¾İ¶ÎµÄÄÚÈİ ID
+	uint16_t sender_ID;   //·¢ËÍÕßµÄ ID
+	uint16_t receiver_ID; //½ÓÊÕÕßµÄ ID
+
 }ext_student_interactive_header_data_t;
+
+/****************************************   ¡ı  »úÆ÷ÈË¼ä½»»¥Êı¾İ  ¡ı  ************************************/
+/* ÄÚÈİ¶ÎID: 0x0200~0x02FF  Byte: 6+n(n < 113)  ½»»¥Êı¾İ */
+typedef __packed struct
+{
+   uint8_t data[LEN_ROBOT_INTERACTIVE_DATE];    //ÄÚÈİÊı¾İ¶Î£¬×î´ó113¸ö×Ö½Ú£¬¸ù¾İÊµ¼ÊĞèÇó½øĞĞÉè¶¨
+} robot_interactive_data_t;
+
+typedef __packed struct
+{
+  uint8_t sentry_mode;
+}ext_aerial_to_sentry_data_t;//¿ÕÖĞ»úÆ÷ÈË·¢ËÍ¸øÉÚ±øÊı¾İ
+
+typedef __packed struct
+{
+  uint8_t launch_num;
+}ext_aerial_to_dart_data_t;//¿ÕÖĞ»úÆ÷ÈË·¢ËÍ¸ø·ÉïÚÊı¾İ
+/****************************************   ¡ü  »úÆ÷ÈË¼ä½»»¥Êı¾İ  ¡ü  ************************************/
+
+/****************************************   ¡ı  ¿Í»§¶ËÉÏÍ¼ĞÎ»æÖÆ  ¡ı  ************************************/
+/* ÄÚÈİ¶ÎID: 0x0100  Byte: 6+2  ¿Í»§¶ËÉ¾³ıÍ¼ĞÎ */
+typedef __packed struct
+{
+  uint8_t operate_tpye; //Í¼ĞÎ²Ù×÷  0£º¿Õ²Ù×÷£»1£ºÉ¾³ıÍ¼²ã£»2£ºÉ¾³ıËùÓĞ£»
+  uint8_t layer;        //Í¼²ãÊı    Í¼²ãÊı£º0~9
+} ext_client_custom_graphic_delete_t;
+
+//Í¼ĞÎÊı¾İ£ºÍ¼ĞÎ»æÖÆÊ±ËùĞè²ÎÊı£¬¾ßÌå²Î¿¼RM2021²ÃÅĞÏµÍ³´®¿ÚĞ­Òé¸½Â¼V1.2
+typedef __packed struct
+{
+	uint8_t graphic_name[3]; //ÔÚÉ¾³ı£¬ĞŞ¸ÄµÈ²Ù×÷ÖĞ£¬×÷Îª¿Í»§¶ËµÄË÷Òı 
+	uint32_t operate_tpye:3; //Í¼ĞÎ²Ù×÷£º0£º¿Õ²Ù×÷£»1£ºÔö¼Ó£»2£ºĞŞ¸Ä£»3£ºÉ¾³ı£»
+	uint32_t graphic_tpye:3; //Í¼ĞÎÀàĞÍ£º0£ºÖ±Ïß£»1£º¾ØĞÎ£»2£ºÕûÔ²£»3£ºÍÖÔ²£»4£ºÔ²»¡£»5£º¸¡µãÊı£»6£ºÕûĞÍÊı£»7£º×Ö·û£»
+	uint32_t layer:4;        //Í¼²ãÊı£¬ 0~9
+	uint32_t color:4;        //ÑÕÉ«£º0£ººìÀ¶Ö÷É«£»1£º»ÆÉ«£»2£ºÂÌÉ«£»3£º³ÈÉ«£»4£º×ÏºìÉ«£»5£º·ÛÉ«£»6£ºÇàÉ«£»7£ººÚÉ«£»8£º°×É«£»
+	uint32_t start_angle:9;  //ÆğÊ¼½Ç¶È£¬µ¥Î»£º ¡ã£¬·¶Î§[0,360]£»
+	uint32_t end_angle:9;    //ÖÕÖ¹½Ç¶È£¬µ¥Î»£º ¡ã£¬·¶Î§[0,360]¡£
+	uint32_t width:10;       //Ïß¿í£»
+	uint32_t start_x:11;     //Æğµã x ×ø±ê£»
+	uint32_t start_y:11;     //Æğµã y ×ø±ê
+	uint32_t radius:10;      //×ÖÌå´óĞ¡»òÕß°ë¾¶£»
+	uint32_t end_x:11;       //ÖÕµã x ×ø±ê£»
+	uint32_t end_y:11;       //ÖÕµã y ×ø±ê£»
+}graphic_data_struct_t;
+ 
+/* ÄÚÈİ¶ÎID: 0x0101  Byte: 6+15  ¿Í»§¶Ë»æÖÆÒ»¸öÍ¼ĞÎ */
+typedef __packed struct
+{
+  graphic_data_struct_t grapic_data_struct;//Í¼ĞÎÅäÖÃ  Ïê¼ûÍ¼ĞÎÊı¾İ½éÉÜ
+} ext_client_custom_graphic_single_t;
+
+/* ÄÚÈİ¶ÎID: 0x0102  Byte: 6+30  ¿Í»§¶Ë»æÖÆ¶ş¸öÍ¼ĞÎ */
+typedef __packed struct
+{
+  graphic_data_struct_t grapic_data_struct[2];//Í¼ĞÎÅäÖÃ  Ïê¼ûÍ¼ĞÎÊı¾İ½éÉÜ
+} ext_client_custom_graphic_double_t;
+
+/* ÄÚÈİ¶ÎID: 0x0103  Byte: 6+75  ¿Í»§¶Ë»æÖÆÎå¸öÍ¼ĞÎ */
+typedef __packed struct
+{
+graphic_data_struct_t grapic_data_struct[5];//Í¼ĞÎÅäÖÃ  Ïê¼ûÍ¼ĞÎÊı¾İ½éÉÜ
+} ext_client_custom_graphic_five_t;
+
+/* ÄÚÈİ¶ÎID: 0x0104  Byte: 6+105  ¿Í»§¶Ë»æÖÆÆß¸öÍ¼ĞÎ */
+typedef __packed struct
+{
+  graphic_data_struct_t grapic_data_struct[7];//Í¼ĞÎÅäÖÃ  Ïê¼ûÍ¼ĞÎÊı¾İ½éÉÜ
+} ext_client_custom_graphic_seven_t;
+
+/* ÄÚÈİ¶ÎID: 0x0110  Byte: 6+45  ¿Í»§¶Ë»æÖÆ×Ö·û */
+typedef __packed struct
+{
+  graphic_data_struct_t grapic_data_struct;//×Ö·ûÅäÖÃ  Ïê¼ûÍ¼ĞÎÊı¾İ½éÉÜ
+  uint8_t data[30];                        //×Ö·û
+} ext_client_custom_character_t;
+/****************************************   ¡ü  ¿Í»§¶ËÉÏÍ¼ĞÎ»æÖÆ  ¡ü  ************************************/
+//===================================================================================================================//
+/***************************  ¡ü   CMD_ID: 0x0301  Byte: 128    »úÆ÷ÈË¼ä½»»¥Êı¾İ  ¡ü  **********************************/
+//===================================================================================================================//
+
+
+/* CMD_ID: 0x0302  Byte: x(x <= 30)   ×Ô¶¨Òå¿ØÖÆÆ÷Êı¾İ */
+typedef __packed struct
+{
+  uint8_t data[20];//ÄÚÈİ¶ÎÊı¾İ,Ğ¡ÓÚ30×Ö½Ú
+} robot_interactive_custom_data_t;
+
+
+/* CMD_ID: 0x0303  Byte: 15   ¿Í»§¶ËĞ¡µØÍ¼ÏÂ·¢ĞÅÏ¢ */
+typedef __packed struct 
+	{ 
+	float target_position_x;  //Ä¿±ê x Î»ÖÃ×ø±ê£¬µ¥Î» m
+	float target_position_y;  //Ä¿±ê y Î»ÖÃ×ø±ê£¬µ¥Î» m
+	float target_position_z;  //Ä¿±ê z Î»ÖÃ×ø±ê£¬µ¥Î» m
+	uint8_t commd_keyboard;   //·¢ËÍÖ¸ÁîÊ±£¬ÔÆÌ¨ÊÖ°´ÏÂµÄ¼üÅÌĞÅÏ¢
+	uint16_t target_robot_ID; //Òª×÷ÓÃµÄÄ¿±ê»úÆ÷ÈË ID
+} ext_robot_command_t_map;    
+
+
+/* CMD_ID: 0x0305  Byte: 10   ¿Í»§¶Ë½ÓÊÕĞÅÏ¢ *///À×´ïÕ¾·¢ËÍµÄ×ø±êĞÅÏ¢¿ÉÒÔ±»ËùÓĞ¼º·½²Ù×÷ÊÖÔÚµÚÒ»ÊÓ½ÇĞ¡µØÍ¼¿´µ½
+typedef __packed struct
+{ 
+  uint16_t target_robot_ID;//Ä¿±ê»úÆ÷ÈË ID
+  float target_position_x; //Ä¿±ê x Î»ÖÃ×ø±ê£¬µ¥Î» m
+  float target_position_y; //Ä¿±ê y Î»ÖÃ×ø±ê£¬µ¥Î» m
+} ext_client_map_command_t;
+
+
+/* CMD_ID: 0x0304  Byte: 12   Í¼´«Ò£¿ØĞÅÏ¢ *///¿Í»§¶ËÍ¨¹ıÍ¼´«Ä£¿é½«¼üÅÌĞÅÏ¢·¢ËÍÖÁ²ÃÅĞÏµÍ³
+typedef __packed struct 
+{ 
+	int16_t mouse_x;           //Êó±ê X ÖáĞÅÏ¢ 
+	int16_t mouse_y;           //Êó±ê Y ÖáĞÅÏ¢
+	int16_t mouse_z;           //Êó±ê¹öÂÖĞÅÏ¢ 
+	int8_t left_button_down;   //Êó±ê×ó¼ü°´ÏÂ
+	int8_t right_button_down;  //Êó±êÓÒ¼ü°´ÏÂ
+	uint16_t keyboard_value;   //¼üÅÌ¸÷°´¼üÊÇ·ñ°´ÏÂ
+	uint16_t reserved;         //±£ÁôÎ»
+}ext_robot_command_t_keyboard;  
 
 
 /* ²ÃÅĞÏµÍ³Êı¾İ»ã×Ü */
@@ -385,27 +664,88 @@ typedef  struct
 	ext_bullet_remaining_t									bullet_remaining;          	 			//µ¯ÍèÊ£Óà·¢ÉäÊı          			
 	ext_rfid_status_t												RFID_status;               	 			//»úÆ÷ÈË RFID ×´Ì¬          		
 	ext_dart_client_cmd_t										dart_client_cmd;           	 			//·ÉïÚ»úÆ÷ÈË¿Í»§¶ËÖ¸ÁîÊı¾İ
-	ext_student_interactive_header_data_t		student_interactive_header_data;	//»úÆ÷ÈË¼ä½»»¥Êı¾İ	
+
+  ext_client_custom_graphic_delete_t      client_custom_graphic_delete;     //¿Í»§¶ËÉ¾³ıÍ¼ĞÎ
+  /*×¢Òâ£º¸ù¾İĞ­Òé£¬¿ÉÒÔÓĞ7¸öÍ¼ĞÎ£¬¹Ê×î¶à¿ÉÒÔ¶¨ÒåÎªcustom_data[7]£¬Òò´Ë×Ô¶¨ÒåÍ¼ĞÎÊı¾İÄÚÈİµÄÊıÁ¿¿ÉÒÔ¸ù¾İ
+    ĞèÇó¸ü¸Ä£¬²¢ÇÒÊı¾İµÄcmd_IDĞèÒª¸ù¾İÍ¼ĞÎµÄÊıÁ¿¸ü¸Ä£¨¾ßÌåÄÚÈİÏê¼ûĞ­Òé£©£¬±ÈÈçµ±Ç°»æÖÆ2¸öÍ¼ĞÎ£¬Êı¾İµÄÄÚ
+    ÈİIDÎª0x0102 µ«ÊÇ¾­¹ı²âÊÔºóµÃ³ö*/
+  /*Èç¹ûÔÚÒ»¸öÊı×éÖĞµÄÍ¼ĞÎÃû³Æ²»Í¬£¬Ôò¿ÉÒÔ³öÏÖĞÂµÄÍ¼ĞÎ£¬Ö®Ç°ÔÚÍ¬Ò»¸öÊı×éÖĞµÄÍ¼ĞÎ²¢²»»áÏûÊ§£¬Òò´ËÒ»¸öÊı×é
+    ¾Í¿ÉÒÔ»æÖÆ¶à¸ö²»Í¬µÄÍ¼ĞÎ£¬Ã»±ØÒªÉèÖÃ7¸öÊı×é*/
+  graphic_data_struct_t                   graphic_data_struct[LEN_SEND_CLIENT_SIDE_BUFFER_NUM]; //×Ô¶¨ÒåÍ¼ĞÎÊı¾İÄÚÈİ          
+  ext_client_custom_character_t           client_custom_character;//×Ô¶¨Òå×Ö·û´®Êı¾İÄÚÈİ
+  
+	ext_student_interactive_header_data_t		student_interactive_header_data;	//»úÆ÷ÈË¼ä½»»¥Êı¾İ ID¶Î
+  robot_interactive_data_t	              robot_interactive_data;           //»úÆ÷ÈË¼ä½»»¥Êı¾İ Êı¾İ¶Î
+  ext_aerial_to_sentry_data_t             aerial_to_sentry_data;            //ÎŞÈË»úÓëÉÚ±ø½»»¥Êı¾İ
+  ext_aerial_to_dart_data_t               aerial_to_dart_data;              //ÎŞÈË»úÓë·ÉïÚ½»»¥Êı¾İ
+  
+  robot_interactive_custom_data_t         robot_interactive_custom_data;    //×Ô¶¨Òå¿ØÖÆÆ÷Êı¾İ
 	//Ö¡Î²(CRC16Ğ£Ñé)
 	uint16_t 																frame_tail;
 	
 }Referee_Struct;
 
+/* Ê¹ÓÃµ½µÄ²ÃÅĞÏµÍ³Êı¾İ»ã×Ü(¿É¸ù¾İÊµ¼ÊĞèÇó½øĞĞÌí¼Ó) */
+typedef  struct   
+{
+  uint8_t robot_id;               //»úÆ÷ÈËID
+  
+  uint16_t robot_remain_hp;       //»úÆ÷ÈËÊ£ÓàÑªÁ¿
+  
+  fp32 chassis_power;             //µ×ÅÌÊµÊ±¹¦ÂÊ
+  uint16_t chassis_power_buffer;  //µ×ÅÌ»º³åÄÜÁ¿
+  uint16_t chassis_power_limit;   //µ×ÅÌ¹¦ÂÊÉÏÏŞ
+  
+  uint16_t shooter1_17mm_heat;        //17mm ·¢Éä»ú¹¹1 Ç¹¿ÚÈÈÁ¿
+  uint16_t shooter2_17mm_heat;        //17mm ·¢Éä»ú¹¹2 Ç¹¿ÚÈÈÁ¿
+  uint16_t shooter1_42mm_heat;        //42mm ·¢Éä»ú¹¹1 Ç¹¿ÚÈÈÁ¿
 
+  uint16_t shooter1_17mm_freq;        //17mm ·¢Éä»ú¹¹1 ÉäÆµ
+  uint16_t shooter2_17mm_freq;        //17mm ·¢Éä»ú¹¹2 ÉäÆµ
+  uint16_t shooter1_42mm_freq;        //42mm ·¢Éä»ú¹¹1 ÉäÆµ
+
+  uint16_t shooter1_17mm_speed;       //17mm ·¢Éä»ú¹¹1 ÉäËÙ
+  uint16_t shooter2_17mm_speed;       //17mm ·¢Éä»ú¹¹2 ÉäËÙ
+  uint16_t shooter1_42mm_speed;       //42mm ·¢Éä»ú¹¹1 ÉäËÙ
+  
+  uint16_t shooter1_17mm_heat_limit;  //17mm ·¢Éä»ú¹¹1 Ç¹¿ÚÈÈÁ¿ÉÏÏŞ
+  uint16_t shooter2_17mm_heat_limit;  //17mm ·¢Éä»ú¹¹2 Ç¹¿ÚÈÈÁ¿ÉÏÏŞ
+  uint16_t shooter1_42mm_heat_limit;  //42mm ·¢Éä»ú¹¹1 Ç¹¿ÚÈÈÁ¿ÉÏÏŞ
+  
+  uint16_t shooter1_17mm_speed_limit; //17mm ·¢Éä»ú¹¹1 Ç¹¿ÚÉäËÙÉÏÏŞ
+  uint16_t shooter2_17mm_speed_limit; //17mm ·¢Éä»ú¹¹2 Ç¹¿ÚÉäËÙÉÏÏŞ
+  uint16_t shooter1_42mm_speed_limit; //42mm ·¢Éä»ú¹¹1 Ç¹¿ÚÉäËÙÉÏÏŞ
+  
+  uint16_t bullet_17mm_remaining_num; //17mm ×Óµ¯Ê£Óà·¢ÉäÊıÄ¿  ¶Ô¿¹Èü½ö¿ÕÖĞ»úÆ÷ÈËÓëÉÚ±øÓĞÓÃ
+  uint16_t coin_remaining_num;        //Ê£Óà½ğ±ÒÊıÁ¿
+  
+  uint8_t gimbal_output;                //ÔÆÌ¨¿ÚÊä³ö
+  uint8_t chassis_output;               //µ×ÅÌ¿ÚÊä³ö
+  uint8_t shooter_output;               //·¢Éä¿ÚÊä³ö
+  
+
+}Referee_Used_Struct;
 /* ±¾Ä£¿éÏòÍâ²¿Ìá¹©µÄ±äÁ¿ÉùÃ÷ -----------------------------------------------*/
 
 /* ±¾Ä£¿éÏòÍâ²¿Ìá¹©µÄ×Ô¶¨ÒåÊı¾İÀàĞÍ±äÁ¿ÉùÃ÷ ---------------------------------*/
+extern Referee_Used_Struct referee_used;
 
 /* ±¾Ä£¿éÏòÍâ²¿Ìá¹©µÄ½Ó¿Úº¯ÊıÔ­ĞÍÉùÃ÷ ---------------------------------------*/
 void RefereeDate_Receive_USART_Init(void);
 void Referee_UART_IRQHandler(void);
-void get_robot_remain_hp(uint16_t *remain_hp);
-void get_robot_mains_power_state(uint8_t *gimbal_output, uint8_t *chassis_output, uint8_t *shooter_output);
-void get_chassis_power_and_buffer(fp32 *power, uint16_t *buffer);
-void get_shooter_17mm_heat(uint16_t *heat1, uint16_t *heat2, uint16_t *heat1_limit, uint16_t *heat2_limit);
-void get_shooter_bullet_freq_speed(uint8_t *type,uint8_t *id,uint8_t *freq,float *speed);
 
+void Robot_Interactive_Date(uint8_t data[], uint16_t robot_interactive_id, uint16_t receive_robot_type);
 
+void Draw_StraightLine_or_Rectangle_or_Ellipse(uint8_t num, uint8_t name, uint8_t operate, uint8_t type, 
+     uint8_t layer, uint8_t color, uint8_t width , uint16_t s_x, uint16_t s_y, uint16_t e_x, uint16_t e_y);
+void Draw_FullCircle(uint8_t num, uint16_t name, uint8_t operate, uint8_t layer,uint8_t color, uint8_t width, 
+     uint16_t s_x, uint16_t s_y, uint16_t radius);
+void Draw_ARC(uint8_t num, uint16_t name, uint8_t operate, uint8_t layer, uint8_t color, uint16_t start_angle, 
+     uint16_t end_angle, uint8_t width, uint16_t s_x, uint16_t s_y, uint16_t e_x, uint16_t e_y);
+void Draw_Integral(uint8_t num, uint16_t name, uint8_t operate, uint8_t layer, uint8_t color, uint16_t size,
+	   uint8_t width, uint16_t s_x, uint16_t s_y, int32_t data);
+void DrawCharacer(uint16_t name, uint8_t operate, uint8_t layer, uint8_t color,uint8_t size, uint8_t length, 
+     uint8_t width, uint16_t s_x, uint16_t s_y, char data[30]);
 
 
 
