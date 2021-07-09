@@ -24,8 +24,7 @@ Referee_Struct  referee_receive;          //裁判系统接收数据
 Referee_Used_Struct referee_used;         //裁判系统接收数据-外部使用
 Referee_Struct  referee_send;             //裁判系统数据发送-机器人交互
 Referee_Struct  referee_client;           //裁判系统数据发送-自定义UI
-//Referee_Struct  referee_client_graphic;   //裁判系统数据发送-自定义UI-绘制图形
-//Referee_Struct  referee_client_character; //裁判系统数据发送-自定义UI-绘制字符
+
 /* 内部变量 ------------------------------------------------------------------*/
 static uint8_t referee_rx_buf[REFEREE_RX_BUFFER_SIZE];//接收裁判系统原始数据
 uint16_t referee_rx_date_len;//实际接收到裁判系统数据的长度

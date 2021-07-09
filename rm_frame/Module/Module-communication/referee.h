@@ -692,7 +692,7 @@ typedef  struct
   
   uint16_t robot_remain_hp;       //机器人剩余血量
   
-  fp32 chassis_power;             //底盘实时功率
+  float chassis_power;             //底盘实时功率
   uint16_t chassis_power_buffer;  //底盘缓冲能量
   uint16_t chassis_power_limit;   //底盘功率上限
   
@@ -700,13 +700,13 @@ typedef  struct
   uint16_t shooter2_17mm_heat;        //17mm 发射机构2 枪口热量
   uint16_t shooter1_42mm_heat;        //42mm 发射机构1 枪口热量
 
-  uint16_t shooter1_17mm_freq;        //17mm 发射机构1 射频
-  uint16_t shooter2_17mm_freq;        //17mm 发射机构2 射频
-  uint16_t shooter1_42mm_freq;        //42mm 发射机构1 射频
+  uint8_t shooter1_17mm_freq;        //17mm 发射机构1 射频
+  uint8_t shooter2_17mm_freq;        //17mm 发射机构2 射频
+  uint8_t shooter1_42mm_freq;        //42mm 发射机构1 射频
 
-  uint16_t shooter1_17mm_speed;       //17mm 发射机构1 射速
-  uint16_t shooter2_17mm_speed;       //17mm 发射机构2 射速
-  uint16_t shooter1_42mm_speed;       //42mm 发射机构1 射速
+  float shooter1_17mm_speed;       //17mm 发射机构1 射速
+  float shooter2_17mm_speed;       //17mm 发射机构2 射速
+  float shooter1_42mm_speed;       //42mm 发射机构1 射速
   
   uint16_t shooter1_17mm_heat_limit;  //17mm 发射机构1 枪口热量上限
   uint16_t shooter2_17mm_heat_limit;  //17mm 发射机构2 枪口热量上限
@@ -733,9 +733,7 @@ extern Referee_Used_Struct referee_used;
 /* 本模块向外部提供的接口函数原型声明 ---------------------------------------*/
 void RefereeDate_Receive_USART_Init(void);
 void Referee_UART_IRQHandler(void);
-
 void Robot_Interactive_Date(uint8_t data[], uint16_t robot_interactive_id, uint16_t receive_robot_type);
-
 void Draw_StraightLine_or_Rectangle_or_Ellipse(uint8_t num, uint8_t name, uint8_t operate, uint8_t type, 
      uint8_t layer, uint8_t color, uint8_t width , uint16_t s_x, uint16_t s_y, uint16_t e_x, uint16_t e_y);
 void Draw_FullCircle(uint8_t num, uint16_t name, uint8_t operate, uint8_t layer,uint8_t color, uint8_t width, 

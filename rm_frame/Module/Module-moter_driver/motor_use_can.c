@@ -31,6 +31,8 @@
 #include "motor_use_can.h"
 #include "remote_control.h"
 #include "offline_check.h"
+#include "referee.h"
+
 /* 内部宏定义 ----------------------------------------------------------------*/
 
 /* 内部自定义数据类型的变量 --------------------------------------------------*/
@@ -46,7 +48,7 @@ void Get_Moto_Measure_6623(motor_measure_t *ptr,uint8_t CAN_RX_date[]);
 void Get_Moto_Measure_6020(motor_measure_t *ptr,uint8_t CAN_RX_date[]);
 void Get_Moto_Offset(motor_measure_t *ptr,uint8_t CAN_RX_date[]);
 void CAN_GET_Remote(RC_ctrl_t * RC , uint8_t CAN_RX_date[]);
-void CAN_GET_RefereeData(uint8_t CAN_RX_date[]);
+void CAN_GET_RefereeData(Referee_Struct  *Referee,uint8_t CAN_RX_date[]);
 
 /* 函数主体部分 --------------------------------------------------------------*/
 //===================================================================================================================//
@@ -65,6 +67,8 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 	uint8_t CAN1_RX_date[8];
 	uint8_t CAN2_RX_date[8];
 	
+  extern Referee_Struct  referee_receive;
+  
 	if(hcan == &hcan1)
 	{
 		HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &CAN1_Rx_Header, CAN1_RX_date);
@@ -178,12 +182,12 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 		{			
 		  case CAN_SEND_REMOTEDATE_ID://上云台发送的遥控信息
 			{
-				CAN_GET_Remote(&rc_ctrl,CAN2_RX_date);
+				CAN_GET_Remote(&rc_ctrl, CAN2_RX_date);
 			}break;
 			
 			case CAN_SEND_REFEREEDATE_ID://上云台发送的遥控信息
 			{
-				CAN_GET_RefereeData(CAN2_RX_date);//内部待完善
+				CAN_GET_RefereeData(&referee_receive, CAN2_RX_date);//内部待完善
 			}break;
 
 
@@ -577,7 +581,7 @@ void CAN_GET_Remote(RC_ctrl_t * RC , uint8_t CAN_RX_date[])
   * @param[in]		CAN_RX_date：保存的来自CAN的数据的数组
   * @retval				
 */
-void CAN_GET_RefereeData(uint8_t CAN_RX_date[])
+void CAN_GET_RefereeData(Referee_Struct  *Referee,uint8_t CAN_RX_date[])
 {
 
 
