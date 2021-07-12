@@ -595,8 +595,8 @@ void DrawCharacer(uint16_t name, uint8_t operate, uint8_t layer, uint8_t color,u
   referee_client.cmdID = ID_STUDENT_INTERACTIVE_HEADER;
   
   //设置自定义UI所需传输数据
-  //设置内容 ID 官方固定,当前为2个图形，所以id为0x0102
-  referee_client.student_interactive_header_data.data_cmd_id = ID_CLIENT_CUSTOM_GRAPHIC_DOUBLE;
+  //设置内容 ID 官方固定,当前绘制字符，所以id为0x0110
+  referee_client.student_interactive_header_data.data_cmd_id = ID_CLIENT_CUSTOM_CHARACTER;
   //设置发送者的 ID
   referee_client.student_interactive_header_data.sender_ID = referee_used.robot_id;
   //设置接收者的 ID
