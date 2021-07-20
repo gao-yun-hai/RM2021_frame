@@ -97,7 +97,5 @@ void Shoot_Firction_Motor_PWM_Init(void)
 	HAL_TIM_PWM_Start(&PWM_htim,TIM_CHANNEL_1);   //PH10,ÓÒ²àÄ¦²ÁÂÖ(TIM5)
 	HAL_TIM_PWM_Start(&PWM_htim,TIM_CHANNEL_2);   //PH11,×ó²àÄ¦²ÁÂÖ(TIM5)
 	Shoot_Firction_Motor (HIGH_SPEED,HIGH_SPEED);
-	HAL_Delay(2000);
-	Shoot_Firction_Motor (LOW_SPEED,LOW_SPEED);
-	HAL_Delay(2000); 
+	Shoot_Firction_Motor (LOW_SPEED,LOW_SPEED); 
 }

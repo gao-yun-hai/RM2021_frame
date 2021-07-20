@@ -30,7 +30,7 @@ void Printf_Task(void const * argument)
 
   for(;;)
 	{
-    printf("round_get\r\n");
+//    printf("round_get\r\n");
 //虚拟示波器打印函数需要花费较多时间，且数据越多时间越长，故不建议反之重要任务中。
 //若虚拟示波器打印数据为8个，则该任务周期应不低于5ms。    
     Virtual_Oscilloscope(0,0,0,0,0,0,0,0);

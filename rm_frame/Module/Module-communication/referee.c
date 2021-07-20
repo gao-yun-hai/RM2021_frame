@@ -194,6 +194,8 @@ static void SBUS_To_Referee(uint8_t *buff, Referee_Struct  *Referee)
 									break;
                   
 									case ID_STUDENT_INTERACTIVE_HEADER:				 //0x0301 机器人间交互数据
+                    //将ID段写入结构体中
+                    memcpy(&Referee->student_interactive_header_data, (buff + LEN_HEADER + LEN_CMDID + i), LEN_ALL_ID);  
                     //空中机器人发送给哨兵
                     if(Referee->student_interactive_header_data.data_cmd_id ==  ID_AERIAL_ROBOT_TO_SENTRY_ROBOT)
                     {
@@ -269,6 +271,9 @@ void Referee_To_Use(void)
   referee_used.chassis_output = referee_receive.game_robot_status.mains_power_chassis_output;//云台口输出
   referee_used.gimbal_output  = referee_receive.game_robot_status.mains_power_gimbal_output; //底盘口输出
   referee_used.shooter_output = referee_receive.game_robot_status.mains_power_shooter_output;//发射口输出  
+  
+  referee_used.sentry_mode = referee_receive.aerial_to_sentry_data.sentry_mode;  //哨兵模式
+  referee_used.dart_launch_num = referee_receive.aerial_to_dart_data.launch_num; //飞镖发射次数
 }
 //===================================================================================================================//
 /******************************************* ↑ 裁判系统数据接收部分 ↑ ************************************************/
@@ -352,7 +357,10 @@ void Draw_StraightLine_or_Rectangle_or_Ellipse(uint8_t num, uint8_t name, uint8_
   referee_client.graphic_data_struct[num].end_x = e_x;
   referee_client.graphic_data_struct[num].end_y = e_y;    
   //将机器人交互数据复制到待发送数组中
-  memcpy(cliend_tx_buffer + LEN_HEADER, (uint8_t *)&referee_client.cmdID, LEN_CMDID + referee_client.frame_header.DataLength);
+  memcpy(cliend_tx_buffer + LEN_HEADER, (uint8_t *)&referee_client.cmdID, LEN_CMDID);
+  memcpy(cliend_tx_buffer + LEN_HEADER + LEN_CMDID, (uint8_t *)&referee_client.student_interactive_header_data, LEN_ALL_ID);
+  memcpy(cliend_tx_buffer + LEN_HEADER + LEN_CMDID + LEN_ALL_ID, (uint8_t *)&referee_client.graphic_data_struct, referee_client.frame_header.DataLength-LEN_ALL_ID);
+  
   //计算数据总长度
   data_length = LEN_HEADER + LEN_CMDID + referee_client.frame_header.DataLength + LEN_TAIL;
   //添加CRC16到数据结尾
@@ -418,8 +426,10 @@ void Draw_FullCircle(uint8_t num, uint16_t name, uint8_t operate, uint8_t layer,
 	//圆的半径
   referee_client.graphic_data_struct[num].radius = radius;    
   //将机器人交互数据复制到待发送数组中
-  memcpy(cliend_tx_buffer + LEN_HEADER, (uint8_t *)&referee_client.cmdID, LEN_CMDID + referee_client.frame_header.DataLength);
-  //计算数据总长度
+  memcpy(cliend_tx_buffer + LEN_HEADER, (uint8_t *)&referee_client.cmdID, LEN_CMDID);
+  memcpy(cliend_tx_buffer + LEN_HEADER + LEN_CMDID, (uint8_t *)&referee_client.student_interactive_header_data, LEN_ALL_ID);
+  memcpy(cliend_tx_buffer + LEN_HEADER + LEN_CMDID + LEN_ALL_ID, (uint8_t *)&referee_client.graphic_data_struct, referee_client.frame_header.DataLength-LEN_ALL_ID);
+//计算数据总长度
   data_length = LEN_HEADER + LEN_CMDID + referee_client.frame_header.DataLength + LEN_TAIL;
   //添加CRC16到数据结尾
   Append_CRC16_Check_Sum(cliend_tx_buffer, data_length);
@@ -489,8 +499,10 @@ void Draw_ARC(uint8_t num, uint16_t name, uint8_t operate, uint8_t layer, uint8_
   referee_client.graphic_data_struct[num].end_x = e_x;
   referee_client.graphic_data_struct[num].end_y = e_y;  
   //将机器人交互数据复制到待发送数组中
-  memcpy(cliend_tx_buffer + LEN_HEADER, (uint8_t *)&referee_client.cmdID, LEN_CMDID + referee_client.frame_header.DataLength);
-  //计算数据总长度
+  memcpy(cliend_tx_buffer + LEN_HEADER, (uint8_t *)&referee_client.cmdID, LEN_CMDID);
+  memcpy(cliend_tx_buffer + LEN_HEADER + LEN_CMDID, (uint8_t *)&referee_client.student_interactive_header_data, LEN_ALL_ID);
+  memcpy(cliend_tx_buffer + LEN_HEADER + LEN_CMDID + LEN_ALL_ID, (uint8_t *)&referee_client.graphic_data_struct, referee_client.frame_header.DataLength-LEN_ALL_ID);
+//计算数据总长度
   data_length = LEN_HEADER + LEN_CMDID + referee_client.frame_header.DataLength + LEN_TAIL;
   //添加CRC16到数据结尾
   Append_CRC16_Check_Sum(cliend_tx_buffer, data_length);
@@ -501,74 +513,79 @@ void Draw_ARC(uint8_t num, uint16_t name, uint8_t operate, uint8_t layer, uint8_
   }
 }
 
-/**
-  * @brief				自定义图形，绘制整型数
-  * @param[in]		图形个数num    图形的名称name   图形操作operate   图形层数layer  图形颜色color  
-                  字体大小size   线条宽度 width   起点坐标s_x,s_y   数据data     
-	* @param[out]		
-  * @retval				
-*/
-void Draw_Integral(uint8_t num, uint16_t name, uint8_t operate, uint8_t layer, uint8_t color, uint16_t size,
-	   uint8_t width, uint16_t s_x, uint16_t s_y, int32_t data)
-{
-  unsigned char cliend_tx_buffer[LEN_SEND_CLIENT_SIDE_DATE_MAX];
-	static uint8_t data_length;
+///**
+//  * @brief				自定义图形，绘制整型数
+//  * @param[in]		图形个数num    图形的名称name   图形操作operate   图形层数layer  图形颜色color  
+//                  字体大小size   线条宽度 width   起点坐标s_x,s_y   数据data     
+//	* @param[out]		
+//  * @retval				
+//*/
+//void Draw_Integral(uint8_t num, uint16_t name, uint8_t operate, uint8_t layer, uint8_t color, uint16_t size,
+//	   uint8_t width, uint16_t s_x, uint16_t s_y, int32_t data)
+//{
+//  unsigned char cliend_tx_buffer[LEN_SEND_CLIENT_SIDE_DATE_MAX];
+//	static uint8_t data_length;
 
-  //设置头帧数据
-  referee_client.frame_header.SOF = FRAME_HEADER_SOF;//头帧
-  referee_client.frame_header.DataLength = LEN_ALL_ID + LEN_SEND_CLIENT_SIDE_BUFFER*LEN_SEND_CLIENT_SIDE_BUFFER_NUM;//数据长度
-  referee_client.frame_header.Seq = 0;   
-  //将头帧数据复制到待发送数组中
-	memcpy(cliend_tx_buffer, &referee_client.frame_header, LEN_HEADER);
-  //添加CRC8到头帧结尾
-  Append_CRC8_Check_Sum(cliend_tx_buffer, LEN_HEADER);
-  
-  //设置CmdID
-  referee_client.cmdID = ID_STUDENT_INTERACTIVE_HEADER;
-  
-  //设置自定义UI所需传输数据
-  //设置内容 ID 官方固定,当前为2个图形，所以id为0x0102
-  referee_client.student_interactive_header_data.data_cmd_id = ID_CLIENT_CUSTOM_GRAPHIC_DOUBLE;
-  //设置发送者的 ID
-  referee_client.student_interactive_header_data.sender_ID = referee_used.robot_id;
-  //设置接收者的 ID
-  referee_client.student_interactive_header_data.receiver_ID = Get_Receive_Client_Side_ID();
-  //设置发送的数据
-  //图形的名称；数组里存放的是name变量的每一位
-  referee_client.graphic_data_struct[num].graphic_name[0] = name%10;
-	referee_client.graphic_data_struct[num].graphic_name[1] = (name/10)%10;
-	referee_client.graphic_data_struct[num].graphic_name[2] = (name/100)%10;
-  //操作；可以删除，增加等操作
-  referee_client.graphic_data_struct[num].operate_tpye = operate;
-  //图形种类；整形数据
-  referee_client.graphic_data_struct[num].graphic_tpye = INTEGER;
-	//图层数；相当于可以不断覆盖
-  referee_client.graphic_data_struct[num].layer = layer;
-  //图形颜色  
-  referee_client.graphic_data_struct[num].color = color;
-  //字体大小
-  referee_client.graphic_data_struct[num].start_angle = size;
-  //宽度
-  referee_client.graphic_data_struct[num].width = width;
-  //整型数的坐标x，y
-  referee_client.graphic_data_struct[num].start_x = s_x;
-  referee_client.graphic_data_struct[num].start_y = s_y;
-  //整型数
-	referee_client.graphic_data_struct[num].radius = data >> 22;
-	referee_client.graphic_data_struct[num].end_x  = data >> 11;
-	referee_client.graphic_data_struct[num].end_y  = data;
-  //将机器人交互数据复制到待发送数组中
-  memcpy(cliend_tx_buffer + LEN_HEADER, (uint8_t *)&referee_client.cmdID, LEN_CMDID + referee_client.frame_header.DataLength);
-  //计算数据总长度
-  data_length = LEN_HEADER + LEN_CMDID + referee_client.frame_header.DataLength + LEN_TAIL;
-  //添加CRC16到数据结尾
-  Append_CRC16_Check_Sum(cliend_tx_buffer, data_length);
-  
-  for(int i=0; i<data_length; i++)
-  {
-  	HAL_UART_Transmit(&RD_huart, &cliend_tx_buffer[i], 1, 1);  
-  }
-}
+//  //设置头帧数据
+//  referee_client.frame_header.SOF = FRAME_HEADER_SOF;//头帧
+//  referee_client.frame_header.DataLength = LEN_ALL_ID + LEN_SEND_CLIENT_SIDE_BUFFER*LEN_SEND_CLIENT_SIDE_BUFFER_NUM;//数据长度
+//  referee_client.frame_header.Seq = 0;   
+//  //将头帧数据复制到待发送数组中
+//	memcpy(cliend_tx_buffer, &referee_client.frame_header, LEN_HEADER);
+//  //添加CRC8到头帧结尾
+//  Append_CRC8_Check_Sum(cliend_tx_buffer, LEN_HEADER);
+//  
+//  //设置CmdID
+//  referee_client.cmdID = ID_STUDENT_INTERACTIVE_HEADER;
+//  
+//  //设置自定义UI所需传输数据
+//  //设置内容 ID 官方固定,当前为2个图形，所以id为0x0102
+//  referee_client.student_interactive_header_data.data_cmd_id = ID_CLIENT_CUSTOM_GRAPHIC_DOUBLE;
+//  //设置发送者的 ID
+//  referee_client.student_interactive_header_data.sender_ID = referee_used.robot_id;
+//  //设置接收者的 ID
+//  referee_client.student_interactive_header_data.receiver_ID = Get_Receive_Client_Side_ID();
+//  //设置发送的数据
+//  //图形的名称；数组里存放的是name变量的每一位
+//  referee_client.graphic_data_struct[num].graphic_name[0] = name%10;
+//	referee_client.graphic_data_struct[num].graphic_name[1] = (name/10)%10;
+//	referee_client.graphic_data_struct[num].graphic_name[2] = (name/100)%10;
+//  //操作；可以删除，增加等操作
+//  referee_client.graphic_data_struct[num].operate_tpye = operate;
+//  //图形种类；整形数据
+//  referee_client.graphic_data_struct[num].graphic_tpye = INTEGER;
+//	//图层数；相当于可以不断覆盖
+//  referee_client.graphic_data_struct[num].layer = layer;
+//  //图形颜色  
+//  referee_client.graphic_data_struct[num].color = color;
+//  //字体大小
+//  referee_client.graphic_data_struct[num].start_angle = size;
+//  //宽度
+//  referee_client.graphic_data_struct[num].width = width;
+//  //整型数的坐标x，y
+//  referee_client.graphic_data_struct[num].start_x = s_x;
+//  referee_client.graphic_data_struct[num].start_y = s_y;
+//  //整型数
+//	referee_client.graphic_data_struct[num].radius = data >> 22;
+//	referee_client.graphic_data_struct[num].end_x  = data >> 11;
+//	referee_client.graphic_data_struct[num].end_y  = data;
+//  //将机器人交互数据复制到待发送数组中
+//  memcpy(cliend_tx_buffer + LEN_HEADER, (uint8_t *)&referee_client.cmdID, LEN_CMDID);
+//  memcpy(cliend_tx_buffer + LEN_HEADER + LEN_CMDID, (uint8_t *)&referee_client.student_interactive_header_data, LEN_ALL_ID);
+//  memcpy(cliend_tx_buffer + LEN_HEADER + LEN_CMDID + LEN_ALL_ID, (uint8_t *)&referee_client.graphic_data_struct, referee_client.frame_header.DataLength-LEN_ALL_ID); 
+//  //计算数据总长度
+//  data_length = LEN_HEADER + LEN_CMDID + referee_client.frame_header.DataLength + LEN_TAIL;
+//  //添加CRC16到数据结尾
+//  Append_CRC16_Check_Sum(cliend_tx_buffer, data_length);
+//  
+//  for(int i=0; i<data_length; i++)
+//  {
+//  	HAL_UART_Transmit(&RD_huart, &cliend_tx_buffer[i], 1, 1);  
+//  }
+//}
+
+//整形数据与浮点型数据均转换成字符，并使用绘制字符函数绘制
+//整形数据与浮点型数据均转换成字符函数待更新
 
 /**
   * @brief				自定义图形，绘制字符串
@@ -629,7 +646,9 @@ void DrawCharacer(uint16_t name, uint8_t operate, uint8_t layer, uint8_t color,u
   strcpy((char*)referee_client.client_custom_character.data,data);
   
   //将机器人交互数据复制到待发送数组中
-  memcpy(cliend_tx_buffer + LEN_HEADER, (uint8_t *)&referee_client.cmdID, LEN_CMDID + referee_client.frame_header.DataLength);
+  memcpy(cliend_tx_buffer + LEN_HEADER, (uint8_t *)&referee_client.cmdID, LEN_CMDID);
+  memcpy(cliend_tx_buffer + LEN_HEADER + LEN_CMDID, (uint8_t *)&referee_client.student_interactive_header_data, LEN_ALL_ID);
+  memcpy(cliend_tx_buffer + LEN_HEADER + LEN_CMDID + LEN_ALL_ID, (uint8_t *)&referee_client.client_custom_character, referee_client.frame_header.DataLength-LEN_ALL_ID);
   //计算数据总长度
   data_length = LEN_HEADER + LEN_CMDID + referee_client.frame_header.DataLength + LEN_TAIL;
   //添加CRC16到数据结尾
@@ -644,7 +663,6 @@ void DrawCharacer(uint16_t name, uint8_t operate, uint8_t layer, uint8_t color,u
 //===================================================================================================================//
 /*********************************************** ↑  绘制自定义UI  ↑ **************************************************/
 //===================================================================================================================//
-
 
 //===================================================================================================================//
 /******************************************* ↓ 机器人间交互数据发送 ↓ ************************************************/
@@ -754,8 +772,10 @@ void Robot_Interactive_Date(uint8_t data[], uint16_t robot_interactive_id, uint1
   referee_send.student_interactive_header_data.receiver_ID = Get_Receive_Robot_ID(receive_robot_type);
   //设置发送的数据
   referee_send.robot_interactive_data.data[0] = data[0];//可继续添加
-  //将机器人交互数据复制到待发送数组中
-  memcpy(robot_interactive_buffer + LEN_HEADER, (uint8_t *)&referee_send.cmdID, LEN_CMDID + referee_send.frame_header.DataLength);
+  //将机器人交互数据复制到待发送数组中（由于结构体地址不连续，故进行两次复制）
+  memcpy(robot_interactive_buffer + LEN_HEADER, (uint8_t *)&referee_send.cmdID, LEN_CMDID);
+  memcpy(robot_interactive_buffer + LEN_HEADER + LEN_CMDID, (uint8_t *)&referee_send.student_interactive_header_data, referee_send.frame_header.DataLength);
+
   //计算数据总长度
   robot_interactive_data_length = LEN_HEADER + LEN_CMDID + referee_send.frame_header.DataLength + LEN_TAIL; 
  //添加CRC16到数据结尾

@@ -39,7 +39,6 @@ shoot_control_t shoot_control;          //射击数据结构体
 */
 void Friction_Drive_Task(void const *argument)
 {
-
 	portTickType xLastWakeTime;
 	xLastWakeTime = xTaskGetTickCount();
 
@@ -74,7 +73,7 @@ void Friction_Drive_Task(void const *argument)
 			shoot_control.fric1_ramp.max_value = 100;
 			shoot_control.fric2_ramp.max_value = 100;    
     }
-     
+
  
    ramp_calc(&shoot_control.fric1_ramp, SHOOT_FRIC_PWM_ADD_VALUE);
    ramp_calc(&shoot_control.fric2_ramp, SHOOT_FRIC_PWM_ADD_VALUE);

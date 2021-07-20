@@ -19,9 +19,11 @@
 #define VD_huart  huart7 //与视觉通信所用串口
 /* 内部自定义数据类型的变量 --------------------------------------------------*/
 Minipc_Rx_Struct minipc_rx; //接收来自minipc的数据
+Minipc_Tx_Struct minipc_tx; //给minipc发送数据
 
 /* 内部变量 ------------------------------------------------------------------*/
 static uint8_t vision_rx_buf[VISION_RX_BUFFER_SIZE];//接收视觉原始数据的数组
+static uint8_t vision_tx_buf[VISION_TX_BUFFER_SIZE];//发送给视觉数据的数组
 
 
 /* 内部函数原型声明 ----------------------------------------------------------*/
@@ -105,4 +107,28 @@ static void SBUS_To_Vision(volatile const uint8_t *buff, Minipc_Rx_Struct *Minip
 	
 }
 
+/**
+* @brief				发送数据给视觉
+  * @param[in]	
+	* @param[out]	
+  * @retval				
+*/
+void Send_To_Vision(int16_t data1, int16_t data2, int8_t data3, int16_t data4)
+{ 
+  //设置数据
+  minipc_tx.frame_header = 0xFF;         
+	minipc_tx.data1 			 = data1;        
+	minipc_tx.data2 		   = data2;
+  minipc_tx.data3        = data3;
+  minipc_tx.data4        = data4;
+	minipc_tx.frame_tail   = 0xFE;
+  
+//将数据复制到待发送数组中  
+//memcpy函数先复制低8位，再复制高8位。
+  memcpy(vision_tx_buf, &minipc_tx.frame_header, sizeof(minipc_tx));
 
+	for(uint8_t i=0; i<sizeof(minipc_tx); i++)
+	{
+		HAL_UART_Transmit(&VD_huart,&vision_tx_buf[i],1,10);
+	}		
+}

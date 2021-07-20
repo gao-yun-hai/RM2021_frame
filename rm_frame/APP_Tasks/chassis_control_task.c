@@ -48,8 +48,8 @@ void Chassis_Control_Task(void const * argument)
 	{
 		Refresh_Task_OffLine_Time(ChassisControlTask_TOE);
 		mini512_cnt = Get_TIM_COUNTER();
-		set_speed = 500;
-		get_speed = motor_get[CHASSIS_MOTOR_LF].speed_rpm;
+		set_speed = 1000;
+		get_speed = motor_get[CHASSIS_MOTOR_RF].speed_rpm;
 		chassis_current_value = PID_Calc(&motor_pid[PID_CHASSIS_MOTOR_RF_SPD], get_speed, set_speed);
 	
 		Chassis_Motor_Drive(&hcan1,chassis_current_value,0,0,0);

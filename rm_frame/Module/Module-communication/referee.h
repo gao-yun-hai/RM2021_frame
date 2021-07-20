@@ -723,6 +723,8 @@ typedef  struct
   uint8_t chassis_output;               //底盘口输出
   uint8_t shooter_output;               //发射口输出
   
+  uint8_t sentry_mode;                  //哨兵模式
+  uint8_t dart_launch_num;              //飞镖发射次数
 
 }Referee_Used_Struct;
 /* 本模块向外部提供的变量声明 -----------------------------------------------*/

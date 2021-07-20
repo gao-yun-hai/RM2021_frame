@@ -111,11 +111,9 @@ int main(void)
   MX_USART6_UART_Init();
   /* USER CODE BEGIN 2 */
 	BSP_Init();
-  /* USER CODE END 2 */
- 
+  /* USER CODE END 2 */ 
   /* Call init function for freertos objects (in freertos.c) */
   MX_FREERTOS_Init(); 
- 
   taskEXIT_CRITICAL();//ÍË³öÁÙ½ç¶Î
   /* Start scheduler */
   osKernelStart();
