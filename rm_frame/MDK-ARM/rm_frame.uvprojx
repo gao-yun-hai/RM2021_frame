@@ -787,6 +787,11 @@
               <FileType>5</FileType>
               <FilePath>..\README\资源分配表.txt</FilePath>
             </File>
+            <File>
+              <FileName>readme.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\README\readme.txt</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
