@@ -25,18 +25,16 @@
 
 /* 函数主体部分 --------------------------------------------------------------*/
 /**
-  * @brief				遥控器任务
+  * @brief				遥控器任务(任务通知方式执行)
   * @param[in]		
 	* @param[out]		
   * @retval				none
 */
 void Remote_Data_Task(void const * argument)
 {
-	  uint32_t NotifyValue;
-
-		portTickType xLastWakeTime;
-		xLastWakeTime = xTaskGetTickCount();
-	
+	 uint32_t NotifyValue;
+//		portTickType xLastWakeTime;
+//		xLastWakeTime = xTaskGetTickCount();	
 	for(;;)
 	{
 		NotifyValue = ulTaskNotifyTake(pdTRUE,portMAX_DELAY);  //未有任务通知则进入堵塞状态去等待任务通知
@@ -46,7 +44,7 @@ void Remote_Data_Task(void const * argument)
 			Refresh_Task_OffLine_Time(RemoteDataTask_TOE);
 			
 		}
+//		osDelayUntil(&xLastWakeTime, REMOTE_PERIOD);
 		
-		osDelayUntil(&xLastWakeTime, REMOTE_PERIOD);
 	}
 }

@@ -73,8 +73,8 @@ void Referee_UART_IRQHandler(void)
 			/* 断线检测刷新时间 */
 			Refresh_Device_OffLine_Time(Referee_TOE);		
 			/* 任务通知 */
-			vTaskNotifyGiveFromISR(RefereeDataTaskHandle,&pxHigherPriorityTaskWoken);
-			portYIELD_FROM_ISR(pxHigherPriorityTaskWoken);	
+//			vTaskNotifyGiveFromISR(RefereeDataTaskHandle,&pxHigherPriorityTaskWoken);
+//			portYIELD_FROM_ISR(pxHigherPriorityTaskWoken);	
 			/* 重新启动DMA传输 */
 			/* 设置DMA可传输最大数据长度 */
 			__HAL_DMA_SET_COUNTER(RD_huart.hdmarx, REFEREE_RX_BUFFER_SIZE);
@@ -702,6 +702,9 @@ uint16_t Get_Receive_Robot_ID(uint16_t receive_robot_type)
         case SENTRY_ROBOT: 
            receive_robot_id = ID_SENTRY_ROBOT_RED; break;
         
+        case DART_ROBOT: 
+           receive_robot_id = ID_DART_ROBOT_RED; break;
+        
         case RADAR_ROBOT: 
           receive_robot_id = ID_RADAR_ROBOT_RED; break; 
         
@@ -732,6 +735,9 @@ uint16_t Get_Receive_Robot_ID(uint16_t receive_robot_type)
         
         case SENTRY_ROBOT: 
            receive_robot_id = ID_SENTRY_ROBOT_BLUE; break;
+        
+        case DART_ROBOT: 
+           receive_robot_id = ID_DART_ROBOT_BLUE; break;
         
         case RADAR_ROBOT: 
           receive_robot_id = ID_RADAR_ROBOT_BLUE; break; 

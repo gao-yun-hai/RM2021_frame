@@ -22,27 +22,27 @@
 
 /* 函数主体部分 --------------------------------------------------------------*/
 /**
-  * @brief				裁判系统任务
+  * @brief				裁判系统任务(任务延时方式执行)
   * @param[in]		
 	* @param[out]		
   * @retval				none
 */
 void Referee_Data_Task(void const * argument)
 {
-	  uint32_t NotifyValue;
+//	  uint32_t NotifyValue;
 
 		portTickType xLastWakeTime;
 		xLastWakeTime = xTaskGetTickCount();
 	
 	for(;;)
 	{
-		NotifyValue = ulTaskNotifyTake(pdTRUE,portMAX_DELAY);  //未有任务通知则进入堵塞状态去等待任务通知
+//		NotifyValue = ulTaskNotifyTake(pdTRUE,portMAX_DELAY);  //未有任务通知则进入堵塞状态去等待任务通知
 		
-    if(NotifyValue == 1)
-		{
+//    if(NotifyValue == 1)
+//		{
 			Refresh_Task_OffLine_Time(RefereeDataTask_TOE);
 			
-		}
+//		}
 		
 		osDelayUntil(&xLastWakeTime, REFEREE_PERIOD);
 	}

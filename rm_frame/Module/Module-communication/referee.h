@@ -429,6 +429,7 @@ typedef enum
   INFATRY5_ROBOT  = 5,
   AERIAL_ROBOT    = 6,
   SENTRY_ROBOT    = 7,
+  DART_ROBOT      = 8,
   RADAR_ROBOT     = 9, 
   
 } xrobotType;//机器人ID
@@ -443,6 +444,7 @@ typedef enum
   ID_INFATRY5_ROBOT_RED  = 5,
   ID_AERIAL_ROBOT_RED    = 6,
   ID_SENTRY_ROBOT_RED    = 7,
+  ID_DART_ROBOT_RED      = 8,
   ID_RADAR_ROBOT_RED     = 9,
   ID_HERO_ROBOT_BLUE     = 101,
   ID_ENGINEER_ROBOT_BLUE = 102,
@@ -451,6 +453,7 @@ typedef enum
   ID_INFATRY5_ROBOT_BLUE = 105,
   ID_AERIAL_ROBOT_BLUE   = 106,
   ID_SENTRY_ROBOT_BLUE   = 107,
+  ID_DART_ROBOT_BLUE     = 108,
   ID_RADAR_ROBOT_BLUE    = 109,  
   
 } xrobotID;//机器人ID

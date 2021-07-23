@@ -22,7 +22,7 @@
 
 /* 函数主体部分 --------------------------------------------------------------*/
 /**
-  * @brief				视觉任务
+  * @brief				视觉任务(任务通知方式执行)
   * @param[in]		
 	* @param[out]		
   * @retval				none
@@ -31,8 +31,8 @@ void Vision_Data_Task(void const * argument)
 {
 	  uint32_t NotifyValue;
 
-		portTickType xLastWakeTime;
-		xLastWakeTime = xTaskGetTickCount();
+//		portTickType xLastWakeTime;
+//		xLastWakeTime = xTaskGetTickCount();
 	
 	for(;;)
 	{
@@ -46,6 +46,6 @@ void Vision_Data_Task(void const * argument)
 			
 		}
 		
-		osDelayUntil(&xLastWakeTime, VISION_PERIOD);
+//		osDelayUntil(&xLastWakeTime, VISION_PERIOD);
 	}
 }
